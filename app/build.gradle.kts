@@ -3,6 +3,8 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     id("org.jetbrains.kotlin.kapt")
+    alias(libs.plugins.hilt.plugin)
+
 
 }
 
@@ -71,4 +73,8 @@ dependencies {
 
     //datastore
     implementation(libs.datastore.preferences)
+
+    //hilt di
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
 }

@@ -13,7 +13,7 @@ gsonConverter="2.9.0"
 okHttp="4.11.0"
 room="2.6.1"
 datastore="1.0.0"
-
+hilt="2.44"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -37,12 +37,14 @@ room-runTime={module="androidx.room:room-runtime", version.ref = "room"}
 room-ktx={module="androidx.room:room-ktx", version.ref = "room"}
 room-compiler={module="androidx.room:room-compiler", version.ref = "room"}
 datastore-preferences={module = "androidx.datastore:datastore-preferences", version.ref = "datastore"}
-
+hilt-android={module = "com.google.dagger:hilt-android", version.ref = "hilt"}
+hilt-compiler={module = "com.google.dagger:hilt-compiler", version.ref = "hilt"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+hilt-plugin={id = "dagger.hilt.android.plugin", version.ref = "hilt"}
 
 [bundles]
 room=["room.runTime","room.ktx"]
