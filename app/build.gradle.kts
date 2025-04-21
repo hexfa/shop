@@ -62,4 +62,9 @@ dependencies {
     implementation(libs.retrofit.converter.gson)
     implementation(libs.okHttp.logging)
 
+    //roomDB
+    implementation(libs.bundles.room)
+  //  kapt(libs.room.compiler)
+
+
 }
