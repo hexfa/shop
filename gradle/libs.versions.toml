@@ -14,6 +14,9 @@ okHttp="4.11.0"
 room="2.6.1"
 datastore="1.0.0"
 hilt="2.44"
+hiltNavigation="1.0.0"
+navigation="2.5.3"
+
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -39,6 +42,9 @@ room-compiler={module="androidx.room:room-compiler", version.ref = "room"}
 datastore-preferences={module = "androidx.datastore:datastore-preferences", version.ref = "datastore"}
 hilt-android={module = "com.google.dagger:hilt-android", version.ref = "hilt"}
 hilt-compiler={module = "com.google.dagger:hilt-compiler", version.ref = "hilt"}
+hilt-navigation-compose={module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigation"}
+navigation-compose={module="androidx.navigation:navigation-compose", version.ref = "navigation"}
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
