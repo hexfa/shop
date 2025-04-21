@@ -19,6 +19,7 @@ navigation="2.5.3"
 lottie="6.1.0"
 coil="2.4.0"
 swiperefresh = "1.1.0"
+accompanistSystemuicontroller = "0.28.0"
 
 
 
@@ -52,6 +53,7 @@ navigation-compose={module="androidx.navigation:navigation-compose", version.ref
 lottie={module="com.airbnb.android:lottie", version.ref = "lottie" }
 coil-compose={module = "io.coil-kt:coil-compose", version.ref = "coil"}
 swipe-refresh = { module = "androidx.swiperefreshlayout:swiperefreshlayout", version.ref = "swiperefresh" }
+accompanist-systemuicontroller = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "accompanistSystemuicontroller" }
 
 
 [plugins]
