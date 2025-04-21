@@ -82,4 +82,8 @@ dependencies {
 
     //navigation
     implementation(libs.navigation.compose)
+
+
+    //animation
+    implementation(libs.lottie)
 }
