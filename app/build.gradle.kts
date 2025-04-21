@@ -69,4 +69,6 @@ dependencies {
     kapt(libs.room.compiler)
 
 
+    //datastore
+    implementation(libs.datastore.preferences)
 }
