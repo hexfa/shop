@@ -86,4 +86,7 @@ dependencies {
 
     //animation
     implementation(libs.lottie)
+
+    //coil load image
+    implementation(libs.coil.compose)
 }
