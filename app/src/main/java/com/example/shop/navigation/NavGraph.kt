@@ -9,9 +9,9 @@ import com.example.shop.ui.screens.SplashScreen
 @Composable
 fun SetUpNavGraph(navController: NavHostController){
     NavHost(navController = navController,
-        startDestination =Screen.splash.rout
+        startDestination =Screen.Splash.route
     ){
-        composable(route =Screen.splash.rout ){
+        composable(route =Screen.Splash.route ){
             SplashScreen(navController=navController)
         }
     }
