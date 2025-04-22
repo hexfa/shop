@@ -14,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import com.example.shop.navigation.SetUpNavGraph
 import com.example.shop.ui.theme.ShopTheme
 
 class MainActivity : ComponentActivity() {
@@ -29,7 +30,9 @@ class MainActivity : ComponentActivity() {
                 navController= rememberNavController()
                 Scaffold (bottomBar = {
                     //todo bottombar
-                }){  }
+                }){
+                    SetUpNavGraph(navController=navController)
+                }
             }
         }
     }
