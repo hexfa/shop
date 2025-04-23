@@ -16,7 +16,7 @@ datastore="1.0.0"
 hilt="2.44"
 hiltNavigation="1.0.0"
 navigation="2.5.3"
-lottie="6.1.0"
+lottie="6.6.6"
 coil="2.4.0"
 swiperefresh = "1.1.0"
 accompanistSystemuicontroller = "0.28.0"
@@ -51,7 +51,7 @@ hilt-android={module = "com.google.dagger:hilt-android", version.ref = "hilt"}
 hilt-compiler={module = "com.google.dagger:hilt-compiler", version.ref = "hilt"}
 hilt-navigation-compose={module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigation"}
 navigation-compose={module="androidx.navigation:navigation-compose", version.ref = "navigation"}
-lottie={module="com.airbnb.android:lottie", version.ref = "lottie" }
+lottie={module="com.airbnb.android:lottie-compose", version.ref = "lottie" }
 coil-compose={module = "io.coil-kt:coil-compose", version.ref = "coil"}
 swipe-refresh = { module = "androidx.swiperefreshlayout:swiperefreshlayout", version.ref = "swiperefresh" }
 accompanist-systemuicontroller = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "accompanistSystemuicontroller" }

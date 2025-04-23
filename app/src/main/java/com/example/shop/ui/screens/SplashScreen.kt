@@ -56,4 +56,14 @@ fun Splash(){
             )
 
     }
+    Box(modifier = Modifier.fillMaxSize()
+        .padding(20.dp)
+        ,
+        contentAlignment = Alignment.BottomCenter
+
+
+    ){
+
+
+    }
 }
