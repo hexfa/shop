@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.navigation.NavController
+import androidx.navigation.compose.currentBackStackEntryAsState
 import com.example.shop.R
 
 @Composable
@@ -43,4 +44,6 @@ fun BottomNavigationBar(
 
 
     )
+    val backStackEntry=navController.currentBackStackEntryAsState()
+    val  showBottomBar=backStackEntry.value?.destination?.route in items.map { it.route }
 }
