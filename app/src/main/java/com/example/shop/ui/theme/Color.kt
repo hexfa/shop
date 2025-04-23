@@ -18,3 +18,7 @@ val Colors.splashBg : Color
 val Colors.selectedBottomBar : Color
    @Composable
    get()=if(isLight) Color(0xFF673AB7) else Color(0xFFed1b34)
+
+val Colors.deSelectedBottomBar : Color
+   @Composable
+   get()=if(isLight) Color(0xFFE91E63) else Color(0xFF4D4748)
