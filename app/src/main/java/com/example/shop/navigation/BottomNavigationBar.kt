@@ -34,6 +34,13 @@ fun BottomNavigationBar(
             deSelectedIcon = painterResource(R.drawable.digi_logo)
         ),
 
+        BottomNavItem(
+            name = "Basket",
+            route = Screen.Basket.route,
+            selectedIcon = painterResource(R.drawable.digi_logo),
+            deSelectedIcon = painterResource(R.drawable.digi_logo)
+        ),
+
 
     )
 }
