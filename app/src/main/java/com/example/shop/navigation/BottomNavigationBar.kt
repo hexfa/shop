@@ -13,14 +13,14 @@ fun BottomNavigationBar(
     onItemClick:(BottomNavItem)->Unit
 ){
 
-   /* val items= listOf(
+    val items= listOf(
         BottomNavItem(
             name = "Home",
             route = Screen.Home.route,
             selectedIcon = painterResource(R.drawable.digi_logo),
             deSelectedIcon = painterResource(R.drawable.digi_logo)
-        ),*/
+        ),
 
 
-    //)
+    )
 }
