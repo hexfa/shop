@@ -19,6 +19,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.example.shop.R
 import com.example.shop.navigation.Screen
+import com.example.shop.ui.components.Loading3Dots
 import com.example.shop.ui.theme.splashBg
 import kotlinx.coroutines.delay
 
@@ -64,6 +65,7 @@ fun Splash(){
 
     ){
 
+        Loading3Dots(false);
 
     }
 }
