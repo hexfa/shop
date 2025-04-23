@@ -72,6 +72,11 @@ fun BottomNavigationBar(
             elevation=5.dp
         ){
 
+            items.forEachIndexed{index,item->
+
+                val selected=item.route==backStackEntry.value?.destination?.route
+                BottomNavigationItem(selected=selected,onClick=onItemClick(item))
+            }
         }
     }
 
