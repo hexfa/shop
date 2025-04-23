@@ -14,3 +14,7 @@ val Pink40 = Color(0xFF7D5260)
 val Colors.splashBg : Color
    @Composable
    get()=Color(0xFFed1b34)
+
+val Colors.selectedBottomBar : Color
+   @Composable
+   get()=if(isLight) Color(0xFF673AB7) else Color(0xFFed1b34)

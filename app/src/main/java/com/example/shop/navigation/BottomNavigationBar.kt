@@ -75,7 +75,8 @@ fun BottomNavigationBar(
             items.forEachIndexed{index,item->
 
                 val selected=item.route==backStackEntry.value?.destination?.route
-                BottomNavigationItem(selected=selected,onClick=onItemClick(item))
+                BottomNavigationItem(selected=selected,onClick=onItemClick(item)}){
+                    //unSelectedCenterColor=
             }
         }
     }
