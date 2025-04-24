@@ -49,6 +49,48 @@ val Typography = Typography(
         fontSize = 20.sp,
         lineHeight = 25.sp,
 
-        )
+        ),
+
+    h2 =TextStyle(
+        fontFamily = font_standard,
+        fontWeight = FontWeight.Medium,
+        fontSize = 18.sp,
+        lineHeight = 25.sp,
+
+        ),
+    h3 =TextStyle(
+        fontFamily = font_standard,
+        fontWeight = FontWeight.Medium,
+        fontSize = 16.sp,
+        lineHeight = 25.sp,
+
+        ),
+
+    h4 =TextStyle(
+        fontFamily = font_standard,
+        fontWeight = FontWeight.Medium,
+        fontSize = 15.sp,
+        lineHeight = 25.sp,
+
+        ),
+
+    h5 =TextStyle(
+        fontFamily = font_standard,
+        fontWeight = FontWeight.Medium,
+        fontSize = 14.sp,
+        lineHeight = 25.sp,
+
+        ),
+
+    h6 =TextStyle(
+        fontFamily = font_standard,
+        fontWeight = FontWeight.Medium,
+        fontSize = 12.sp,
+        lineHeight = 25.sp,
+
+        ),
+
+
+
 
 )
