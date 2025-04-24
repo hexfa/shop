@@ -14,6 +14,10 @@ val font_medium= FontFamily(
     Font(R.font.iranyekanmedium)
 )
 
+val font_bold= FontFamily(
+    Font(R.font.iranyekanbold)
+)
+
 
 
 
