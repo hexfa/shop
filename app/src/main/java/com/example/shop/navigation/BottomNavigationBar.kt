@@ -2,9 +2,8 @@ package com.example.shop.navigation
 
 
 //noinspection UsingMaterialAndMaterial3Libraries
-import androidx.compose.material.BottomNavigation
 //noinspection UsingMaterialAndMaterial3Libraries
-import androidx.compose.material.BottomNavigationItem
+import androidx.compose.material.BottomNavigation
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -13,6 +12,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import com.example.shop.R
+
 //noinspection UsingMaterialAndMaterial3Libraries
 
 @Composable

@@ -24,6 +24,8 @@ composeMaterial = "1.4.1"
 navigationRuntimeKtx = "2.8.9"
 navigationCompose = "2.9.0-rc01"
 material = "1.9.0-alpha01"
+media3Effect = "1.6.1"
+rendering = "1.17.1"
 
 
 
@@ -64,6 +66,8 @@ androidx-compose-material = { group = "androidx.wear.compose", name = "compose-m
 androidx-navigation-runtime-ktx = { group = "androidx.navigation", name = "navigation-runtime-ktx", version.ref = "navigationRuntimeKtx" }
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
 material = { group = "androidx.compose.material", name = "material", version.ref = "material" }
+androidx-media3-effect = { group = "androidx.media3", name = "media3-effect", version.ref = "media3Effect" }
+rendering = { group = "com.google.ar.sceneform", name = "rendering", version.ref = "rendering" }
 
 
 [plugins]
