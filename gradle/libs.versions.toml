@@ -22,6 +22,8 @@ swiperefresh = "1.1.0"
 accompanistSystemuicontroller = "0.28.0"
 composeMaterial = "1.4.1"
 navigationRuntimeKtx = "2.8.9"
+navigationCompose = "2.9.0-rc01"
+material = "1.9.0-alpha01"
 
 
 
@@ -41,6 +43,8 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-material = { group = "androidx.compose.material:material", name = "material" }
+
 retrofit={module= "com.squareup.retrofit2:retrofit" ,version.ref="retrofit"}
 retrofit-converter-gson={ module = "com.squareup.retrofit2:converter-gson", version.ref = "gsonConverter"}
 okHttp-logging={module="com.squareup.okhttp3:logging-interceptor", version.ref = "okHttp"}
@@ -58,6 +62,8 @@ swipe-refresh = { module = "androidx.swiperefreshlayout:swiperefreshlayout", ver
 accompanist-systemuicontroller = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "accompanistSystemuicontroller" }
 androidx-compose-material = { group = "androidx.wear.compose", name = "compose-material", version.ref = "composeMaterial" }
 androidx-navigation-runtime-ktx = { group = "androidx.navigation", name = "navigation-runtime-ktx", version.ref = "navigationRuntimeKtx" }
+androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
+material = { group = "androidx.compose.material", name = "material", version.ref = "material" }
 
 
 [plugins]
