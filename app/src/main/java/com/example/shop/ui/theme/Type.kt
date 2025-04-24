@@ -18,6 +18,10 @@ val font_bold= FontFamily(
     Font(R.font.iranyekanbold)
 )
 
+val font_standard= FontFamily(
+    Font(R.font.iranyekan)
+)
+
 
 
 
