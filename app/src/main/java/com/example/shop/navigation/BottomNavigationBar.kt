@@ -4,6 +4,7 @@ package com.example.shop.navigation
 //noinspection UsingMaterialAndMaterial3Libraries
 //noinspection UsingMaterialAndMaterial3Libraries
 import androidx.compose.material.BottomNavigation
+import androidx.compose.material.BottomNavigationItem
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -66,7 +67,8 @@ fun BottomNavigationBar(
             items.forEachIndexed{index,item->
 
                 val selected=item.route==backStackEntry.value?.destination?.route
-               // BottomNavigationItem(selected=selected,onClick=onItemClick(item)}){
+
+                BottomNavigationItem(selected=selected,onClick=onItemClick(item)}){
                     //unSelectedCenterColor=
             }
         }
