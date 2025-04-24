@@ -1,11 +1,11 @@
 package com.example.shop.navigation
 
 
-//noinspection UsingMaterialAndMaterial3Libraries
-//noinspection UsingMaterialAndMaterial3Libraries
+
 //noinspection UsingMaterialAndMaterial3Libraries
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.BottomNavigation
 import androidx.compose.material.BottomNavigationItem
 import androidx.compose.material.Icon
@@ -16,6 +16,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
@@ -93,7 +94,11 @@ fun BottomNavigationBar(
                             }
 
                             Text(text = item.name,
-                                textAlign = TextAlign.Center)
+                                textAlign = TextAlign.Center,
+                                style = MaterialTheme.typography.h1,
+                                fontWeight = FontWeight.Bold,
+                                modifier = Modifier.padding(top = 5.dp)
+                            )
                         }
                     }
 
