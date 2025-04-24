@@ -1,7 +1,8 @@
 package com.example.shop.ui.theme
+//noinspection UsingMaterialAndMaterial3Libraries
+import androidx.compose.material.Colors
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
-import androidx.compose.material3.ColorScheme as Colors
 
 val Purple80 = Color(0xFFed1b34)
 val PurpleGrey80 = Color(0xFFCCC2DC)
@@ -15,11 +16,10 @@ val Colors.splashBg : Color
    @Composable
    get()=Color(0xFFed1b34)
 
-/*
 val Colors.selectedBottomBar : Color
    @Composable
-   get()=if(isLight) Color(0xFF673AB7) else Color(0xFFed1b34)
+   get()=if(isLight) Color(0xFF43474C) else Color(0xFFCFD4DA)
 
-val Colors.deSelectedBottomBar : Color
+val Colors.unSelectedBottomBar : Color
    @Composable
-   get()=if(isLight) Color(0xFFE91E63) else Color(0xFF4D4748)*/
+   get()=if(isLight) Color(0xFFA4A1A1) else Color(0xFF575A5E)

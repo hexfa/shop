@@ -1,29 +1,31 @@
 package com.example.shop.navigation
 
 
+
+//noinspection UsingMaterialAndMaterial3Libraries
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-//noinspection UsingMaterialAndMaterial3Libraries
-import androidx.compose.material.*
+import androidx.compose.material.BottomNavigation
+import androidx.compose.material.BottomNavigationItem
+import androidx.compose.material.Icon
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
-import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import com.example.shop.R
+import com.example.shop.ui.theme.selectedBottomBar
+import com.example.shop.ui.theme.unSelectedBottomBar
 
+//noinspection UsingMaterialAndMaterial3Libraries
 
 @Composable
 fun BottomNavigationBar(
@@ -65,21 +67,46 @@ fun BottomNavigationBar(
     val backStackEntry=navController.currentBackStackEntryAsState()
     val  showBottomBar=backStackEntry.value?.destination?.route in items.map { it.route }
 
-    /*if(showBottomBar){
+    if(showBottomBar){
+
         BottomNavigation(
             modifier=Modifier,
-            backGroundColor=Color.White,
+            backgroundColor =Color.White,
             elevation=5.dp
         ){
 
             items.forEachIndexed{index,item->
 
                 val selected=item.route==backStackEntry.value?.destination?.route
-                BottomNavigationItem(selected=selected,onClick=onItemClick(item)}){
-                    //unSelectedCenterColor=
+
+                BottomNavigationItem(
+                    selected=selected,
+                    onClick={onItemClick(item)},
+                    selectedContentColor = MaterialTheme.colors.selectedBottomBar,
+                    unselectedContentColor = MaterialTheme.colors.unSelectedBottomBar,
+                    icon = {
+                        Column (horizontalAlignment = Alignment.CenterHorizontally){
+                            if (selected){
+                                Icon(painter = item.selectedIcon  , contentDescription = item.name, modifier = Modifier.height(24.dp))
+                            }else{
+                                Icon(painter = item.deSelectedIcon  , contentDescription = item.name, modifier = Modifier.height(24.dp))
+
+                            }
+
+                            Text(text = item.name,
+                                textAlign = TextAlign.Center,
+                                style = MaterialTheme.typography.h1,
+                                fontWeight = FontWeight.Bold,
+                                modifier = Modifier.padding(top = 5.dp)
+                            )
+                        }
+                    }
+
+
+                )
             }
         }
-    }*/
+    }
 
 
 }
