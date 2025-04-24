@@ -2,6 +2,7 @@ package com.example.shop.ui.theme
 
 //noinspection UsingMaterialAndMaterial3Libraries
 import androidx.compose.material.Typography
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
@@ -23,7 +24,14 @@ val font_standard= FontFamily(
 )
 
 
+val Typography.extraBoldNumber:TextStyle
+@Composable
+get() = TextStyle(
+    fontFamily = font_bold,
+    fontWeight = FontWeight.Bold,
+    fontSize = 26.sp,
 
+)
 
 // Set of Material typography styles to start with
 val Typography = Typography(
