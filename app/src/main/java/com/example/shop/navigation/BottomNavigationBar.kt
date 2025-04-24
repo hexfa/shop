@@ -3,9 +3,15 @@ package com.example.shop.navigation
 
 //noinspection UsingMaterialAndMaterial3Libraries
 //noinspection UsingMaterialAndMaterial3Libraries
+//noinspection UsingMaterialAndMaterial3Libraries
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.height
 import androidx.compose.material.BottomNavigation
 import androidx.compose.material.BottomNavigationItem
+import androidx.compose.material.Icon
+import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
@@ -13,6 +19,8 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import com.example.shop.R
+import com.example.shop.ui.theme.selectedBottomBar
+import com.example.shop.ui.theme.unSelectedBottomBar
 
 //noinspection UsingMaterialAndMaterial3Libraries
 
@@ -68,8 +76,22 @@ fun BottomNavigationBar(
 
                 val selected=item.route==backStackEntry.value?.destination?.route
 
-                BottomNavigationItem(selected=selected,onClick=onItemClick(item)}){
-                    //unSelectedCenterColor=
+                BottomNavigationItem(
+                    selected=selected,
+                    onClick={onItemClick(item)},
+                    selectedContentColor = MaterialTheme.colors.selectedBottomBar,
+                    unselectedContentColor = MaterialTheme.colors.unSelectedBottomBar,
+                    icon = {
+                        Column (horizontalAlignment = Alignment.CenterHorizontally){
+                            if (selected){
+                                Icon(painter = item.selectedIcon  , contentDescription = item.name, modifier = Modifier.height(24.dp))
+                            }else{
+                                Icon(painter = item.deSelectedIcon  , contentDescription = item.name, modifier = Modifier.height(24.dp))
+
+                            }
+                        }
+                    }
+                )
             }
         }
     }
