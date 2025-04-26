@@ -16,6 +16,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -36,7 +37,7 @@ fun BottomNavigationBar(
 
     val items= listOf(
         BottomNavItem(
-            name = "خانه",
+            name = stringResource(id=R.string.home),
             route = Screen.Home.route,
             selectedIcon = painterResource(R.drawable.home_fill),
             deSelectedIcon = painterResource(R.drawable.home_outline)
