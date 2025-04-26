@@ -51,8 +51,8 @@ fun BottomNavigationBar(
         BottomNavItem(
             name = "پروفایل",
             route = Screen.Profile.route,
-            selectedIcon = painterResource(R.drawable.digi_logo),
-            deSelectedIcon = painterResource(R.drawable.digi_logo)
+            selectedIcon = painterResource(R.drawable.user_fill),
+            deSelectedIcon = painterResource(R.drawable.user_outline)
         ),
 
         BottomNavItem(
