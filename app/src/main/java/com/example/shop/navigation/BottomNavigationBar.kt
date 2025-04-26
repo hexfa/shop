@@ -16,6 +16,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -36,27 +37,27 @@ fun BottomNavigationBar(
 
     val items= listOf(
         BottomNavItem(
-            name = "خانه",
+            name = stringResource(id=R.string.home),
             route = Screen.Home.route,
             selectedIcon = painterResource(R.drawable.home_fill),
             deSelectedIcon = painterResource(R.drawable.home_outline)
         ),
 
         BottomNavItem(
-            name = "دسته بندی",
+            name = stringResource(id=R.string.category),
             route = Screen.Category.route,
             selectedIcon = painterResource(R.drawable.cart_fill),
             deSelectedIcon = painterResource(R.drawable.category_outline)
         ),
         BottomNavItem(
-            name = "پروفایل",
+            name = stringResource(id=R.string.profile),
             route = Screen.Profile.route,
             selectedIcon = painterResource(R.drawable.user_fill),
             deSelectedIcon = painterResource(R.drawable.user_outline)
         ),
 
         BottomNavItem(
-            name = "سبد خرید",
+            name =stringResource(id=R.string.basket),
             route = Screen.Basket.route,
             selectedIcon = painterResource(R.drawable.cart_fill),
             deSelectedIcon = painterResource(R.drawable.cart_outline)
