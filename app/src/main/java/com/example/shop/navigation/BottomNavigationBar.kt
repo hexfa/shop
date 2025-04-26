@@ -44,7 +44,7 @@ fun BottomNavigationBar(
         ),
 
         BottomNavItem(
-            name = "دسته بندی",
+            name = stringResource(id=R.string.category),
             route = Screen.Category.route,
             selectedIcon = painterResource(R.drawable.cart_fill),
             deSelectedIcon = painterResource(R.drawable.category_outline)
