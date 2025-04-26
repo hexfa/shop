@@ -4,4 +4,6 @@
     <string name="home">Home</string>
     <string name="category">Categories</string>
     <string name="profile">Profile</string>
+    <string name="basket">Basket</string>
+
 </resources>
