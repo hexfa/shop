@@ -38,8 +38,8 @@ fun BottomNavigationBar(
         BottomNavItem(
             name = "خانه",
             route = Screen.Home.route,
-            selectedIcon = painterResource(R.drawable.digi_logo),
-            deSelectedIcon = painterResource(R.drawable.digi_logo)
+            selectedIcon = painterResource(R.drawable.home_fill),
+            deSelectedIcon = painterResource(R.drawable.home_outline)
         ),
 
         BottomNavItem(
