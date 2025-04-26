@@ -58,8 +58,8 @@ fun BottomNavigationBar(
         BottomNavItem(
             name = "سبد خرید",
             route = Screen.Basket.route,
-            selectedIcon = painterResource(R.drawable.digi_logo),
-            deSelectedIcon = painterResource(R.drawable.digi_logo)
+            selectedIcon = painterResource(R.drawable.cart_fill),
+            deSelectedIcon = painterResource(R.drawable.cart_outline)
         ),
 
 
