@@ -37,6 +37,12 @@ fun BottomNavigationBar(
 
     val items= listOf(
         BottomNavItem(
+            name =stringResource(id=R.string.basket),
+            route = Screen.Basket.route,
+            selectedIcon = painterResource(R.drawable.cart_fill),
+            deSelectedIcon = painterResource(R.drawable.cart_outline)
+        ),
+        BottomNavItem(
             name = stringResource(id=R.string.home),
             route = Screen.Home.route,
             selectedIcon = painterResource(R.drawable.home_fill),
@@ -56,12 +62,7 @@ fun BottomNavigationBar(
             deSelectedIcon = painterResource(R.drawable.user_outline)
         ),
 
-        BottomNavItem(
-            name =stringResource(id=R.string.basket),
-            route = Screen.Basket.route,
-            selectedIcon = painterResource(R.drawable.cart_fill),
-            deSelectedIcon = painterResource(R.drawable.cart_outline)
-        ),
+
 
 
     )
