@@ -30,7 +30,6 @@ architecture and is ready for payment & analytics extensions.
 - **Profile** – orders, addresses, dark-mode toggle
 - **Localization** – English & Persian built-in  
 ## Architecture
-
 ```mermaid
 flowchart LR
     UI[Compose UI] -->|Events| VM[ViewModel]
@@ -38,6 +37,8 @@ flowchart LR
     Repo --> API[Retrofit]
     Repo --> DB[(Room DB)]
     API --> Backend[(REST API)]
+
+
 ## Installation
 ```bash
 # clone
