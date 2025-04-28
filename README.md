@@ -46,8 +46,6 @@ flowchart LR
     Repo --> DB[(Room DB)]
     API --> Backend[(REST API)]
 
-
-
 ## Installation
 ```bash
 # clone
