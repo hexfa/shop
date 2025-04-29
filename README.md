@@ -2,6 +2,7 @@
 ![Android](https://img.shields.io/badge/Android-API%2024+-green)
 ![Kotlin](https://img.shields.io/badge/Kotlin-1.9.x-purple)
 ![License](https://img.shields.io/badge/License-MIT-blue)
+
 ## Table of Contents
 1. [Overview](#overview)
 2. [Features](#features)
@@ -17,18 +18,25 @@
 12. [License](#license)
 13. [Roadmap](#roadmap)
 14. [Acknowledgements](#acknowledgements)
+
+---
+
 ## Overview
-H-Shop delivers a seamless shopping experience on Android with a clean
-Compose UI, offline-first caching and lightning-fast search.  
-Built 100 % in **Kotlin + Jetpack Compose**, it follows a single-activity
-architecture and is ready for payment & analytics extensions.
+H-Shop delivers a seamless shopping experience on Android with a clean Compose UI, offline-first caching and lightning-fast search.  
+Built **100 % Kotlin + Jetpack Compose**, it follows a single-activity architecture and is ready for payment & analytics extensions.
+
+---
+
 ## Features
 - **Home** – flash deals & banners
 - **Categories** – multi-level tree with filters
 - **Product Details** – gallery, specs, reviews
 - **Cart & Checkout** – local persistence, coupons
 - **Profile** – orders, addresses, dark-mode toggle
-- **Localization** – English & Persian built-in  
+- **Localization** – English & Persian built-in
+
+---
+
 ## Architecture
 ```mermaid
 flowchart LR
@@ -37,6 +45,7 @@ flowchart LR
     Repo --> API[Retrofit]
     Repo --> DB[(Room DB)]
     API --> Backend[(REST API)]
+
 
 
 ## Installation
