@@ -37,17 +37,6 @@ Built **100 % Kotlin + Jetpack Compose**, it follows a single-activity architect
 
 ---
 
-## Architecture
-```mermaid
-flowchart LR
-    UI[Compose UI] -->|Events| VM[ViewModel]
-    VM -->|Flows| Repo[Repository]
-    Repo --> API[Retrofit]
-    Repo --> DB[(Room DB)]
-    API --> Backend[(REST API)]
-
-
-
 ## Installation
 ```bash
 # clone
