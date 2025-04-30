@@ -6,11 +6,14 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.material3.Scaffold
+import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.shop.navigation.BottomNavigationBar
 import com.example.shop.navigation.SetUpNavGraph
 import com.example.shop.ui.theme.ShopTheme
+import com.example.shop.utils.Constants.PERSIAN
+import com.example.shop.utils.LocalUtils
 
 class MainActivity : ComponentActivity() {
 
@@ -24,6 +27,7 @@ class MainActivity : ComponentActivity() {
             ShopTheme {
 
                 navController = rememberNavController()
+                LocalUtils.setLocale(LocalContext.current,PERSIAN)
                 Scaffold(bottomBar = {
                     BottomNavigationBar(navController = navController, onItemClick = {
                         navController.navigate(it.route)
