@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
+import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
 import com.example.shop.utils.Constants.DATASTORE_NAME
@@ -22,9 +23,11 @@ class DataStoreRepositoryImp @Inject constructor(
         }
     }
 
-    override suspend fun putInt(key: String, value: String) {
-        TODO("Not yet implemented")
-    }
+    override suspend fun putInt(key: String, value: Int) {
+        val preferencesKey= intPreferencesKey(key)
+        context.datastore.edit { preferences->
+            preferences[preferencesKey]=value
+        }    }
 
     override suspend fun getString(key: String): String {
         TODO("Not yet implemented")
