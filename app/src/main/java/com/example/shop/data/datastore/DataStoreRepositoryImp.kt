@@ -1,7 +1,14 @@
 package com.example.shop.data.datastore
 
 import android.content.Context
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.preferencesDataStore
+import com.example.shop.utils.Constants.DATASTORE_NAME
 import javax.inject.Inject
+
+
+private val Context.datastore :DataStore<Preferences> by preferencesDataStore(name=DATASTORE_NAME)
 
 class DataStoreRepositoryImp @Inject constructor(
     private val context: Context
