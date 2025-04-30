@@ -8,6 +8,7 @@ import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
 import com.example.shop.utils.Constants.DATASTORE_NAME
+import kotlinx.coroutines.flow.first
 import javax.inject.Inject
 
 
@@ -29,8 +30,16 @@ class DataStoreRepositoryImp @Inject constructor(
             preferences[preferencesKey]=value
         }    }
 
-    override suspend fun getString(key: String): String {
-        TODO("Not yet implemented")
+    override suspend fun getString(key: String): String? {
+        return  try {
+            val preferencesKey= stringPreferencesKey(key)
+            val  preferences=context.datastore.data.first()
+            preferences[preferencesKey]
+
+        }catch (e:Exception){
+            e.printStackTrace()
+            return null
+        }
     }
 
     override suspend fun getInt(key: String): Int {
