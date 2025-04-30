@@ -4,4 +4,6 @@ object Constants {
     const val ENGLISH="en"
     const val PERSIAN="fa"
     const val DATASTORE_NAME="SHOP_DATA_STORE"
+     var USER_LANGUAGE="USER_LANGUAGE"
+
 }
