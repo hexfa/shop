@@ -6,7 +6,10 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.material3.Scaffold
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalLayoutDirection
+import androidx.compose.ui.unit.LayoutDirection
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.shop.navigation.BottomNavigationBar
@@ -28,13 +31,18 @@ class MainActivity : ComponentActivity() {
 
                 navController = rememberNavController()
                 LocalUtils.setLocale(LocalContext.current,PERSIAN)
-                Scaffold(bottomBar = {
-                    BottomNavigationBar(navController = navController, onItemClick = {
-                        navController.navigate(it.route)
-                    })
-                }) {
-                    SetUpNavGraph(navController = navController)
+                CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
+                    Scaffold(bottomBar = {
+                        BottomNavigationBar(navController = navController, onItemClick = {
+                            navController.navigate(it.route)
+                        })
+                    }) {
+                        SetUpNavGraph(navController = navController)
+                    }
+
+
                 }
+
             }
         }
     }
