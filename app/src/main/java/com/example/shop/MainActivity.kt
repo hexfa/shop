@@ -19,7 +19,9 @@ import com.example.shop.ui.theme.ShopTheme
 import com.example.shop.utils.Constants.ENGLISH
 import com.example.shop.utils.Constants.USER_LANGUAGE
 import com.example.shop.utils.LocalUtils
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
     private lateinit var navController: NavHostController

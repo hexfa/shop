@@ -3,8 +3,10 @@ package com.example.shop.viewmodels
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.shop.data.datastore.DataStoreRepository
+import com.example.shop.utils.Constants
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 import javax.inject.Inject
 
 @HiltViewModel
@@ -18,10 +20,11 @@ class DataStoreViewModel @Inject constructor(
     fun saveUserLanguage(value:String){
         viewModelScope.launch {
             repository.putString(USER_LANGUAGE_KEY,value)
+
         }
     }
 
-    suspend  fun getUserLanguage():String=
-        repository.getString(USER_LANGUAGE_KEY)?:"fa"
-
+    fun getUserLanguage():String= runBlocking{
+        repository.getString(USER_LANGUAGE_KEY)?:Constants.PERSIAN
+    }
 }
