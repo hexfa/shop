@@ -14,8 +14,10 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.shop.navigation.BottomNavigationBar
 import com.example.shop.navigation.SetUpNavGraph
+import com.example.shop.ui.components.AppConfig
 import com.example.shop.ui.theme.ShopTheme
-import com.example.shop.utils.Constants.PERSIAN
+import com.example.shop.utils.Constants.ENGLISH
+import com.example.shop.utils.Constants.USER_LANGUAGE
 import com.example.shop.utils.LocalUtils
 
 class MainActivity : ComponentActivity() {
@@ -30,8 +32,15 @@ class MainActivity : ComponentActivity() {
             ShopTheme {
 
                 navController = rememberNavController()
-                LocalUtils.setLocale(LocalContext.current,PERSIAN)
-                CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
+                AppConfig()
+                LocalUtils.setLocale(LocalContext.current, USER_LANGUAGE)
+
+                val direction = if (USER_LANGUAGE == ENGLISH) {
+                    LayoutDirection.Ltr
+                } else {
+                    LayoutDirection.Rtl
+                }
+                CompositionLocalProvider(LocalLayoutDirection provides direction) {
                     Scaffold(bottomBar = {
                         BottomNavigationBar(navController = navController, onItemClick = {
                             navController.navigate(it.route)
