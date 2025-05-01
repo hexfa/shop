@@ -10,3 +10,7 @@ fun AppConfig(
 ){
 
 }
+
+private fun getDataStoreVariables(dataStore: DataStoreViewModel){
+
+}
