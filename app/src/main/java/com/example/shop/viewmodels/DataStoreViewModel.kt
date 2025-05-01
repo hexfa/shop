@@ -5,7 +5,6 @@ import androidx.lifecycle.viewModelScope
 import com.example.shop.data.datastore.DataStoreRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
 import javax.inject.Inject
 
 @HiltViewModel
@@ -22,7 +21,7 @@ class DataStoreViewModel @Inject constructor(
         }
     }
 
-    fun getUserLanguage():String= runBlocking{
+    suspend  fun getUserLanguage():String=
         repository.getString(USER_LANGUAGE_KEY)?:"fa"
-    }
+
 }
