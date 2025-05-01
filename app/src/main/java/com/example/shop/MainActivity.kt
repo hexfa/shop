@@ -15,6 +15,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.shop.navigation.BottomNavigationBar
 import com.example.shop.navigation.SetUpNavGraph
 import com.example.shop.ui.components.AppConfig
+import com.example.shop.ui.components.ChangeStatusBarColor
 import com.example.shop.ui.theme.ShopTheme
 import com.example.shop.utils.Constants.ENGLISH
 import com.example.shop.utils.Constants.USER_LANGUAGE
@@ -34,6 +35,8 @@ class MainActivity : ComponentActivity() {
             ShopTheme {
 
                 navController = rememberNavController()
+                ChangeStatusBarColor(navController)
+
                 AppConfig()
                 LocalUtils.setLocale(LocalContext.current, USER_LANGUAGE)
 
