@@ -17,6 +17,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import com.example.shop.MainActivity
+import com.example.shop.utils.Constants.ENGLISH
 import com.example.shop.utils.Constants.PERSIAN
 import com.example.shop.viewmodels.DataStoreViewModel
 
@@ -49,7 +50,11 @@ fun ProfileScreen(navController: NavHostController,
         }
 
         Button(onClick = {
-
+            dataStore.saveUserLanguage(ENGLISH)
+            activity.apply {
+                finish()
+                startActivity(Intent(activity,MainActivity::class.java))
+            }
         }) {
             Text("en")
         }
