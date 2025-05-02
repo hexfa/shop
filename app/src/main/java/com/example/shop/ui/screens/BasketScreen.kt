@@ -47,6 +47,14 @@ fun BasketDark(){
 
 @Composable
 @Preview
-fun BasketPreview(){
+fun BasketLightPreview(){
 
+    BasketLight()
+}
+
+@Composable
+@Preview
+fun BasketDarkPreview(){
+
+    BasketDark()
 }
