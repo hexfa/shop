@@ -14,9 +14,14 @@ import androidx.navigation.NavHostController
 
 @Composable
 fun BasketScreen(navController: NavHostController){
+
+}
+
+@Composable
+fun BasketLight(){
     Column (
         modifier = Modifier.fillMaxSize()
-            .background(Color.Cyan),
+            .background(Color.LightGray),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ){
@@ -26,13 +31,16 @@ fun BasketScreen(navController: NavHostController){
 }
 
 @Composable
-fun BasketLight(){
-
-}
-
-@Composable
 fun BasketDark(){
+    Column (
+        modifier = Modifier.fillMaxSize()
+            .background(Color.DarkGray),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
+    ){
+        Text("BasketScreen")
 
+    }
 }
 
 @Composable
