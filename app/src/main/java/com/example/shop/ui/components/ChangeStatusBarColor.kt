@@ -3,6 +3,7 @@ package com.example.shop.ui.components
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.SideEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.graphics.Color
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import com.example.shop.navigation.Screen
@@ -23,6 +24,10 @@ fun ChangeStatusBarColor(navController: NavHostController){
                     color = Purple80
                 )
             }
-        }
+        }else->
+        systemUiController.setStatusBarColor(
+            color = Color.White
+        )
+
     }
 }
