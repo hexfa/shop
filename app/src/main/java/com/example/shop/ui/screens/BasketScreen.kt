@@ -1,6 +1,7 @@
 package com.example.shop.ui.screens
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -17,6 +18,13 @@ import com.example.shop.ui.theme.selectedBottomBar
 @Composable
 fun BasketScreen(navController: NavHostController){
 
+    if (isSystemInDarkTheme()){
+
+        BasketDark()
+    }else{
+
+        BasketLight()
+    }
 }
 
 @Composable
