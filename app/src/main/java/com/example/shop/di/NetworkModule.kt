@@ -5,6 +5,8 @@ import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 @Module
@@ -16,4 +18,11 @@ object NetworkModule {
         .readTimeout(TIMEOUT_IN_SECOND,TimeUnit.SECONDS)
         .writeTimeout(TIMEOUT_IN_SECOND,TimeUnit.SECONDS)
         .build()
+
+    fun provideRetrofit(okHttpClient: OkHttpClient):Retrofit=
+        Retrofit.Builder()
+           // .baseUrl()
+            .addConverterFactory(GsonConverterFactory.create())
+            .client(okHttpClient)
+            .build()
 }
