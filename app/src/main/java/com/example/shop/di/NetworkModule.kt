@@ -1,5 +1,6 @@
 package com.example.shop.di
 
+import com.example.shop.utils.Constants.TIMEOUT_IN_SECOND
 import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
@@ -11,8 +12,8 @@ import java.util.concurrent.TimeUnit
 object NetworkModule {
 
     fun provideOkHttp():OkHttpClient=OkHttpClient.Builder()
-        .connectTimeout(60,TimeUnit.SECONDS)
-        .readTimeout(60,TimeUnit.SECONDS)
-        .writeTimeout(60,TimeUnit.SECONDS)
+        .connectTimeout(TIMEOUT_IN_SECOND,TimeUnit.SECONDS)
+        .readTimeout(TIMEOUT_IN_SECOND,TimeUnit.SECONDS)
+        .writeTimeout(TIMEOUT_IN_SECOND,TimeUnit.SECONDS)
         .build()
 }
