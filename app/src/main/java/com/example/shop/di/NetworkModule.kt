@@ -1,5 +1,6 @@
 package com.example.shop.di
 
+import com.example.shop.utils.Constants.BASE_URL
 import com.example.shop.utils.Constants.TIMEOUT_IN_SECOND
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -21,7 +22,7 @@ object NetworkModule {
 
     fun provideRetrofit(okHttpClient: OkHttpClient):Retrofit=
         Retrofit.Builder()
-           // .baseUrl()
+            .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .client(okHttpClient)
             .build()
