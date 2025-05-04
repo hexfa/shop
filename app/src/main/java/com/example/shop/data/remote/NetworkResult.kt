@@ -8,5 +8,6 @@ sealed class NetworkResult<T>(
     ){
     class Success<T>(message: String?,data: T?):NetworkResult<T>(message,data)
     class Error<T>(message: String?,data: T?=null):NetworkResult<T>(message,data)
+    class Loading<T>():NetworkResult<T>()
 
 }
