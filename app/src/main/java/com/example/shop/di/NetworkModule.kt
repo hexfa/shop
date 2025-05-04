@@ -1,5 +1,6 @@
 package com.example.shop.di
 
+import com.example.shop.data.remote.ApiInterface
 import com.example.shop.utils.Constants.BASE_URL
 import com.example.shop.utils.Constants.TIMEOUT_IN_SECOND
 import dagger.Module
@@ -26,4 +27,7 @@ object NetworkModule {
             .addConverterFactory(GsonConverterFactory.create())
             .client(okHttpClient)
             .build()
+
+    fun provideApiService(retrofit: Retrofit):ApiInterface=
+        retrofit.create(ApiInterface::class.java)
 }
