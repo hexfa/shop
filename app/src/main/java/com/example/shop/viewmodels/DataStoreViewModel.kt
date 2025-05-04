@@ -12,19 +12,20 @@ import javax.inject.Inject
 @HiltViewModel
 class DataStoreViewModel @Inject constructor(
     private val repository: DataStoreRepository
-) :ViewModel(){
+) : ViewModel() {
 
-    companion object{
-       const val USER_LANGUAGE_KEY="USER_LANGUAGE_KEY"
+    companion object {
+        const val USER_LANGUAGE_KEY = "USER_LANGUAGE_KEY"
     }
-    fun saveUserLanguage(value:String){
+
+    fun saveUserLanguage(value: String) {
         viewModelScope.launch {
-            repository.putString(USER_LANGUAGE_KEY,value)
+            repository.putString(USER_LANGUAGE_KEY, value)
 
         }
     }
 
-    fun getUserLanguage():String= runBlocking{
-        repository.getString(USER_LANGUAGE_KEY)?:Constants.PERSIAN
+    fun getUserLanguage(): String = runBlocking {
+        repository.getString(USER_LANGUAGE_KEY) ?: Constants.PERSIAN
     }
 }

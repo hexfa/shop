@@ -23,17 +23,19 @@ import com.example.shop.viewmodels.DataStoreViewModel
 
 @SuppressLint("ContextCastToActivity")
 @Composable
-fun ProfileScreen(navController: NavHostController,
-                  dataStore:DataStoreViewModel= hiltViewModel()
-){
-    Column (
-        modifier = Modifier.fillMaxSize()
+fun ProfileScreen(
+    navController: NavHostController,
+    dataStore: DataStoreViewModel = hiltViewModel()
+) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
             .background(Color.Blue),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
-    ){
+    ) {
 
-        val activity= LocalContext.current as Activity
+        val activity = LocalContext.current as Activity
 
         Text("profile")
 
@@ -42,7 +44,7 @@ fun ProfileScreen(navController: NavHostController,
             dataStore.saveUserLanguage(PERSIAN)
             activity.apply {
                 finish()
-                startActivity(Intent(activity,MainActivity::class.java))
+                startActivity(Intent(activity, MainActivity::class.java))
             }
 
         }) {
@@ -53,7 +55,7 @@ fun ProfileScreen(navController: NavHostController,
             dataStore.saveUserLanguage(ENGLISH)
             activity.apply {
                 finish()
-                startActivity(Intent(activity,MainActivity::class.java))
+                startActivity(Intent(activity, MainActivity::class.java))
             }
         }) {
             Text("en")
