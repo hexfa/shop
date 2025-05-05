@@ -5,7 +5,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import retrofit2.Response
 
-abstract class BaseApiResponse {
+open class BaseApiResponse {
     suspend fun <T> safeApiCall(apiCall:suspend()-> Response<ResponseResult<T>>):NetworkResult<T> =
 
         withContext(Dispatchers.IO){

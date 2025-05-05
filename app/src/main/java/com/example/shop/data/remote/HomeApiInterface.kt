@@ -1,6 +1,6 @@
 package com.example.shop.data.remote
 
-interface ApiInterface {
+interface HomeApiInterface {
 
     //todo apical
 }

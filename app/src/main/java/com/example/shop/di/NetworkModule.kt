@@ -1,6 +1,6 @@
 package com.example.shop.di
 
-import com.example.shop.data.remote.ApiInterface
+import com.example.shop.data.remote.HomeApiInterface
 import com.example.shop.utils.Constants.BASE_URL
 import com.example.shop.utils.Constants.TIMEOUT_IN_SECOND
 import dagger.Module
@@ -48,6 +48,6 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun provideApiService(retrofit: Retrofit):ApiInterface=
-        retrofit.create(ApiInterface::class.java)
+    fun provideApiService(retrofit: Retrofit):HomeApiInterface=
+        retrofit.create(HomeApiInterface::class.java)
 }
