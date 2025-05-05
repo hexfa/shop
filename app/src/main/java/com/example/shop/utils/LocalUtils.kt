@@ -7,10 +7,6 @@ import java.util.Locale
 object LocalUtils {
 
     fun setLocale(context: Context,language:String)= updateResource(context,language)
-
-
-
-
     private fun updateResource(context: Context,language:String){
         context.resources.apply {
             val local=Locale(language)
