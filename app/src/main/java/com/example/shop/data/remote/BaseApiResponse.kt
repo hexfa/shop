@@ -16,12 +16,12 @@ abstract class BaseApiResponse {
                 if (response.isSuccessful){
                     val body=response.body()
                     body?.let {
-                        return NetworkResult.Success(body.message,body.data)
+                        return@withContext NetworkResult.Success(body.message,body.data)
                     }
                 }
-                return error("code :${response.code()}  message:${response.message()}")
+                return@withContext error("code :${response.code()}  message:${response.message()}")
             }catch (e: Exception){
-                return error(e.message?:e.toString())
+                return@withContext error(e.message?:e.toString())
 
             }
         }
