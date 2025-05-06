@@ -19,4 +19,7 @@ abstract class BaseApiResponse {
     }catch (){
 
     }
+
+    private fun <T> error(errorMessage:String):NetworkResult<T> =
+        NetworkResult.Error(errorMessage)
 }
