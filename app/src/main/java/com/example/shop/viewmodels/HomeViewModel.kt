@@ -18,7 +18,8 @@ class HomeViewModel @Inject constructor(private val repository: HomeRepository):
     suspend fun getSlider(){
 
         viewModelScope.launch {
-            repository.getSlider()
+            slider.emit(repository.getSlider())
+
 
         }
     }
