@@ -1,8 +1,10 @@
 package com.example.shop.di
 
 import com.example.shop.data.remote.HomeApiInterface
+import com.example.shop.utils.Constants.API_KEY
 import com.example.shop.utils.Constants.BASE_URL
 import com.example.shop.utils.Constants.TIMEOUT_IN_SECOND
+import com.example.shop.utils.Constants.USER_LANGUAGE
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -35,6 +37,12 @@ object NetworkModule {
         .connectTimeout(TIMEOUT_IN_SECOND,TimeUnit.SECONDS)
         .readTimeout(TIMEOUT_IN_SECOND,TimeUnit.SECONDS)
         .writeTimeout(TIMEOUT_IN_SECOND,TimeUnit.SECONDS)
+        .addInterceptor { chain->
+            val request=chain.request().newBuilder()
+                .addHeader("x-api-key",API_KEY)
+                .addHeader("lang", USER_LANGUAGE)
+                chain.proceed(request.build())
+        }
         .addInterceptor(interceptor())
         .build()
     @Provides
