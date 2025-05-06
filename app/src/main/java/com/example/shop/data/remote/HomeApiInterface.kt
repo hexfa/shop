@@ -1,6 +1,10 @@
 package com.example.shop.data.remote
 
-interface HomeApiInterface {
+import com.example.shop.data.model.ResponseResult
+import retrofit2.Response
+import retrofit2.http.GET
 
-    //todo apical
+interface HomeApiInterface {
+    @GET("v1/getSlider")
+    suspend fun getSlider(): Response<ResponseResult<List<Slider>>>
 }
