@@ -1,4 +1,8 @@
 package com.example.shop.repository
 
-class HomeRepository {
+import com.example.shop.data.remote.HomeApiInterface
+import javax.inject.Inject
+
+
+class HomeRepository @Inject constructor(private val api:HomeApiInterface) {
 }
