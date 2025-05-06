@@ -15,7 +15,7 @@ abstract class BaseApiResponse {
                 return NetworkResult.Success(body.message,body.data)
             }
         }
-        return
+        return error("code :${response.code()}  message:${response.message()}")
     }catch (){
 
     }
