@@ -16,7 +16,8 @@ abstract class BaseApiResponse {
             }
         }
         return error("code :${response.code()}  message:${response.message()}")
-    }catch (){
+    }catch (e: Exception){
+        return error(e.message?:e.toString())
 
     }
 
