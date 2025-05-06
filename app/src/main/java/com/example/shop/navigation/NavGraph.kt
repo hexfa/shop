@@ -5,7 +5,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.example.shop.ui.screens.BasketScreen
-import com.example.shop.ui.screens.HomeScreen
+import com.example.shop.ui.screens.home.HomeScreen
 import com.example.shop.ui.screens.ProfileScreen
 import com.example.shop.ui.screens.SplashScreen
 
