@@ -8,6 +8,8 @@ plugins {
 
 }
 
+val apikeyPropertiesFile=rootProject.file("key.properties")
+
 android {
     namespace = "com.example.shop"
     compileSdk = 35
