@@ -1,3 +1,4 @@
+
 import java.io.FileInputStream
 import java.util.Properties
 
@@ -12,7 +13,7 @@ plugins {
 }
 
 val apikeyPropertiesFile=rootProject.file("key.properties")
-val apikeyProperties = Properties()
+val apikeyProperties =  Properties()
 apikeyProperties.load(FileInputStream(apikeyPropertiesFile))
 
 
@@ -26,7 +27,7 @@ android {
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
-
+       // buildConfigField("String","X_API_KEY",apikeyProperties("X_API_KEY"))
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
