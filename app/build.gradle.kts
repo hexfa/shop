@@ -1,3 +1,4 @@
+import java.io.FileInputStream
 import java.util.Properties
 
 plugins {
@@ -12,6 +13,7 @@ plugins {
 
 val apikeyPropertiesFile=rootProject.file("key.properties")
 val apikeyProperties = Properties()
+apikeyProperties.load(FileInputStream(apikeyPropertiesFile))
 
 
 android {
