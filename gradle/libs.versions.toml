@@ -18,7 +18,7 @@ hiltNavigation="1.0.0"
 navigation="2.8.9"
 lottie="6.6.6"
 coil="2.4.0"
-swiperefresh = "1.1.0"
+swiperefresh = "0.27.0"
 accompanistSystemuicontroller = "0.28.0"
 composeMaterial = "1.4.1"
 navigationRuntimeKtx = "2.8.9"
@@ -58,7 +58,7 @@ hilt-navigation-compose={module = "androidx.hilt:hilt-navigation-compose", versi
 navigation-compose={module="androidx.navigation:navigation-compose", version.ref = "navigation"}
 lottie={module="com.airbnb.android:lottie-compose", version.ref = "lottie" }
 coil-compose={module = "io.coil-kt:coil-compose", version.ref = "coil"}
-swipe-refresh = { module = "androidx.swiperefreshlayout:swiperefreshlayout", version.ref = "swiperefresh" }
+swipe-refresh = { module = "com.google.accompanist:accompanist-swiperefresh", version.ref = "swiperefresh" }
 accompanist-systemuicontroller = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "accompanistSystemuicontroller" }
 androidx-compose-material = { group = "androidx.wear.compose", name = "compose-material", version.ref = "composeMaterial" }
 androidx-navigation-runtime-ktx = { group = "androidx.navigation", name = "navigation-runtime-ktx", version.ref = "navigationRuntimeKtx" }
