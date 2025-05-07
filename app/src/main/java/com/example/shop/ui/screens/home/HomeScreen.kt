@@ -6,10 +6,10 @@ import androidx.navigation.NavHostController
 @Composable
 fun HomeScreen(navController: NavHostController){
 
-    Home()
+    Home(navController)
 }
 
 @Composable
-fun Home(){
+fun Home(navController: NavHostController){
 
 }
