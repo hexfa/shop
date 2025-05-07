@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -9,6 +11,8 @@ plugins {
 }
 
 val apikeyPropertiesFile=rootProject.file("key.properties")
+val apikeyProperties = Properties()
+
 
 android {
     namespace = "com.example.shop"
