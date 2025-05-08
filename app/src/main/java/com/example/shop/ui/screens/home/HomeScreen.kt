@@ -3,6 +3,8 @@ package com.example.shop.ui.screens.home
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
@@ -44,6 +46,7 @@ fun Home(navController: NavHostController,
             Modifier
                 .background(color = Color.White)
                 .fillMaxSize()
+                .verticalScroll(rememberScrollState())
             ){
 
             }
