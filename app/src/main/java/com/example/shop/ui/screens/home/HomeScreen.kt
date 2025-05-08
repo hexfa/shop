@@ -38,7 +38,16 @@ fun Home(navController: NavHostController,
             refreshScope.launch {
 
             }
-        } ) { }
+        } ) {
+
+            Column (modifier =
+            Modifier
+                .background(color = Color.White)
+                .fillMaxSize()
+            ){
+
+            }
+        }
 
     }
 
