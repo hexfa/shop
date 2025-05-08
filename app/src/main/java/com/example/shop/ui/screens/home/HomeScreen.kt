@@ -12,6 +12,7 @@ import androidx.navigation.NavHostController
 import com.example.shop.viewmodels.HomeViewModel
 import com.google.accompanist.swiperefresh.SwipeRefresh
 import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
+import kotlinx.coroutines.launch
 
 @Composable
 fun HomeScreen(navController: NavHostController){
@@ -34,6 +35,9 @@ fun Home(navController: NavHostController,
 
         SwipeRefresh(state = swipeRefreshState, onRefresh ={
 
+            refreshScope.launch {
+
+            }
         } ) { }
 
     }
