@@ -10,6 +10,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import com.example.shop.viewmodels.HomeViewModel
+import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
 
 @Composable
 fun HomeScreen(navController: NavHostController){
@@ -28,7 +29,7 @@ fun Home(navController: NavHostController,
     ){
 
       val refreshScope= rememberCoroutineScope()
-       // val swipeRefreshState= rememberSwipeRefreshState()
+        val swipeRefreshState= rememberSwipeRefreshState(isRefreshing = false)
 
     }
 
