@@ -54,7 +54,7 @@ fun Home(navController: NavHostController,
             ){
 
                 LaunchedEffect(true) {
-
+                    viewModel.getSlider();
                 }
             }
         }
