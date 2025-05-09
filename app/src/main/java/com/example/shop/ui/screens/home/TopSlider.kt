@@ -14,7 +14,7 @@ import com.example.shop.viewmodels.HomeViewModel
 import kotlinx.coroutines.flow.collectLatest
 
 @Composable
-fun TopSlider(viewModel: HomeViewModel= hiltViewModel()){
+fun TopSlider(viewModel: HomeViewModel= hiltViewModel()) {
 
     var list by remember {
         mutableStateOf<List<Slider>>(emptyList())
@@ -27,28 +27,27 @@ fun TopSlider(viewModel: HomeViewModel= hiltViewModel()){
     }
 
     val sliderResult by viewModel.slider.collectAsState()
-    LaunchedEffect(true) {
-        viewModel.slider.collectLatest {result->
-            when (result){
-                is NetworkResult.Success->{
-                    result.data?.let {
-                        list=it
-                    }
-                    loading=false
-                }
 
-                is NetworkResult.Error->{
-                    loading=false
-
-                }
-
-                is NetworkResult.Loading->{
-                    loading=true
-                }
-
-
+    when (sliderResult) {
+        is NetworkResult.Success -> {
+            sliderResult.data?.let {
+                list = it
             }
+            loading = false
         }
+
+        is NetworkResult.Error -> {
+            loading = false
+
+        }
+
+        is NetworkResult.Loading -> {
+            loading = true
+        }
+
+
     }
+}
+
 
 }
