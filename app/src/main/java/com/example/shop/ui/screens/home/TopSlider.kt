@@ -40,7 +40,9 @@ fun TopSlider(viewModel: HomeViewModel= hiltViewModel()){
 
                 }
 
-                is NetworkResult.Loading->{}
+                is NetworkResult.Loading->{
+                    loading=true
+                }
 
 
             }
