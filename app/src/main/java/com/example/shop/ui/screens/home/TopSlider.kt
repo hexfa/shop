@@ -7,6 +7,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.example.shop.data.model.home.Slider
 import com.example.shop.data.remote.NetworkResult
 import com.example.shop.viewmodels.HomeViewModel
 import kotlinx.coroutines.flow.collectLatest
@@ -15,6 +16,8 @@ import kotlinx.coroutines.flow.collectLatest
 fun TopSlider(viewModel: HomeViewModel= hiltViewModel()){
 
     var list by remember {
+        mutableStateOf<List<Slider>>(emptyList())
+
     }
 
 
