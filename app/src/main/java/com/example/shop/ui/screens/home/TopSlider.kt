@@ -2,8 +2,10 @@ package com.example.shop.ui.screens.home
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -56,9 +58,13 @@ fun TopSlider(viewModel: HomeViewModel= hiltViewModel()) {
         .height(200.dp)
         .background(Color.White)
     ){
-        if (loading){
+        Column (modifier = Modifier
+            .fillMaxWidth()
+            .fillMaxHeight()
+            .padding(
 
-        }else{
+            )
+        ){
 
         }
     }
