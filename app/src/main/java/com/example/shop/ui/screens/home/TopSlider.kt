@@ -1,7 +1,6 @@
 package com.example.shop.ui.screens.home
 
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -11,7 +10,6 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.shop.data.model.home.Slider
 import com.example.shop.data.remote.NetworkResult
 import com.example.shop.viewmodels.HomeViewModel
-import kotlinx.coroutines.flow.collectLatest
 
 @Composable
 fun TopSlider(viewModel: HomeViewModel= hiltViewModel()) {
@@ -30,9 +28,7 @@ fun TopSlider(viewModel: HomeViewModel= hiltViewModel()) {
 
     when (sliderResult) {
         is NetworkResult.Success -> {
-            sliderResult.data?.let {
-                list = it
-            }
+            list=sliderResult.data?: emptyList()
             loading = false
         }
 
@@ -50,4 +46,3 @@ fun TopSlider(viewModel: HomeViewModel= hiltViewModel()) {
 }
 
 
-}
