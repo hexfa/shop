@@ -14,6 +14,10 @@ import kotlinx.coroutines.flow.collectLatest
 @Composable
 fun TopSlider(viewModel: HomeViewModel= hiltViewModel()){
 
+    var list by remember {
+    }
+
+
     var loading by remember {
         mutableStateOf(false)
     }
