@@ -13,6 +13,9 @@ fun TopSlider(viewModel: HomeViewModel= hiltViewModel()){
         viewModel.slider.collectLatest {result->
             when (result){
                 is NetworkResult.Success->{}
+
+                is NetworkResult.Error->{}
+
             }
         }
     }
