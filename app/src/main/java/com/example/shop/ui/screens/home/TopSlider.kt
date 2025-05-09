@@ -2,6 +2,7 @@ package com.example.shop.ui.screens.home
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -25,6 +26,7 @@ fun TopSlider(viewModel: HomeViewModel= hiltViewModel()){
         mutableStateOf(false)
     }
 
+    val sliderResult by viewModel.slider.collectAsState()
     LaunchedEffect(true) {
         viewModel.slider.collectLatest {result->
             when (result){
