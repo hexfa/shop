@@ -32,6 +32,7 @@ fun TopSlider(viewModel: HomeViewModel= hiltViewModel()){
                     result.data?.let {
                         list=it
                     }
+                    loading=false
                 }
 
                 is NetworkResult.Error->{}
