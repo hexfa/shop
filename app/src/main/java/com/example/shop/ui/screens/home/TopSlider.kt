@@ -55,7 +55,13 @@ fun TopSlider(viewModel: HomeViewModel= hiltViewModel()) {
         .fillMaxWidth()
         .height(200.dp)
         .background(Color.White)
-    ){  }
+    ){
+        if (loading){
+
+        }else{
+
+        }
+    }
 }
 
 
