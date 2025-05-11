@@ -55,6 +55,7 @@ fun TopSlider(viewModel: HomeViewModel= hiltViewModel()) {
 
     }
 
+
     Column (modifier = Modifier
         .fillMaxWidth()
         .height(200.dp)
