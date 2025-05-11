@@ -15,7 +15,7 @@ class HomeViewModel @Inject constructor(private val repository: HomeRepository):
 
 
     val slider= MutableStateFlow<NetworkResult<List<Slider>>>(NetworkResult.Loading())
-    suspend fun getSlider(){
+     fun getSlider(){
 
         viewModelScope.launch {
             slider.emit(repository.getSlider())
