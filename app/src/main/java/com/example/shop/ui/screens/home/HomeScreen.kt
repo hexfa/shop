@@ -58,6 +58,9 @@ fun Home(navController: NavHostController,
                 .padding(bottom = 60.dp)
             ){
 
+
+
+
                 LaunchedEffect(true) {
                     viewModel.getSlider();
                 }
