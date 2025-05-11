@@ -55,15 +55,16 @@ fun BasketDark(){
 }
 
 @Composable
+@Preview(uiMode = Configuration.UI_MODE_NIGHT_YES)
+fun BasketDarkPreview(){
+
+    BasketDark()
+}
+
+@Composable
 @Preview
 fun BasketLightPreview(){
 
     BasketLight()
 }
 
-@Composable
-@Preview(uiMode = Configuration.UI_MODE_NIGHT_YES)
-fun BasketDarkPreview(){
-
-    BasketDark()
-}
