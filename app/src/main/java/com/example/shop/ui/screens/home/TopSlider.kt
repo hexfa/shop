@@ -44,6 +44,8 @@ fun TopSlider(viewModel: HomeViewModel= hiltViewModel()) {
         is NetworkResult.Error -> {
             loading = false
 
+
+
         }
 
         is NetworkResult.Loading -> {
