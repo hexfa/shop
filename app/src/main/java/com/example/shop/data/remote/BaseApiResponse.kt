@@ -6,30 +6,29 @@ import kotlinx.coroutines.withContext
 import retrofit2.Response
 
 open class BaseApiResponse {
-    suspend fun <T> safeApiCall(apiCall:suspend()-> Response<ResponseResult<T>>):NetworkResult<T> =
+    suspend fun <T> safeApiCall(apiCall: suspend () -> Response<ResponseResult<T>>): NetworkResult<T> =
 
 
+        withContext(Dispatchers.IO) {
+            try {
 
-        withContext(Dispatchers.IO){
-            try{
+                val response = apiCall()
 
-                val response=apiCall()
-
-                if (response.isSuccessful){
-                    val body=response.body()
+                if (response.isSuccessful) {
+                    val body = response.body()
                     body?.let {
-                        return@withContext NetworkResult.Success(body.message,body.data)
+                        return@withContext NetworkResult.Success(body.message, body.data)
                     }
                 }
                 return@withContext error("code :${response.code()}  message:${response.message()}")
-            }catch (e: Exception){
-                return@withContext error(e.message?:e.toString())
+            } catch (e: Exception) {
+                return@withContext error(e.message ?: e.toString())
 
             }
         }
 
 
-    private fun <T> error(errorMessage:String):NetworkResult<T> =
+    private fun <T> error(errorMessage: String): NetworkResult<T> =
         NetworkResult.Error("Api call failed: $errorMessage")
 
 
