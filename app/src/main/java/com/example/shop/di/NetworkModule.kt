@@ -23,9 +23,9 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    internal fun interceptor():HttpLoggingInterceptor{
+    internal fun interceptor(): HttpLoggingInterceptor {
 
-        val  logging=HttpLoggingInterceptor()
+        val logging = HttpLoggingInterceptor()
         logging.setLevel(HttpLoggingInterceptor.Level.BODY)
         return logging
     }
@@ -33,21 +33,22 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun provideOkHttp():OkHttpClient=OkHttpClient.Builder()
-        .connectTimeout(TIMEOUT_IN_SECOND,TimeUnit.SECONDS)
-        .readTimeout(TIMEOUT_IN_SECOND,TimeUnit.SECONDS)
-        .writeTimeout(TIMEOUT_IN_SECOND,TimeUnit.SECONDS)
-        .addInterceptor { chain->
-            val request=chain.request().newBuilder()
-                .addHeader("x-api-key",API_KEY)
+    fun provideOkHttp(): OkHttpClient = OkHttpClient.Builder()
+        .connectTimeout(TIMEOUT_IN_SECOND, TimeUnit.SECONDS)
+        .readTimeout(TIMEOUT_IN_SECOND, TimeUnit.SECONDS)
+        .writeTimeout(TIMEOUT_IN_SECOND, TimeUnit.SECONDS)
+        .addInterceptor { chain ->
+            val request = chain.request().newBuilder()
+                .addHeader("x-api-key", API_KEY)
                 .addHeader("lang", USER_LANGUAGE)
-                chain.proceed(request.build())
+            chain.proceed(request.build())
         }
         .addInterceptor(interceptor())
         .build()
+
     @Provides
     @Singleton
-    fun provideRetrofit(okHttpClient: OkHttpClient):Retrofit=
+    fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit =
         Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
@@ -56,6 +57,6 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun provideApiService(retrofit: Retrofit):HomeApiInterface=
+    fun provideApiService(retrofit: Retrofit): HomeApiInterface =
         retrofit.create(HomeApiInterface::class.java)
 }
