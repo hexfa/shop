@@ -20,45 +20,44 @@ import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
 import kotlinx.coroutines.launch
 
 @Composable
-fun HomeScreen(navController: NavHostController){
+fun HomeScreen(navController: NavHostController) {
 
     Home(navController)
 }
 
 @Composable
-fun Home(navController: NavHostController,
-         viewModel: HomeViewModel = hiltViewModel()
-){
-    Column (modifier =
-    Modifier
-        .background(color = Color.White)
-        .fillMaxSize()
-    ){
+fun Home(
+    navController: NavHostController,
+    viewModel: HomeViewModel = hiltViewModel()
+) {
+    Column(
+        modifier =
+        Modifier
+            .background(color = Color.White)
+            .fillMaxSize()
+    ) {
+
+
+        val refreshScope = rememberCoroutineScope()
+        val swipeRefreshState = rememberSwipeRefreshState(isRefreshing = false)
 
 
 
-
-      val refreshScope= rememberCoroutineScope()
-        val swipeRefreshState= rememberSwipeRefreshState(isRefreshing = false)
-
-
-
-        SwipeRefresh(state = swipeRefreshState, onRefresh ={
+        SwipeRefresh(state = swipeRefreshState, onRefresh = {
 
             refreshScope.launch {
 
             }
-        } ) {
+        }) {
 
-            Column (modifier =
-            Modifier
-                .background(color = Color.White)
-                .fillMaxSize()
-                .verticalScroll(rememberScrollState())
-                .padding(bottom = 60.dp)
-            ){
-
-
+            Column(
+                modifier =
+                Modifier
+                    .background(color = Color.White)
+                    .fillMaxSize()
+                    .verticalScroll(rememberScrollState())
+                    .padding(bottom = 60.dp)
+            ) {
 
 
                 LaunchedEffect(true) {
