@@ -21,13 +21,12 @@ import com.example.shop.data.remote.NetworkResult
 import com.example.shop.viewmodels.HomeViewModel
 
 @Composable
-fun TopSlider(viewModel: HomeViewModel= hiltViewModel()) {
+fun TopSlider(viewModel: HomeViewModel = hiltViewModel()) {
 
     var list by remember {
         mutableStateOf<List<Slider>>(emptyList())
 
     }
-
 
 
     var loading by remember {
@@ -38,10 +37,9 @@ fun TopSlider(viewModel: HomeViewModel= hiltViewModel()) {
 
     when (sliderResult) {
         is NetworkResult.Success -> {
-            list=sliderResult.data?: emptyList()
+            list = sliderResult.data ?: emptyList()
             loading = false
         }
-
 
 
         is NetworkResult.Loading -> {
@@ -52,25 +50,26 @@ fun TopSlider(viewModel: HomeViewModel= hiltViewModel()) {
             loading = false
 
 
-
         }
 
 
     }
 
 
-    Column (modifier = Modifier
-        .fillMaxWidth()
-        .height(200.dp)
-        .background(Color.White)
-    ){
-        Column (modifier = Modifier
+    Column(
+        modifier = Modifier
             .fillMaxWidth()
-            .fillMaxHeight()
-            .padding(
+            .height(200.dp)
+            .background(Color.White)
+    ) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .fillMaxHeight()
+                .padding(
 
-            )
-        ){
+                )
+        ) {
 
         }
     }
