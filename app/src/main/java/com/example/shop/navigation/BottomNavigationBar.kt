@@ -1,7 +1,6 @@
 package com.example.shop.navigation
 
 
-
 //noinspection UsingMaterialAndMaterial3Libraries
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.height
@@ -31,71 +30,78 @@ import com.example.shop.ui.theme.unSelectedBottomBar
 @Composable
 fun BottomNavigationBar(
     navController: NavController,
-    modifier: Modifier=Modifier,
-    onItemClick:(BottomNavItem)->Unit
-){
+    modifier: Modifier = Modifier,
+    onItemClick: (BottomNavItem) -> Unit
+) {
 
-    val items= listOf(
+    val items = listOf(
         BottomNavItem(
-            name =stringResource(id=R.string.basket),
+            name = stringResource(id = R.string.basket),
             route = Screen.Basket.route,
             selectedIcon = painterResource(R.drawable.cart_fill),
             deSelectedIcon = painterResource(R.drawable.cart_outline)
         ),
         BottomNavItem(
-            name = stringResource(id=R.string.home),
+            name = stringResource(id = R.string.home),
             route = Screen.Home.route,
             selectedIcon = painterResource(R.drawable.home_fill),
             deSelectedIcon = painterResource(R.drawable.home_outline)
         ),
 
         BottomNavItem(
-            name = stringResource(id=R.string.category),
+            name = stringResource(id = R.string.category),
             route = Screen.Category.route,
             selectedIcon = painterResource(R.drawable.cart_fill),
             deSelectedIcon = painterResource(R.drawable.category_outline)
         ),
         BottomNavItem(
-            name = stringResource(id=R.string.profile),
+            name = stringResource(id = R.string.profile),
             route = Screen.Profile.route,
             selectedIcon = painterResource(R.drawable.user_fill),
             deSelectedIcon = painterResource(R.drawable.user_outline)
         ),
 
 
+        )
+    val backStackEntry = navController.currentBackStackEntryAsState()
+    val showBottomBar = backStackEntry.value?.destination?.route in items.map { it.route }
 
-
-    )
-    val backStackEntry=navController.currentBackStackEntryAsState()
-    val  showBottomBar=backStackEntry.value?.destination?.route in items.map { it.route }
-
-    if(showBottomBar){
+    if (showBottomBar) {
 
         BottomNavigation(
-            modifier=Modifier,
-            backgroundColor =Color.White,
-            elevation=5.dp
-        ){
+            modifier = Modifier,
+            backgroundColor = Color.White,
+            elevation = 5.dp
+        ) {
 
-            items.forEachIndexed{index,item->
+            items.forEachIndexed { index, item ->
 
-                val selected=item.route==backStackEntry.value?.destination?.route
+                val selected = item.route == backStackEntry.value?.destination?.route
 
                 BottomNavigationItem(
-                    selected=selected,
-                    onClick={onItemClick(item)},
+                    selected = selected,
+                    onClick = { onItemClick(item) },
                     selectedContentColor = MaterialTheme.colors.selectedBottomBar,
                     unselectedContentColor = MaterialTheme.colors.unSelectedBottomBar,
                     icon = {
-                        Column (horizontalAlignment = Alignment.CenterHorizontally){
-                            if (selected){
-                                Icon(painter = item.selectedIcon  , contentDescription = item.name, modifier = Modifier.height(24.dp))
-                            }else{
-                                Icon(painter = item.deSelectedIcon  , contentDescription = item.name, modifier = Modifier.height(24.dp))
+                        Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                            if (selected) {
+                                Icon(
+                                    painter = item.selectedIcon,
+                                    contentDescription = item.name,
+                                    modifier = Modifier.height(24.dp)
+                                )
+                            } else {
+                                Icon(
+                                    painter = item.deSelectedIcon,
+                                    contentDescription = item.name,
+                                    modifier = Modifier.height(24.dp)
+                                )
 
                             }
 
-                            Text(text = item.name,
+                            Text(
+                                text = item.name,
                                 textAlign = TextAlign.Center,
                                 style = MaterialTheme.typography.h6,
                                 fontWeight = FontWeight.Bold,
