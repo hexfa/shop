@@ -8,12 +8,12 @@ import com.example.shop.viewmodels.DataStoreViewModel
 @Composable
 fun AppConfig(
     dataStore: DataStoreViewModel = hiltViewModel()
-){
+) {
 
-        getDataStoreVariables(dataStore)
+    getDataStoreVariables(dataStore)
 }
 
-private  fun getDataStoreVariables(dataStore: DataStoreViewModel){
-    Constants.USER_LANGUAGE=dataStore.getUserLanguage()
+private fun getDataStoreVariables(dataStore: DataStoreViewModel) {
+    Constants.USER_LANGUAGE = dataStore.getUserLanguage()
 }
 
