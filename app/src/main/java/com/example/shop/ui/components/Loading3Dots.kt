@@ -9,15 +9,19 @@ import com.airbnb.lottie.compose.rememberLottieComposition
 import com.example.shop.R
 
 @Composable
-fun Loading3Dots(isDark:Boolean){
-    if (isDark){
+fun Loading3Dots(isDark: Boolean) {
+    if (isDark) {
         val composition by rememberLottieComposition(spec = LottieCompositionSpec.RawRes(R.raw.loading3dotsdark))
-        LottieAnimation(composition=composition,
-            iterations = LottieConstants.IterateForever)
-    }else{
+        LottieAnimation(
+            composition = composition,
+            iterations = LottieConstants.IterateForever
+        )
+    } else {
         val composition by rememberLottieComposition(spec = LottieCompositionSpec.RawRes(R.raw.loading3dots))
-        LottieAnimation(composition=composition,
-            iterations = LottieConstants.IterateForever)
+        LottieAnimation(
+            composition = composition,
+            iterations = LottieConstants.IterateForever
+        )
     }
 
 }
