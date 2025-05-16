@@ -53,6 +53,8 @@ class MainActivity : ComponentActivity() {
                 } else {
                     LayoutDirection.Rtl
                 }
+
+
                 CompositionLocalProvider(LocalLayoutDirection provides direction) {
                     Scaffold(bottomBar = {
                         BottomNavigationBar(navController = navController, onItemClick = {
