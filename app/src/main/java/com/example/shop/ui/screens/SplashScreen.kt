@@ -24,7 +24,7 @@ import kotlinx.coroutines.delay
 
 
 @Composable
-fun SplashScreen(navController: NavHostController){
+fun SplashScreen(navController: NavHostController) {
 
     Splash()
     LaunchedEffect(true) {
@@ -34,48 +34,52 @@ fun SplashScreen(navController: NavHostController){
 }
 
 @Composable
-fun Splash(){
-    Box(modifier = Modifier.background(MaterialTheme.colors.splashBg).fillMaxSize(),
+fun Splash() {
+    Box(
+        modifier = Modifier
+            .background(MaterialTheme.colors.splashBg)
+            .fillMaxSize(),
         contentAlignment = Alignment.Center
-    ){
+    ) {
 
 
-
-        Image(painter = painterResource(R.drawable.digi_logo)
-            ,contentDescription = null, modifier = Modifier.size(250.dp))
+        Image(
+            painter = painterResource(R.drawable.digi_logo),
+            contentDescription = null,
+            modifier = Modifier.size(250.dp)
+        )
     }
 
 
 
 
-    Box(modifier = Modifier.fillMaxSize()
-        .padding(100.dp)
-        ,
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(100.dp),
         contentAlignment = Alignment.BottomCenter
 
 
-
-
-
-
-    ){
-        Image(painter = painterResource(R.drawable.digi_txt_white),
+    ) {
+        Image(
+            painter = painterResource(R.drawable.digi_txt_white),
             contentDescription = null,
             modifier = Modifier.height(30.dp),
-            )
+        )
 
     }
 
 
 
 
-    Box(modifier = Modifier.fillMaxSize()
-        .padding(20.dp)
-        ,
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(20.dp),
         contentAlignment = Alignment.BottomCenter
 
 
-    ){
+    ) {
 
         Loading3Dots(false);
 
