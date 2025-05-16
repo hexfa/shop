@@ -42,6 +42,8 @@ class MainActivity : ComponentActivity() {
 
                 ChangeStatusBarColor(navController)
                 AppConfig()
+
+
                 LocalUtils.setLocale(LocalContext.current, USER_LANGUAGE)
 
                 val direction = if (USER_LANGUAGE == ENGLISH) {
