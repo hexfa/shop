@@ -57,6 +57,8 @@ class MainActivity : ComponentActivity() {
 
                 CompositionLocalProvider(LocalLayoutDirection provides direction) {
                     Scaffold(bottomBar = {
+
+
                         BottomNavigationBar(navController = navController, onItemClick = {
                             navController.navigate(it.route)
                         })
