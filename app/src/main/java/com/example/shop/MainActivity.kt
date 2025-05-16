@@ -46,6 +46,8 @@ class MainActivity : ComponentActivity() {
 
                 LocalUtils.setLocale(LocalContext.current, USER_LANGUAGE)
 
+
+
                 val direction = if (USER_LANGUAGE == ENGLISH) {
                     LayoutDirection.Ltr
                 } else {
