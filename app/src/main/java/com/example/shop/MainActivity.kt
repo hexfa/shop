@@ -37,6 +37,9 @@ class MainActivity : ComponentActivity() {
 
 
                 navController = rememberNavController()
+
+
+
                 ChangeStatusBarColor(navController)
                 AppConfig()
                 LocalUtils.setLocale(LocalContext.current, USER_LANGUAGE)
