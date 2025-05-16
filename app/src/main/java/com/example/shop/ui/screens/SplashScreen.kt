@@ -45,6 +45,9 @@ fun Splash(){
             ,contentDescription = null, modifier = Modifier.size(250.dp))
     }
 
+
+
+
     Box(modifier = Modifier.fillMaxSize()
         .padding(100.dp)
         ,
