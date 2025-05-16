@@ -33,6 +33,9 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ShopTheme {
+
+
+
                 navController = rememberNavController()
                 ChangeStatusBarColor(navController)
                 AppConfig()
