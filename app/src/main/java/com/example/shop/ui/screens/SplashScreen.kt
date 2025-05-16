@@ -39,6 +39,8 @@ fun Splash(){
         contentAlignment = Alignment.Center
     ){
 
+
+
         Image(painter = painterResource(R.drawable.digi_logo)
             ,contentDescription = null, modifier = Modifier.size(250.dp))
     }
