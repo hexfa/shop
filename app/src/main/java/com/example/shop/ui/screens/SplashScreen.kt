@@ -1,5 +1,6 @@
 package com.example.shop.ui.screens
 
+//noinspection UsingMaterialAndMaterial3Libraries
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -7,7 +8,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-//noinspection UsingMaterialAndMaterial3Libraries
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -36,6 +36,7 @@ fun SplashScreen(navController: NavHostController) {
 @Composable
 fun Splash() {
     val fullSize = Modifier.fillMaxSize()
+    val CONTENT_PADDING = 20.dp
     Box(
         modifier = fullSize.background(MaterialTheme.colors.splashBg),
         contentAlignment = Alignment.Center
@@ -53,7 +54,7 @@ fun Splash() {
 
 
     Box(
-         modifier = fullSize.padding(100.dp),
+         modifier = fullSize.padding(CONTENT_PADDING*5),
         contentAlignment = Alignment.BottomCenter
 
 
@@ -66,13 +67,10 @@ fun Splash() {
 
     }
 
-
-
-
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .padding(20.dp),
+            .padding(CONTENT_PADDING),
         contentAlignment = Alignment.BottomCenter
 
 
