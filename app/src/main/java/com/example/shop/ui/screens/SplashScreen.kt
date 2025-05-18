@@ -81,7 +81,7 @@ fun Splash() {
 
     ) {
 
-        Loading3Dots(false);
+        Loading3Dots(false)
 
     }
 }
