@@ -25,8 +25,8 @@ import kotlinx.coroutines.delay
 
 @Composable
 fun SplashScreen(navController: NavHostController) {
-      val SPLASH_DELAY_MS = 2000L
-     val HOME_ROUTE = Screen.Home.route
+    val SPLASH_DELAY_MS = 2000L
+    val HOME_ROUTE = Screen.Home.route
     SplashContent()
     LaunchedEffect(Unit) {
         waitAndNavigate(SPLASH_DELAY_MS, navController, HOME_ROUTE)
@@ -63,7 +63,7 @@ fun SplashContent() {
 
 
     Box(
-         modifier = fullSize.padding(CONTENT_PADDING*5),
+        modifier = fullSize.padding(CONTENT_PADDING * 5),
         contentAlignment = Alignment.BottomCenter
 
 
