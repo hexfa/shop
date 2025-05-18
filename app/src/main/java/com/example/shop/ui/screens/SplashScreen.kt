@@ -4,6 +4,7 @@ package com.example.shop.ui.screens
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -63,7 +64,7 @@ fun SplashContent() {
 
 
     Box(
-        modifier = fullSize.padding(CONTENT_PADDING * 5),
+        modifier = Modifier.fillMaxHeight().padding(CONTENT_PADDING * 5),
         contentAlignment = Alignment.BottomCenter
 
 
