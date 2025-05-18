@@ -26,7 +26,7 @@ import kotlinx.coroutines.delay
 @Composable
 fun SplashScreen(navController: NavHostController) {
       val SPLASH_DELAY_MS = 2000L
-    Splash()
+    SplashContent()
     LaunchedEffect(true) {
         delay(SPLASH_DELAY_MS)
         navController.navigate(Screen.Home.route)
@@ -34,7 +34,7 @@ fun SplashScreen(navController: NavHostController) {
 }
 
 @Composable
-fun Splash() {
+fun SplashContent() {
     val fullSize = Modifier.fillMaxSize()
     val CONTENT_PADDING = 20.dp
     Box(
