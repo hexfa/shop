@@ -35,10 +35,9 @@ fun SplashScreen(navController: NavHostController) {
 
 @Composable
 fun Splash() {
+    val fullSize = Modifier.fillMaxSize()
     Box(
-        modifier = Modifier
-            .background(MaterialTheme.colors.splashBg)
-            .fillMaxSize(),
+        modifier = fullSize.background(MaterialTheme.colors.splashBg),
         contentAlignment = Alignment.Center
     ) {
 
@@ -54,9 +53,7 @@ fun Splash() {
 
 
     Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(100.dp),
+         modifier = fullSize.padding(100.dp),
         contentAlignment = Alignment.BottomCenter
 
 
