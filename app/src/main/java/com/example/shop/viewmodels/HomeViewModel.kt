@@ -11,7 +11,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class HomeViewModel @Inject constructor(private val repository: HomeRepository):ViewModel(){
+class HomeViewModel @Inject constructor(private val homeRepo: HomeRepository):ViewModel(){
 
 
     val slider= MutableStateFlow<NetworkResult<List<Slider>>>(NetworkResult.Loading())
@@ -19,7 +19,7 @@ class HomeViewModel @Inject constructor(private val repository: HomeRepository):
 
          viewModelScope.launch {
              slider.value = NetworkResult.Loading()
-             slider.emit(repository.getSlider())
+             slider.emit(homeRepo.getSlider())
          }
     }
 }
