@@ -29,9 +29,17 @@ fun SplashScreen(navController: NavHostController) {
      val HOME_ROUTE = Screen.Home.route
     SplashContent()
     LaunchedEffect(Unit) {
-        delay(SPLASH_DELAY_MS)
-        navController.navigate(HOME_ROUTE)
+        waitAndNavigate(SPLASH_DELAY_MS, navController, HOME_ROUTE)
     }
+}
+
+private suspend fun waitAndNavigate(
+    SPLASH_DELAY_MS: Long,
+    navController: NavHostController,
+    HOME_ROUTE: String
+) {
+    delay(SPLASH_DELAY_MS)
+    navController.navigate(HOME_ROUTE)
 }
 
 @Composable
