@@ -45,7 +45,7 @@ fun Splash() {
 
         Image(
             painter = painterResource(R.drawable.digi_logo),
-            contentDescription = null,
+            contentDescription = "Shop logo",
             modifier = Modifier.size(250.dp)
         )
     }
