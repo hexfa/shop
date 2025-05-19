@@ -108,6 +108,9 @@ fun BottomNavigationBar(
 
                             }
 
+
+
+
                             Text(
                                 text = navItem .name,
                                 textAlign = TextAlign.Center,
