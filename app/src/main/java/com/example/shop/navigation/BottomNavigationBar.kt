@@ -5,11 +5,8 @@ package com.example.shop.navigation
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-//noinspection UsingMaterialAndMaterial3Libraries
 import androidx.compose.material.BottomNavigation
-//noinspection UsingMaterialAndMaterial3Libraries
 import androidx.compose.material.BottomNavigationItem
-//noinspection UsingMaterialAndMaterial3Libraries
 import androidx.compose.material.Icon
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
@@ -36,9 +33,8 @@ fun BottomNavigationBar(
     modifier: Modifier = Modifier,
     onItemClick: (BottomNavItem) -> Unit
 ) {
-    val background = Color.White
 
-    val navItems = listOf(
+    val items = listOf(
         BottomNavItem(
             name = stringResource(id = R.string.basket),
             route = Screen.Basket.route,
@@ -67,64 +63,52 @@ fun BottomNavigationBar(
 
 
         )
-    val backStackEntry
-    = navController.currentBackStackEntryAsState()
-    val showBottomBar = navItems.any { it.route == backStackEntry.value?.destination?.route }
-    val currentRoute = backStackEntry.value?.destination?.route
-     val ICON_HEIGHT = 24.dp
+    val backStackEntry = navController.currentBackStackEntryAsState()
+    val showBottomBar = backStackEntry.value?.destination?.route in items.map { it.route }
 
-    val labelStyle = MaterialTheme.typography.h6.copy(fontWeight = FontWeight.Bold)
     if (showBottomBar) {
 
         BottomNavigation(
             modifier = Modifier,
-            backgroundColor = background,
+            backgroundColor = Color.White,
             elevation = 5.dp
         ) {
 
-            navItems.forEach { navItem ->
+            items.forEachIndexed { index, item ->
 
-
-                val selected = navItem .route == currentRoute
+                val selected = item.route == backStackEntry.value?.destination?.route
 
                 BottomNavigationItem(
-                    selected = navItem.route == currentRoute,
-                    onClick = { onItemClick(navItem ) },
-
-
+                    selected = selected,
+                    onClick = { onItemClick(item) },
                     selectedContentColor = MaterialTheme.colors.selectedBottomBar,
                     unselectedContentColor = MaterialTheme.colors.unSelectedBottomBar,
                     icon = {
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
                             if (selected) {
                                 Icon(
-                                    painter = navItem .selectedIcon,
-                                    contentDescription = navItem .name,
-                                    modifier = Modifier.height(ICON_HEIGHT)
+                                    painter = item.selectedIcon,
+                                    contentDescription = item.name,
+                                    modifier = Modifier.height(24.dp)
                                 )
                             } else {
                                 Icon(
-                                    painter = navItem .deSelectedIcon,
-                                    contentDescription = navItem .name,
-                                    modifier = Modifier.height(ICON_HEIGHT)
+                                    painter = item.deSelectedIcon,
+                                    contentDescription = item.name,
+                                    modifier = Modifier.height(24.dp)
                                 )
 
                             }
 
-
-
-
                             Text(
-                                text = navItem .name,
+                                text = item.name,
                                 textAlign = TextAlign.Center,
-                                style = labelStyle,
+                                style = MaterialTheme.typography.h6,
                                 fontWeight = FontWeight.Bold,
                                 modifier = Modifier.padding(top = 5.dp)
                             )
                         }
                     }
-
-
 
 
                 )
