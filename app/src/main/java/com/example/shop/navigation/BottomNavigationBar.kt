@@ -64,7 +64,7 @@ fun BottomNavigationBar(
 
         )
     val backStackEntry = navController.currentBackStackEntryAsState()
-    val showBottomBar = backStackEntry.value?.destination?.route in navItems.map { it.route }
+    val showBottomBar = navItems.any { it.route == backStackEntry.value?.destination?.route }
 
     if (showBottomBar) {
 
