@@ -68,6 +68,7 @@ fun BottomNavigationBar(
     = navController.currentBackStackEntryAsState()
     val showBottomBar = navItems.any { it.route == backStackEntry.value?.destination?.route }
     val currentRoute = backStackEntry.value?.destination?.route
+     val ICON_HEIGHT = 24.dp
     if (showBottomBar) {
 
         BottomNavigation(
@@ -92,13 +93,13 @@ fun BottomNavigationBar(
                                 Icon(
                                     painter = navItem .selectedIcon,
                                     contentDescription = navItem .name,
-                                    modifier = Modifier.height(24.dp)
+                                    modifier = Modifier.height(ICON_HEIGHT)
                                 )
                             } else {
                                 Icon(
                                     painter = navItem .deSelectedIcon,
                                     contentDescription = navItem .name,
-                                    modifier = Modifier.height(24.dp)
+                                    modifier = Modifier.height(ICON_HEIGHT)
                                 )
 
                             }
