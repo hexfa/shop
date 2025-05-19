@@ -33,7 +33,7 @@ fun BottomNavigationBar(
     modifier: Modifier = Modifier,
     onItemClick: (BottomNavItem) -> Unit
 ) {
-
+    val background = Color.White
     val navItems = listOf(
         BottomNavItem(
             name = stringResource(id = R.string.basket),
@@ -70,7 +70,7 @@ fun BottomNavigationBar(
 
         BottomNavigation(
             modifier = Modifier,
-            backgroundColor = Color.White,
+            backgroundColor = background,
             elevation = 5.dp
         ) {
 
