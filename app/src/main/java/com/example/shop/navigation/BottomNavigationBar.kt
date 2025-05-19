@@ -69,6 +69,8 @@ fun BottomNavigationBar(
     val showBottomBar = navItems.any { it.route == backStackEntry.value?.destination?.route }
     val currentRoute = backStackEntry.value?.destination?.route
      val ICON_HEIGHT = 24.dp
+
+    val labelStyle = MaterialTheme.typography.h6.copy(fontWeight = FontWeight.Bold)
     if (showBottomBar) {
 
         BottomNavigation(
@@ -107,7 +109,7 @@ fun BottomNavigationBar(
                             Text(
                                 text = navItem .name,
                                 textAlign = TextAlign.Center,
-                                style = MaterialTheme.typography.h6,
+                                style = labelStyle,
                                 fontWeight = FontWeight.Bold,
                                 modifier = Modifier.padding(top = 5.dp)
                             )
