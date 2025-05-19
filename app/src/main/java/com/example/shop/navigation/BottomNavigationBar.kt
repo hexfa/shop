@@ -34,7 +34,7 @@ fun BottomNavigationBar(
     onItemClick: (BottomNavItem) -> Unit
 ) {
 
-    val items = listOf(
+    val bottomNavItems = listOf(
         BottomNavItem(
             name = stringResource(id = R.string.basket),
             route = Screen.Basket.route,
@@ -64,7 +64,7 @@ fun BottomNavigationBar(
 
         )
     val backStackEntry = navController.currentBackStackEntryAsState()
-    val showBottomBar = backStackEntry.value?.destination?.route in items.map { it.route }
+    val showBottomBar = backStackEntry.value?.destination?.route in bottomNavItems.map { it.route }
 
     if (showBottomBar) {
 
@@ -74,7 +74,7 @@ fun BottomNavigationBar(
             elevation = 5.dp
         ) {
 
-            items.forEachIndexed { index, item ->
+            bottomNavItems.forEachIndexed { index, item ->
 
                 val selected = item.route == backStackEntry.value?.destination?.route
 
