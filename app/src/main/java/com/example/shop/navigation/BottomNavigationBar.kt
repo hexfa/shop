@@ -75,35 +75,35 @@ fun BottomNavigationBar(
             elevation = 5.dp
         ) {
 
-            navItems.forEachIndexed { index, item ->
+            navItems.forEach { navItem ->
 
 
-                val selected = item.route == backStackEntry.value?.destination?.route
+                val selected = navItem .route == backStackEntry.value?.destination?.route
 
                 BottomNavigationItem(
                     selected = selected,
-                    onClick = { onItemClick(item) },
+                    onClick = { onItemClick(navItem ) },
                     selectedContentColor = MaterialTheme.colors.selectedBottomBar,
                     unselectedContentColor = MaterialTheme.colors.unSelectedBottomBar,
                     icon = {
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
                             if (selected) {
                                 Icon(
-                                    painter = item.selectedIcon,
-                                    contentDescription = item.name,
+                                    painter = navItem .selectedIcon,
+                                    contentDescription = navItem .name,
                                     modifier = Modifier.height(24.dp)
                                 )
                             } else {
                                 Icon(
-                                    painter = item.deSelectedIcon,
-                                    contentDescription = item.name,
+                                    painter = navItem .deSelectedIcon,
+                                    contentDescription = navItem .name,
                                     modifier = Modifier.height(24.dp)
                                 )
 
                             }
 
                             Text(
-                                text = item.name,
+                                text = navItem .name,
                                 textAlign = TextAlign.Center,
                                 style = MaterialTheme.typography.h6,
                                 fontWeight = FontWeight.Bold,
