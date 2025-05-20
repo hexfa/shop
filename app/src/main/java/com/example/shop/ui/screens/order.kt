@@ -2,9 +2,11 @@ package com.example.shop.ui.screens
 
 import com.example.shop.data.model.ResponseResult
 import com.example.shop.data.model.home.Slider
+import com.example.shop.data.remote.BaseApiResponse
 import com.example.shop.data.remote.NetworkResult
 import retrofit2.Response
 import retrofit2.http.GET
+import javax.inject.Inject
 
 data class Order(
     val id: String,
@@ -23,4 +25,11 @@ interface HomeApiInterface {
 
 interface OrderRepository {
     suspend fun getOrders(): NetworkResult<List<Order>>
+}
+
+class OrderRepositoryImpl @Inject constructor(
+    private val api: HomeApiInterface
+) : OrderRepository, BaseApiResponse() {
+    override suspend fun getOrders(): NetworkResult<List<Order>> =
+        safeApiCall { api.getOrders() }
 }
