@@ -89,3 +89,11 @@ fun NavGraphBuilder.orderHistoryGraph(navController: NavHostController) {
         OrderHistoryScreen(navController)
     }*/
 }
+
+sealed class Screen(val route: String) {
+    object Home : Screen("home")
+    object Basket : Screen("basket")
+    object Category : Screen("category")
+    object Profile : Screen("profile")
+    object OrderHistory : Screen("order_history")
+}
