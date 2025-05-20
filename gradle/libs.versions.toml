@@ -26,6 +26,7 @@ navigationCompose = "2.9.0-rc01"
 material = "1.9.0-alpha01"
 media3Effect = "1.6.1"
 rendering = "1.17.1"
+recyclerview = "1.4.0"
 
 
 
@@ -66,6 +67,7 @@ androidx-navigation-compose = { group = "androidx.navigation", name = "navigatio
 material = { group = "androidx.compose.material", name = "material", version.ref = "material" }
 androidx-media3-effect = { group = "androidx.media3", name = "media3-effect", version.ref = "media3Effect" }
 rendering = { group = "com.google.ar.sceneform", name = "rendering", version.ref = "rendering" }
+androidx-recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "recyclerview" }
 
 
 [plugins]
