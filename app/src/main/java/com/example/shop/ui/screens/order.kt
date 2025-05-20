@@ -1,9 +1,14 @@
 package com.example.shop.ui.screens
 
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -126,6 +131,14 @@ fun OrderHistoryScreen(
             is UiState.Success -> OrderList((uiState as UiState.Success<List<Order>>).data)
             is UiState.Error -> ErrorView((uiState as UiState.Error).message) { viewModel.fetchOrders() }
         }*/
+    }
+
+    @Composable
+    fun LoadingIndicator() = Box(
+        contentAlignment = Alignment.Center,
+        modifier = Modifier.fillMaxSize()
+    ) {
+        CircularProgressIndicator()
     }
 }
 
