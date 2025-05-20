@@ -1,13 +1,21 @@
 package com.example.shop.ui.screens
 
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import com.example.shop.data.model.ResponseResult
 import com.example.shop.data.model.home.Slider
 import com.example.shop.data.remote.BaseApiResponse
 import com.example.shop.data.remote.NetworkResult
+import com.google.accompanist.swiperefresh.SwipeRefresh
+import com.google.accompanist.swiperefresh.SwipeRefreshState
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -97,3 +105,28 @@ sealed class Screen(val route: String) {
     object Profile : Screen("profile")
     object OrderHistory : Screen("order_history")
 }
+
+
+@Composable
+fun OrderHistoryScreen(
+    navController: NavController,
+    viewModel: OrderHistoryViewModel = hiltViewModel()
+) {
+    val uiState by viewModel.uiState.collectAsState()
+    val isRefreshing = uiState is UiState.Loading
+
+    LaunchedEffect(Unit) { viewModel.fetchOrders() }
+
+    SwipeRefresh(
+        state = SwipeRefreshState(isRefreshing),
+        onRefresh = { viewModel.fetchOrders() }
+    ) {
+      /*  when (uiState) {
+            is UiState.Loading -> LoadingIndicator()
+            is UiState.Success -> OrderList((uiState as UiState.Success<List<Order>>).data)
+            is UiState.Error -> ErrorView((uiState as UiState.Error).message) { viewModel.fetchOrders() }
+        }*/
+    }
+}
+
+
