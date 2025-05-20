@@ -140,58 +140,62 @@ fun OrderHistoryScreen(
         state = SwipeRefreshState(isRefreshing),
         onRefresh = { viewModel.fetchOrders() }
     ) {
-      /*  when (uiState) {
+        when (uiState) {
             is UiState.Loading -> LoadingIndicator()
             is UiState.Success -> OrderList((uiState as UiState.Success<List<Order>>).data)
             is UiState.Error -> ErrorView((uiState as UiState.Error).message) { viewModel.fetchOrders() }
-        }*/
-    }
-
-    @Composable
-    fun LoadingIndicator() = Box(
-        contentAlignment = Alignment.Center,
-        modifier = Modifier.fillMaxSize()
-    ) {
-        CircularProgressIndicator()
+        }
     }
 
 
-    @Composable
-    fun ErrorView(message: String, onRetry: () -> Unit) = Column(
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center,
-        modifier = Modifier.fillMaxSize().padding(16.dp)
-    ) {
-        Text(text = message, color = MaterialTheme.colors.error)
-        Spacer(modifier = Modifier.height(8.dp))
-        Button(onClick = onRetry) { Text("Retry") }
-    }
+}
 
-    @Composable
-    fun OrderList(orders: List<Order>) = LazyColumn(
-        modifier = Modifier.fillMaxSize().padding(16.dp)
-    ) {
-        items(orders) { order ->
-            Card(
-                modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp),
-                elevation = 2.dp
+@Composable
+fun LoadingIndicator() = Box(
+    contentAlignment = Alignment.Center,
+    modifier = Modifier.fillMaxSize()
+) {
+    CircularProgressIndicator()
+}
+
+
+@Composable
+fun ErrorView(message: String, onRetry: () -> Unit) = Column(
+    horizontalAlignment = Alignment.CenterHorizontally,
+    verticalArrangement = Arrangement.Center,
+    modifier = Modifier.fillMaxSize().padding(16.dp)
+) {
+    Text(text = message, color = MaterialTheme.colors.error)
+    Spacer(modifier = Modifier.height(8.dp))
+    Button(onClick = onRetry) { Text("Retry") }
+}
+
+@Composable
+fun OrderList(orders: List<Order>) = LazyColumn(
+    modifier = Modifier.fillMaxSize().padding(16.dp)
+) {
+    items(orders) { order ->
+        Card(
+            modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp),
+            elevation = 2.dp
+        ) {
+            Row(
+                modifier = Modifier.padding(16.dp),
+                horizontalArrangement = Arrangement.SpaceBetween
             ) {
-                Row(
-                    modifier = Modifier.padding(16.dp),
-                    horizontalArrangement = Arrangement.SpaceBetween
-                ) {
-                    Column {
-                        Text(text = "Order #${order.id}")
-                        Text(text = order.date)
-                    }
-                    Column(horizontalAlignment = Alignment.End) {
-                        Text(text = "\$${order.total}")
-                        Text(text = order.status)
-                    }
+                Column {
+                    Text(text = "Order #${order.id}")
+                    Text(text = order.date)
+                }
+                Column(horizontalAlignment = Alignment.End) {
+                    Text(text = "\$${order.total}")
+                    Text(text = order.status)
                 }
             }
         }
     }
 }
+
+
 
 
