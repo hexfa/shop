@@ -2,6 +2,8 @@ package com.example.shop.ui.screens
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import androidx.navigation.NavGraphBuilder
+import androidx.navigation.NavHostController
 import com.example.shop.data.model.ResponseResult
 import com.example.shop.data.model.home.Slider
 import com.example.shop.data.remote.BaseApiResponse
@@ -79,4 +81,11 @@ class OrderHistoryViewModel @Inject constructor(
             }
         }
     }
+}
+
+
+fun NavGraphBuilder.orderHistoryGraph(navController: NavHostController) {
+    /*composable(Screen.OrderHistory.route) {
+        OrderHistoryScreen(navController)
+    }*/
 }
