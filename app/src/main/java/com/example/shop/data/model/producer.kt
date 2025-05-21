@@ -6,20 +6,17 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material.AlertDialog
 import androidx.compose.material.Button
 import androidx.compose.material.CircularProgressIndicator
-import androidx.compose.material.DismissDirection
-import androidx.compose.material.DismissValue
 import androidx.compose.material.Divider
-import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.FloatingActionButton
 import androidx.compose.material.Icon
 import androidx.compose.material.Scaffold
-import androidx.compose.material.SwipeToDismiss
 import androidx.compose.material.Text
+import androidx.compose.material.TextButton
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.rememberDismissState
 import androidx.compose.material.rememberScaffoldState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -193,49 +190,25 @@ fun AppNavHost(viewModel: ProductViewModel = hiltViewModel()) {
 
 
 }
-
-@OptIn(ExperimentalMaterialApi::class)
 @Composable
-fun ProductListScreen(viewModel: ProductViewModel, onAddClick: () -> Unit) {
-    val products by viewModel.products.collectAsState()
-    val scaffoldState = rememberScaffoldState()
-
-    Scaffold(
-        scaffoldState = scaffoldState,
-        floatingActionButton = {
-            FloatingActionButton(onClick = onAddClick) {
-                Icon(Icons.Default.Add, contentDescription = "Add Product")
-            }
+fun ConfirmDeleteDialog(
+    product: Product,
+    onConfirm: () -> Unit,
+    onDismiss: () -> Unit
+) {
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text("Delete Product") },
+        text = { Text("Are you sure you want to delete ${product.name}?") },
+        confirmButton = {
+            TextButton(onClick = onConfirm) { Text("Delete") }
+        },
+        dismissButton = {
+            TextButton(onClick = onDismiss) { Text("Cancel") }
         }
-    ) { padding ->
-        LazyColumn(contentPadding = padding) {
-            items(products, key = { it.id }) { product ->
-                val dismissState = rememberDismissState(
-                    confirmStateChange = {
-                        if (it == DismissValue.DismissedToStart) {
-                           // viewModel.deleteProduct(product)
-                        }
-                        true
-                    }
-                )
-                SwipeToDismiss(
-                    state = dismissState,
-                    directions = setOf(DismissDirection.EndToStart),
-                    background = { /* پس‌زمینه حذف */ },
-                    dismissContent = {
-                        Text(
-                            "${product.name} - $${String.format("%.2f", product.price)}",
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .padding(16.dp)
-                        )
-                    }
-                )
-                Divider()
-            }
-        }
-    }
+    )
 }
+
 
 
 
