@@ -28,4 +28,15 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun productDao(): ProductDao
 }
 
+interface ProductRepository {
+    suspend fun addProduct(product: Product)
+    fun getProducts(): Flow<List<Product>>
+}
+
+class ProductRepositoryImpl(private val dao: ProductDao) : ProductRepository {
+    override suspend fun addProduct(product: Product) = dao.insertProduct(product)
+    override fun getProducts() = dao.getAllProducts()
+}
+
+
 
