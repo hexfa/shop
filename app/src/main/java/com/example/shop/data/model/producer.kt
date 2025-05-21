@@ -1,3 +1,18 @@
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.material.Divider
+import androidx.compose.material.FloatingActionButton
+import androidx.compose.material.Icon
+import androidx.compose.material.Scaffold
+import androidx.compose.material.Text
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.room.Dao
@@ -74,6 +89,29 @@ object AppModule {
     @Provides
     fun provideAddProductUseCase(repo: ProductRepository): AddProductUseCase = AddProductUseCase(repo)
 }
+
+
+@Composable
+fun ProductListScreen(viewModel: ProductViewModel, onAddClick: () -> Unit) {
+    val products by viewModel.products.collectAsState()
+
+    Scaffold(
+        floatingActionButton = {
+            FloatingActionButton(onClick = onAddClick) {
+                Icon(Icons.Default.Add, contentDescription = "Add Product")
+            }
+        }
+    ) { padding ->
+        LazyColumn(contentPadding = padding) {
+            items(products) { product ->
+                Text("${"product"} - $${String.format("%.2f", "product.price")}",
+                    modifier = Modifier.padding(16.dp))
+                Divider()
+            }
+        }
+    }
+}
+
 
 
 
