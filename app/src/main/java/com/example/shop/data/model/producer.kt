@@ -26,8 +26,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import androidx.room.Dao
 import androidx.room.Database
 import androidx.room.Entity
@@ -164,6 +168,26 @@ fun AddProductScreen(
         }
     }
 }
+
+
+@Composable
+fun AppNavHost(viewModel: ProductViewModel = hiltViewModel()) {
+    val navController = rememberNavController()
+
+    NavHost(navController, startDestination = "productList") {
+        composable("productList") {
+            ProductListScreen(viewModel) {
+                navController.navigate("addProduct")
+            }
+        }
+        composable("addProduct") {
+            AddProductScreen(viewModel) {
+                navController.popBackStack()
+            }
+        }
+    }
+}
+
 
 
 
