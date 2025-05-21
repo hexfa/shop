@@ -7,6 +7,10 @@ import androidx.room.Insert
 import androidx.room.PrimaryKey
 import androidx.room.Query
 import androidx.room.RoomDatabase
+import dagger.Module
+import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -54,10 +58,23 @@ class ProductViewModel(private val addProductUseCase: AddProductUseCase) : ViewM
     fun addProduct(product: Product) {
         viewModelScope.launch {
             addProductUseCase(product)
-            // بعداً می‌توانید لیست محصولات را بروزرسانی کنید
         }
     }
 }
+
+@Module
+@InstallIn(SingletonComponent::class)
+object AppModule {
+    @Provides
+    fun provideProductDao(db: AppDatabase): ProductDao = db.productDao()
+
+    @Provides
+    fun provideProductRepository(dao: ProductDao): ProductRepository = ProductRepositoryImpl(dao)
+
+    @Provides
+    fun provideAddProductUseCase(repo: ProductRepository): AddProductUseCase = AddProductUseCase(repo)
+}
+
 
 
 
