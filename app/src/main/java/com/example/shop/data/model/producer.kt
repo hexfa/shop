@@ -38,5 +38,10 @@ class ProductRepositoryImpl(private val dao: ProductDao) : ProductRepository {
     override fun getProducts() = dao.getAllProducts()
 }
 
+class AddProductUseCase(private val repository: ProductRepository) {
+    suspend operator fun invoke(product: Product) = repository.addProduct(product)
+}
+
+
 
 
