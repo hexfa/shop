@@ -1,3 +1,5 @@
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import androidx.room.Dao
 import androidx.room.Database
 import androidx.room.Entity
@@ -6,6 +8,9 @@ import androidx.room.PrimaryKey
 import androidx.room.Query
 import androidx.room.RoomDatabase
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.launch
 
 @Entity(tableName = "products")
 data class Product(
@@ -41,6 +46,19 @@ class ProductRepositoryImpl(private val dao: ProductDao) : ProductRepository {
 class AddProductUseCase(private val repository: ProductRepository) {
     suspend operator fun invoke(product: Product) = repository.addProduct(product)
 }
+
+class ProductViewModel(private val addProductUseCase: AddProductUseCase) : ViewModel() {
+    private val _products = MutableStateFlow<List<Product>>(emptyList())
+    val products: StateFlow<List<Product>> = _products
+
+    fun addProduct(product: Product) {
+        viewModelScope.launch {
+            addProductUseCase(product)
+            // بعداً می‌توانید لیست محصولات را بروزرسانی کنید
+        }
+    }
+}
+
 
 
 
