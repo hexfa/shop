@@ -183,3 +183,23 @@ class CartViewModelFactory(
     }
 }
 
+class InMemoryCartRepository : CartRepository {
+
+    private val _items = MutableStateFlow<List<CartItem>>(emptyList())
+    override fun getCartItems(): Flow<List<CartItem>> = _items.asStateFlow()
+
+    init {
+        _items.value = listOf(
+            CartItem(id = "1", name = "Sample Product", price = 19.99, quantity = 2)
+        )
+    }
+
+    override suspend fun removeItem(itemId: String) {
+        _items.value = _items.value.filterNot { it.id == itemId }
+    }
+
+    override suspend fun clearCart() {
+        _items.value = emptyList()
+    }
+}
+
