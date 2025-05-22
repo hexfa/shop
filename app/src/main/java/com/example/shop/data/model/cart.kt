@@ -165,11 +165,7 @@ fun NavGraph(navController: NavHostController) {
         startDestination = "home"
     ) {
         composable("home") { /* ... */ }
-        composable("cart") {
-            CartScreen(
-                viewModel = viewModel(),
-                onCheckout = { /* navigate to checkout */ }
-            )
+
         }
         // other routes...
     }
@@ -230,6 +226,7 @@ class InMemoryCartRepository : CartRepository {
             }
         }
     }
+
 }
 
 @Module
