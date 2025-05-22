@@ -206,6 +206,30 @@ class InMemoryCartRepository : CartRepository {
     override suspend fun clearCart() {
         _items.value = emptyList()
     }
+
+    @Composable
+    fun CartItemRow(
+        item: CartItem,
+        onRemove: (String) -> Unit) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(8.dp),
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {
+            Column {
+                Text(item.name, style = MaterialTheme.typography.h2)
+                Text("Qty: ${item.quantity}", style = MaterialTheme.typography.h2)
+            }
+            Row {
+                Text("$${"%.2f".format(item.price * item.quantity)}",
+                    modifier = Modifier.alignByBaseline())
+                IconButton(onClick = { onRemove(item.id) }) {
+                    Icon(Icons.Default.Delete, contentDescription = "Remove")
+                }
+            }
+        }
+    }
 }
 
 @Module
@@ -220,3 +244,5 @@ abstract class CartModule {
 
 
     }
+
+
