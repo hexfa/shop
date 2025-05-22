@@ -156,6 +156,8 @@ private fun CartItemRow(item: CartItem, onRemove: (String) -> Unit) {
             }
         }
     }
+
+
 }
 
 @Composable
@@ -165,7 +167,7 @@ fun NavGraph(navController: NavHostController) {
         startDestination = "home"
     ) {
         composable("home") { /* ... */ }
-
+        composable("cart") {
         }
         // other routes...
     }
