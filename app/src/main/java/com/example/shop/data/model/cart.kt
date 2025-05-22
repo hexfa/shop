@@ -22,6 +22,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
@@ -227,6 +228,66 @@ class InMemoryCartRepository : CartRepository {
                 }
             }
         }
+    }
+
+    @Composable
+    fun CartScreen(
+        onCheckout: () -> Unit,
+        viewModel: CartViewModel = hiltViewModel()
+    ) {
+        val uiState = viewModel.uiState.collectAsState().value
+
+        Scaffold(
+            topBar = {
+                TopAppBar(
+                    title = { Text("Your Cart") },
+                    actions = {
+                        IconButton(onClick = { viewModel.clearCart() }) {
+                            Icon(Icons.Default.Delete, contentDescription = "Clear Cart")
+                        }
+                    }
+                )
+            },
+            content = { padding ->
+                Column(
+                    modifier = Modifier
+                        .padding(padding)
+                        .fillMaxSize()
+                ) {
+                    if (uiState.items.isEmpty()) {
+                        Text(
+                            "Your cart is empty",
+                            modifier = Modifier.padding(16.dp)
+                        )
+                    }
+                    /*else {
+                        LazyColumn(modifier = Modifier.weight(1f)) {
+                            items(uiState.items) { item ->
+                                CartItemRow(item = item, onRemove = { viewModel.removeItem(it) })
+                            }
+                        }
+                        Divider()
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(16.dp),
+                            horizontalArrangement = Arrangement.SpaceBetween
+                        ) {
+                            Text("Total:")
+                            Text("$${"%.2f".format(uiState.totalPrice)}")
+                        }
+                        Button(
+                            onClick = onCheckout,
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(16.dp)
+                        ) {
+                            Text("Checkout")
+                        }
+                    }*/
+                }
+            }
+        )
     }
 
 }
