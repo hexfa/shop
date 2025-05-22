@@ -10,9 +10,14 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.Button
 import androidx.compose.material.Divider
+import androidx.compose.material.Icon
+import androidx.compose.material.IconButton
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.material.TopAppBar
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Delete
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
@@ -95,7 +100,7 @@ fun CartScreen(
                 } else {
                     LazyColumn(modifier = Modifier.weight(1f)) {
                         items(uiState.items) { item ->
-                           // CartItemRow(item = item, onRemove = { viewModel.removeItem(it) })
+                            CartItemRow(item = item, onRemove = { viewModel.removeItem(it) })
                         }
                     }
                     Divider()
@@ -120,5 +125,27 @@ fun CartScreen(
             }
         }
     )
+}
+
+@Composable
+private fun CartItemRow(item: CartItem, onRemove: (String) -> Unit) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(8.dp),
+        horizontalArrangement = Arrangement.SpaceBetween
+    ) {
+        Column {
+            Text(item.name, style = MaterialTheme.typography.h1)
+            Text("Qty: ${item.quantity}", style = MaterialTheme.typography.h2)
+        }
+        Row {
+            Text("$${"%.2f".format(item.price * item.quantity)}",
+                modifier = Modifier.alignByBaseline())
+            IconButton(onClick = { onRemove(item.id) }) {
+                Icon(Icons.Default.Delete, contentDescription = "Remove")
+            }
+        }
+    }
 }
 
