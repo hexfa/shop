@@ -260,7 +260,7 @@ class InMemoryCartRepository : CartRepository {
                             modifier = Modifier.padding(16.dp)
                         )
                     }
-                    /*else {
+                    else {
                         LazyColumn(modifier = Modifier.weight(1f)) {
                             items(uiState.items) { item ->
                                 CartItemRow(item = item, onRemove = { viewModel.removeItem(it) })
@@ -284,7 +284,7 @@ class InMemoryCartRepository : CartRepository {
                         ) {
                             Text("Checkout")
                         }
-                    }*/
+                    }
                 }
             }
         )
