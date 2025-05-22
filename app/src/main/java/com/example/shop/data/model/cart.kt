@@ -25,6 +25,9 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -146,6 +149,23 @@ private fun CartItemRow(item: CartItem, onRemove: (String) -> Unit) {
                 Icon(Icons.Default.Delete, contentDescription = "Remove")
             }
         }
+    }
+}
+
+@Composable
+fun NavGraph(navController: NavHostController) {
+    NavHost(
+        navController = navController,
+        startDestination = "home"
+    ) {
+        composable("home") { /* ... */ }
+        composable("cart") {
+            CartScreen(
+                viewModel = viewModel(),
+                onCheckout = { /* navigate to checkout */ }
+            )
+        }
+        // other routes...
     }
 }
 
