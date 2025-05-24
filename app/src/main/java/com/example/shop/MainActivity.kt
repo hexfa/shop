@@ -23,6 +23,7 @@ import com.example.shop.utils.Constants.USER_LANGUAGE
 import com.example.shop.utils.LocalUtils
 import dagger.hilt.android.AndroidEntryPoint
 
+
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
@@ -69,7 +70,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             ShopTheme {
 
-                ChangeStatusBarColor(navController = rememberNavController())
+                ConfigureApp(navController = rememberNavController())
 
                 CompositionLocalProvider(LocalLayoutDirection provides getLayoutDirection()) {
                     MainContent()
@@ -79,6 +80,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+
 
 
 @Composable
