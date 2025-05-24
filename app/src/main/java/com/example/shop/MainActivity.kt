@@ -6,9 +6,12 @@ import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.SideEffect
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.unit.LayoutDirection
@@ -21,8 +24,8 @@ import com.example.shop.ui.theme.ShopTheme
 import com.example.shop.utils.Constants.ENGLISH
 import com.example.shop.utils.Constants.USER_LANGUAGE
 import com.example.shop.utils.LocalUtils
+import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import dagger.hilt.android.AndroidEntryPoint
-
 
 
 @AndroidEntryPoint
@@ -91,4 +94,19 @@ fun ConfigureApp(navController: NavHostController? = null) {
     }
     // Add more app-wide configurations here
 }
+
+
+@Composable
+fun ChangeStatusBarColor(navController: NavHostController) {
+    val systemUiController = rememberSystemUiController()
+    val useDarkIcons = MaterialTheme.colors.isLight
+
+    SideEffect {
+        systemUiController.setStatusBarColor(
+            color = Color.White,
+            darkIcons = useDarkIcons
+        )
+    }
+}
+
 
