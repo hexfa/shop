@@ -12,7 +12,6 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.unit.LayoutDirection
-import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.shop.navigation.BottomNavigationBar
 import com.example.shop.navigation.SetUpNavGraph
@@ -26,8 +25,6 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
-
-    private lateinit var navController: NavHostController
 
     @Composable
     private fun setupLocale() {
@@ -47,7 +44,7 @@ class MainActivity : ComponentActivity() {
     }
 
     @Composable
-    fun MainBottomBar(navController: NavHostController) {
+    fun MainBottomBar(navController: androidx.navigation.NavHostController) {
         BottomNavigationBar(navController = navController, onItemClick = {
             navController.navigate(it.route)
         })
@@ -55,7 +52,8 @@ class MainActivity : ComponentActivity() {
 
     @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
     @Composable
-    fun MainContent(navController: NavHostController) {
+    fun MainContent() {
+        val navController = rememberNavController()
         Scaffold(bottomBar = {
             MainBottomBar(navController)
         }) {
@@ -71,13 +69,11 @@ class MainActivity : ComponentActivity() {
         setContent {
             ShopTheme {
 
-                navController = rememberNavController()
-
-                ChangeStatusBarColor(navController)
+                ChangeStatusBarColor(navController = rememberNavController())
                 AppConfig()
 
                 CompositionLocalProvider(LocalLayoutDirection provides getLayoutDirection()) {
-                    MainContent(navController)
+                    MainContent()
                 }
 
             }
