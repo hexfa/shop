@@ -2,6 +2,7 @@ package com.example.shop
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -41,6 +42,10 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+    private fun logAppConfig() {
+        Log.d("MainActivity", "User language: $USER_LANGUAGE, LayoutDirection: ${getLayoutDirection()}")
+    }
+
     @Composable
     fun MainBottomBar(navController: NavHostController) {
         BottomNavigationBar(navController = navController, onItemClick = {
@@ -62,6 +67,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        logAppConfig()
         setContent {
             ShopTheme {
 
@@ -69,8 +75,6 @@ class MainActivity : ComponentActivity() {
 
                 ChangeStatusBarColor(navController)
                 AppConfig()
-
-                setupLocale()
 
                 CompositionLocalProvider(LocalLayoutDirection provides getLayoutDirection()) {
                     MainContent(navController)
