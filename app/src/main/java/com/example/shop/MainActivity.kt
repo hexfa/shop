@@ -15,7 +15,6 @@ import androidx.compose.ui.unit.LayoutDirection
 import androidx.navigation.compose.rememberNavController
 import com.example.shop.navigation.BottomNavigationBar
 import com.example.shop.navigation.SetUpNavGraph
-import com.example.shop.ui.components.AppConfig
 import com.example.shop.ui.components.ChangeStatusBarColor
 import com.example.shop.ui.theme.ShopTheme
 import com.example.shop.utils.Constants.ENGLISH
@@ -70,7 +69,6 @@ class MainActivity : ComponentActivity() {
             ShopTheme {
 
                 ChangeStatusBarColor(navController = rememberNavController())
-                AppConfig()
 
                 CompositionLocalProvider(LocalLayoutDirection provides getLayoutDirection()) {
                     MainContent()
