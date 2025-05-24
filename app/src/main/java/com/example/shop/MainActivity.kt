@@ -24,6 +24,7 @@ import com.example.shop.utils.LocalUtils
 import dagger.hilt.android.AndroidEntryPoint
 
 
+
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
