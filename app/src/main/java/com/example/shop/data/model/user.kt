@@ -11,10 +11,18 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material.BottomAppBar
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Switch
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material3.Button
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.SegmentedButtonDefaults.Icon
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -26,6 +34,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
@@ -217,3 +226,31 @@ fun SetUpNavGraph(navController: NavHostController) {
         }
     }
 }
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun BottomNavigationBar(navController: NavHostController, onItemClick: (NavItem) -> Unit) {
+    val items = listOf(
+        // آیتم‌های قبلی
+        NavItem("home", "Home", Icons.Default.Home),
+        NavItem("cart", "Cart", Icons.Default.ShoppingCart),
+        NavItem("settings", "Settings", Icons.Default.Settings)
+    )
+
+    BottomAppBar {
+        items.forEach { item ->
+            NavigationBarItem(
+                icon = { Icon(item.icon) },
+                label = { Text(item.title) },
+                selected = false, // برای مثال ساده، می‌توانید وضعیت انتخاب را مدیریت کنید
+                onClick = { onItemClick(item) }
+            )
+        }
+    }
+}
+
+data class NavItem(
+    val route: String,
+    val title: String,
+    val icon: ImageVector
+)
