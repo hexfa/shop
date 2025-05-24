@@ -49,6 +49,16 @@ class MainActivity : ComponentActivity() {
     }
 
     @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
+    @Composable
+    fun MainContent(navController: NavHostController) {
+        Scaffold(bottomBar = {
+            MainBottomBar(navController)
+        }) {
+            SetUpNavGraph(navController = navController)
+        }
+    }
+
+    @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -63,11 +73,7 @@ class MainActivity : ComponentActivity() {
                 setupLocale()
 
                 CompositionLocalProvider(LocalLayoutDirection provides getLayoutDirection()) {
-                    Scaffold(bottomBar = {
-                        MainBottomBar(navController)
-                    }) {
-                        SetUpNavGraph(navController = navController)
-                    }
+                    MainContent(navController)
                 }
 
             }
