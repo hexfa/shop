@@ -182,3 +182,17 @@ fun SettingsScreen(
         }
     }
 }
+
+class SettingsViewModel : ViewModel() {
+
+    private val _isDarkMode = MutableStateFlow(false)
+    val isDarkMode: StateFlow<Boolean> = _isDarkMode
+
+    fun toggleDarkMode() {
+        _isDarkMode.value = !_isDarkMode.value
+    }
+
+    fun logout() {
+        // TODO: Implement logout logic here
+    }
+}
