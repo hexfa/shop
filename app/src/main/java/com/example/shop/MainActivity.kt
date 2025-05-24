@@ -6,6 +6,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.material3.Scaffold
+import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLayoutDirection
@@ -27,6 +28,11 @@ class MainActivity : ComponentActivity() {
 
     private lateinit var navController: NavHostController
 
+    @Composable
+    private fun SetupLocale() {
+        LocalUtils.setLocale(LocalContext.current, USER_LANGUAGE)
+    }
+
     @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,7 +45,7 @@ class MainActivity : ComponentActivity() {
                 ChangeStatusBarColor(navController)
                 AppConfig()
 
-                LocalUtils.setLocale(LocalContext.current, USER_LANGUAGE)
+                SetupLocale()
 
                 val direction = if (USER_LANGUAGE == ENGLISH) {
                     LayoutDirection.Ltr
