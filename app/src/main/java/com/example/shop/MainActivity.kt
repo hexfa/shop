@@ -29,8 +29,16 @@ class MainActivity : ComponentActivity() {
     private lateinit var navController: NavHostController
 
     @Composable
-    private fun SetupLocale() {
+    private fun setupLocale() {
         LocalUtils.setLocale(LocalContext.current, USER_LANGUAGE)
+    }
+
+    private fun getLayoutDirection(): LayoutDirection {
+        return if (USER_LANGUAGE == ENGLISH) {
+            LayoutDirection.Ltr
+        } else {
+            LayoutDirection.Rtl
+        }
     }
 
     @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -45,15 +53,9 @@ class MainActivity : ComponentActivity() {
                 ChangeStatusBarColor(navController)
                 AppConfig()
 
-                SetupLocale()
+                setupLocale()
 
-                val direction = if (USER_LANGUAGE == ENGLISH) {
-                    LayoutDirection.Ltr
-                } else {
-                    LayoutDirection.Rtl
-                }
-
-                CompositionLocalProvider(LocalLayoutDirection provides direction) {
+                CompositionLocalProvider(LocalLayoutDirection provides getLayoutDirection()) {
                     Scaffold(bottomBar = {
 
                         BottomNavigationBar(navController = navController, onItemClick = {
