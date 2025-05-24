@@ -12,6 +12,7 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.unit.LayoutDirection
+import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.shop.navigation.BottomNavigationBar
 import com.example.shop.navigation.SetUpNavGraph
@@ -78,3 +79,13 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+
+
+@Composable
+fun ConfigureApp(navController: NavHostController? = null) {
+    navController?.let {
+        ChangeStatusBarColor(it)
+    }
+    // Add more app-wide configurations here
+}
+
