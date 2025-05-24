@@ -41,6 +41,13 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+    @Composable
+    fun MainBottomBar(navController: NavHostController) {
+        BottomNavigationBar(navController = navController, onItemClick = {
+            navController.navigate(it.route)
+        })
+    }
+
     @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -57,14 +64,10 @@ class MainActivity : ComponentActivity() {
 
                 CompositionLocalProvider(LocalLayoutDirection provides getLayoutDirection()) {
                     Scaffold(bottomBar = {
-
-                        BottomNavigationBar(navController = navController, onItemClick = {
-                            navController.navigate(it.route)
-                        })
+                        MainBottomBar(navController)
                     }) {
                         SetUpNavGraph(navController = navController)
                     }
-
                 }
 
             }
