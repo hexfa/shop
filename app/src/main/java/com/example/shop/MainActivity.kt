@@ -34,17 +34,12 @@ class MainActivity : ComponentActivity() {
         setContent {
             ShopTheme {
 
-
                 navController = rememberNavController()
-
-
 
                 ChangeStatusBarColor(navController)
                 AppConfig()
 
-
                 LocalUtils.setLocale(LocalContext.current, USER_LANGUAGE)
-
 
                 val direction = if (USER_LANGUAGE == ENGLISH) {
                     LayoutDirection.Ltr
@@ -52,10 +47,8 @@ class MainActivity : ComponentActivity() {
                     LayoutDirection.Rtl
                 }
 
-
                 CompositionLocalProvider(LocalLayoutDirection provides direction) {
                     Scaffold(bottomBar = {
-
 
                         BottomNavigationBar(navController = navController, onItemClick = {
                             navController.navigate(it.route)
@@ -64,11 +57,9 @@ class MainActivity : ComponentActivity() {
                         SetUpNavGraph(navController = navController)
                     }
 
-
                 }
 
             }
         }
     }
 }
-
