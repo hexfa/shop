@@ -12,6 +12,7 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object HomeApiInterfaceModule {
 
+
     @Provides
     @Singleton
     fun provideHomeApiService(retrofit: Retrofit): HomeApiInterface =
