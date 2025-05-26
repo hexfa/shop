@@ -18,14 +18,17 @@ fun SetUpNavGraph(navController: NavHostController){
             SplashScreen(navController=navController)
         }
 
+
         composable(route=Screen.Home.route){
             HomeScreen(navController=navController)
         }
+
 
         composable(route=Screen.Basket.route){
 
             BasketScreen(navController=navController)
         }
+
 
         composable(route=Screen.Profile.route){
             ProfileScreen(navController = navController)
