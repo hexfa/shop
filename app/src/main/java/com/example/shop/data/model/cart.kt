@@ -104,7 +104,9 @@ fun CartScreen(
             TopAppBar(title = { Text("Your Cart") })
         },
         content = { padding ->
-            Column(modifier = Modifier.padding(padding).fillMaxSize()) {
+            Column(modifier = Modifier
+                .padding(padding)
+                .fillMaxSize()) {
                 if (uiState.items.isEmpty()) {
                     Text("Your cart is empty", modifier = Modifier.padding(16.dp))
                 } else {
@@ -150,8 +152,10 @@ private fun CartItemRow(item: CartItem, onRemove: (String) -> Unit) {
             Text("Qty: ${item.quantity}", style = MaterialTheme.typography.h2)
         }
         Row {
-            Text("$${"%.2f".format(item.price * item.quantity)}",
-                modifier = Modifier.alignByBaseline())
+            Text(
+                "$${"%.2f".format(item.price * item.quantity)}",
+                modifier = Modifier.alignByBaseline()
+            )
             IconButton(onClick = { onRemove(item.id) }) {
                 Icon(Icons.Default.Delete, contentDescription = "Remove")
             }
@@ -209,7 +213,8 @@ class InMemoryCartRepository : CartRepository {
     @Composable
     fun CartItemRow(
         item: CartItem,
-        onRemove: (String) -> Unit) {
+        onRemove: (String) -> Unit
+    ) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
@@ -221,8 +226,10 @@ class InMemoryCartRepository : CartRepository {
                 Text("Qty: ${item.quantity}", style = MaterialTheme.typography.h2)
             }
             Row {
-                Text("$${"%.2f".format(item.price * item.quantity)}",
-                    modifier = Modifier.alignByBaseline())
+                Text(
+                    "$${"%.2f".format(item.price * item.quantity)}",
+                    modifier = Modifier.alignByBaseline()
+                )
                 IconButton(onClick = { onRemove(item.id) }) {
                     Icon(Icons.Default.Delete, contentDescription = "Remove")
                 }
@@ -259,8 +266,7 @@ class InMemoryCartRepository : CartRepository {
                             "Your cart is empty",
                             modifier = Modifier.padding(16.dp)
                         )
-                    }
-                    else {
+                    } else {
                         LazyColumn(modifier = Modifier.weight(1f)) {
                             items(uiState.items) { item ->
                                 CartItemRow(item = item, onRemove = { viewModel.removeItem(it) })
@@ -303,6 +309,6 @@ abstract class CartModule {
     ): CartRepository
 
 
-    }
+}
 
 
