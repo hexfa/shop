@@ -100,6 +100,8 @@ fun BottomNavigationBar(
 
                             }
 
+
+
                             Text(
                                 text = item.name,
                                 textAlign = TextAlign.Center,
