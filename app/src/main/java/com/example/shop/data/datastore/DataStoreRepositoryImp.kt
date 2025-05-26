@@ -12,44 +12,46 @@ import kotlinx.coroutines.flow.first
 import javax.inject.Inject
 
 
-private val Context.datastore :DataStore<Preferences> by preferencesDataStore(name=DATASTORE_NAME)
+private val Context.datastore: DataStore<Preferences> by preferencesDataStore(name = DATASTORE_NAME)
 
 class DataStoreRepositoryImp @Inject constructor(
     private val context: Context
-):DataStoreRepository{
+) : DataStoreRepository {
     override suspend fun putString(key: String, value: String) {
-        val preferencesKey= stringPreferencesKey(key)
-        context.datastore.edit { preferences->
-            preferences[preferencesKey]=value
+        val preferencesKey = stringPreferencesKey(key)
+        context.datastore.edit { preferences ->
+            preferences[preferencesKey] = value
         }
     }
 
     override suspend fun putInt(key: String, value: Int) {
-        val preferencesKey= intPreferencesKey(key)
-        context.datastore.edit { preferences->
-            preferences[preferencesKey]=value
-        }    }
+        val preferencesKey = intPreferencesKey(key)
+        context.datastore.edit { preferences ->
+            preferences[preferencesKey] = value
+        }
+    }
 
     override suspend fun getString(key: String): String? {
-        return  try {
-            val preferencesKey= stringPreferencesKey(key)
-            val  preferences=context.datastore.data.first()
+        return try {
+            val preferencesKey = stringPreferencesKey(key)
+            val preferences = context.datastore.data.first()
             preferences[preferencesKey]
 
-        }catch (e:Exception){
+        } catch (e: Exception) {
             e.printStackTrace()
             return null
         }
     }
 
     override suspend fun getInt(key: String): Int? {
-        return  try {
-            val preferencesKey= intPreferencesKey(key)
-            val  preferences=context.datastore.data.first()
+        return try {
+            val preferencesKey = intPreferencesKey(key)
+            val preferences = context.datastore.data.first()
             preferences[preferencesKey]
 
-        }catch (e:Exception){
+        } catch (e: Exception) {
             e.printStackTrace()
             return null
-        }    }
+        }
+    }
 }
