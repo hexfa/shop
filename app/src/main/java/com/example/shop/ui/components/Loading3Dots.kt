@@ -15,6 +15,8 @@ fun Loading3Dots(isDark: Boolean) {
         val composition by rememberLottieComposition(spec = LottieCompositionSpec.RawRes(R.raw.loading3dotsdark))
         LottieAnimation(
 
+
+
             composition = composition,
 
             iterations = LottieConstants.IterateForever
