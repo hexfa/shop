@@ -35,6 +35,7 @@ fun ProfileScreen(
         verticalArrangement = Arrangement.Center
     ) {
 
+
         val activity = LocalContext.current as Activity
 
         Text("profile")
