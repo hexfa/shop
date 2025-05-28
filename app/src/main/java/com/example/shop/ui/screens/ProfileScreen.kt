@@ -59,6 +59,7 @@ fun ProfileScreen(
             dataStore.saveUserLanguage(ENGLISH)
             activity.apply {
                 finish()
+
                 startActivity(Intent(activity, MainActivity::class.java))
             }
         }) {
