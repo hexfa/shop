@@ -8,6 +8,7 @@ import com.airbnb.lottie.compose.LottieConstants
 import com.airbnb.lottie.compose.rememberLottieComposition
 import com.example.shop.R
 
+
 @Composable
 fun Loading3Dots(isDark: Boolean) {
     if (isDark) {
@@ -16,7 +17,7 @@ fun Loading3Dots(isDark: Boolean) {
         LottieAnimation(
 
 
-            
+
 
 
             composition = composition,
