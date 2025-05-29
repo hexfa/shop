@@ -64,13 +64,14 @@ fun ProfileScreen(
         Button(onClick = {
             dataStore.saveUserLanguage(ENGLISH)
 
-            
+
             activity.apply {
 
                 finish()
 
                 startActivity(Intent(activity, MainActivity::class.java))
             }
+
         }) {
             Text("en")
         }
