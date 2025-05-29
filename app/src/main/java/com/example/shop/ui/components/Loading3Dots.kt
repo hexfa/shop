@@ -17,9 +17,6 @@ fun Loading3Dots(isDark: Boolean) {
         LottieAnimation(
 
 
-
-
-
             composition = composition,
 
             iterations = LottieConstants.IterateForever
