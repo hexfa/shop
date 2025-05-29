@@ -18,14 +18,13 @@ import com.example.shop.ui.theme.selectedBottomBar
 
 
 @Composable
-fun BasketScreen(navController: NavHostController){
+fun BasketScreen(navController: NavHostController) {
 
 
-
-    if (isSystemInDarkTheme()){
+    if (isSystemInDarkTheme()) {
 
         BasketDark()
-    }else{
+    } else {
 
         BasketLight()
     }
@@ -33,42 +32,42 @@ fun BasketScreen(navController: NavHostController){
 }
 
 @Composable
-fun BasketLight(){
-    Column (
+fun BasketLight() {
+    Column(
 
-        modifier = Modifier.fillMaxSize()
+        modifier = Modifier
+            .fillMaxSize()
             .background(Color.LightGray),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
-    ){
+    ) {
 
-        Text("BasketScreen",color= MaterialTheme.colors.selectedBottomBar)
+        Text("BasketScreen", color = MaterialTheme.colors.selectedBottomBar)
 
     }
-
 
 
 }
 
 @Composable
-fun BasketDark(){
-    Column (
-        modifier = Modifier.fillMaxSize()
+fun BasketDark() {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
             .background(Color.DarkGray),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
-    ){
-        Text("BasketScreen",color= MaterialTheme.colors.selectedBottomBar)
+    ) {
+        Text("BasketScreen", color = MaterialTheme.colors.selectedBottomBar)
 
 
     }
 }
-
 
 
 @Composable
 @Preview(uiMode = Configuration.UI_MODE_NIGHT_YES)
-fun BasketDarkPreview(){
+fun BasketDarkPreview() {
 
 
     BasketDark()
@@ -76,7 +75,7 @@ fun BasketDarkPreview(){
 
 @Composable
 @Preview
-fun BasketLightPreview(){
+fun BasketLightPreview() {
 
     BasketLight()
 }
