@@ -64,6 +64,7 @@ fun ProfileScreen(
         Button(onClick = {
             dataStore.saveUserLanguage(ENGLISH)
 
+            
             activity.apply {
 
                 finish()
