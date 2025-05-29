@@ -16,6 +16,8 @@ fun Loading3Dots(isDark: Boolean) {
         LottieAnimation(
 
 
+            
+
 
             composition = composition,
 
