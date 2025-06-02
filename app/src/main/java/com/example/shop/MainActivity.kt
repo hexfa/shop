@@ -43,6 +43,7 @@ class MainActivity : ComponentActivity() {
         return if (USER_LANGUAGE == ENGLISH) {
             LayoutDirection.Ltr
         } else {
+
             LayoutDirection.Rtl
         }
     }
