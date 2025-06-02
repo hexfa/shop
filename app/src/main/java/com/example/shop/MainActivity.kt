@@ -66,6 +66,7 @@ class MainActivity : ComponentActivity() {
 
     @Composable
     fun MainContent() {
+
         val navController = rememberNavController()
 
         Scaffold(bottomBar = {
