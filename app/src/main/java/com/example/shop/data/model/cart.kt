@@ -282,6 +282,7 @@ class InMemoryCartRepository : CartRepository {
                             Text("Total:")
                             Text("$${"%.2f".format(uiState.totalPrice)}")
                         }
+
                         Button(
                             onClick = onCheckout,
                             modifier = Modifier
