@@ -274,6 +274,7 @@ class InMemoryCartRepository : CartRepository {
                         }
                         Divider()
                         Row(
+
                             modifier = Modifier
                                 .fillMaxWidth()
 
