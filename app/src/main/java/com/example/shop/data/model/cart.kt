@@ -318,6 +318,7 @@ abstract class CartModule {
     @Singleton
 
     abstract fun bindCartRepository(
+
         impl: InMemoryCartRepository
 
     ): CartRepository
