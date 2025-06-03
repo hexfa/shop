@@ -284,6 +284,7 @@ class InMemoryCartRepository : CartRepository {
                             horizontalArrangement = Arrangement.SpaceBetween
                         ) {
                             Text("Total:")
+
                             Text("$${"%.2f".format(uiState.totalPrice)}")
                         }
 
