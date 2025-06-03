@@ -319,6 +319,7 @@ abstract class CartModule {
 
     abstract fun bindCartRepository(
         impl: InMemoryCartRepository
+
     ): CartRepository
 
 
