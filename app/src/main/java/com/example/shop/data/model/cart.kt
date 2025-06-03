@@ -277,6 +277,7 @@ class InMemoryCartRepository : CartRepository {
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .padding(16.dp),
+
                             horizontalArrangement = Arrangement.SpaceBetween
                         ) {
                             Text("Total:")
