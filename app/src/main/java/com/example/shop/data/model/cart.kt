@@ -288,6 +288,7 @@ class InMemoryCartRepository : CartRepository {
 
                         Button(
 
+
                             onClick = onCheckout,
                             modifier = Modifier
                                 .fillMaxWidth()
