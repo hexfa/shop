@@ -222,6 +222,7 @@ class InMemoryCartRepository : CartRepository {
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
             Column {
+
                 Text(item.name, style = MaterialTheme.typography.h2)
                 Text("Qty: ${item.quantity}", style = MaterialTheme.typography.h2)
             }
@@ -230,7 +231,7 @@ class InMemoryCartRepository : CartRepository {
                     "$${"%.2f".format(item.price * item.quantity)}",
                     modifier = Modifier.alignByBaseline()
                 )
-                
+
                 IconButton(onClick = { onRemove(item.id) }) {
                     Icon(Icons.Default.Delete, contentDescription = "Remove")
                 }
