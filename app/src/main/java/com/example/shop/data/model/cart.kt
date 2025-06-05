@@ -244,6 +244,7 @@ class InMemoryCartRepository : CartRepository {
     ) {
         val uiState = viewModel.uiState.collectAsState().value
 
+        
         Scaffold(
             topBar = {
                 TopAppBar(
