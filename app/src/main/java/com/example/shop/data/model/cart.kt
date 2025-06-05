@@ -242,9 +242,10 @@ class InMemoryCartRepository : CartRepository {
         onCheckout: () -> Unit,
         viewModel: CartViewModel = hiltViewModel()
     ) {
+
         val uiState = viewModel.uiState.collectAsState().value
 
-        
+
         Scaffold(
             topBar = {
                 TopAppBar(
