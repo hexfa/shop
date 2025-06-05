@@ -230,6 +230,7 @@ class InMemoryCartRepository : CartRepository {
                     "$${"%.2f".format(item.price * item.quantity)}",
                     modifier = Modifier.alignByBaseline()
                 )
+                
                 IconButton(onClick = { onRemove(item.id) }) {
                     Icon(Icons.Default.Delete, contentDescription = "Remove")
                 }
@@ -239,7 +240,7 @@ class InMemoryCartRepository : CartRepository {
 
     @Composable
     fun CartScreen(
-        
+
         onCheckout: () -> Unit,
         viewModel: CartViewModel = hiltViewModel()
     ) {
