@@ -314,6 +314,7 @@ class InMemoryCartRepository : CartRepository {
 @InstallIn(SingletonComponent::class)
 abstract class CartModule {
 
+
     @Binds
     @Singleton
 
