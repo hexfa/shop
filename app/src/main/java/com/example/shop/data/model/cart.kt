@@ -261,12 +261,13 @@ class InMemoryCartRepository : CartRepository {
                         .padding(padding)
                         .fillMaxSize()
                 ) {
+
                     if (uiState.items.isEmpty()) {
                         Text(
                             "Your cart is empty",
                             modifier = Modifier.padding(16.dp)
                         )
-                        
+
                     } else {
                         LazyColumn(modifier = Modifier.weight(1f)) {
                             items(uiState.items) { item ->
