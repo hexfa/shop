@@ -288,6 +288,7 @@ class InMemoryCartRepository : CartRepository {
                             Text("$${"%.2f".format(uiState.totalPrice)}")
                         }
 
+
                         Button(
 
 
@@ -295,7 +296,7 @@ class InMemoryCartRepository : CartRepository {
 
                             modifier = Modifier
 
-                                
+
                                 .fillMaxWidth()
 
                                 .padding(16.dp)
