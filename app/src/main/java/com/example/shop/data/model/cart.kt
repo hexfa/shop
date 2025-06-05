@@ -266,6 +266,7 @@ class InMemoryCartRepository : CartRepository {
                             "Your cart is empty",
                             modifier = Modifier.padding(16.dp)
                         )
+                        
                     } else {
                         LazyColumn(modifier = Modifier.weight(1f)) {
                             items(uiState.items) { item ->
