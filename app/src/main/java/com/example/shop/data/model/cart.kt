@@ -257,6 +257,7 @@ class InMemoryCartRepository : CartRepository {
             },
             content = { padding ->
                 Column(
+                    
                     modifier = Modifier
                         .padding(padding)
                         .fillMaxSize()
