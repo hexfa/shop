@@ -281,6 +281,7 @@ class InMemoryCartRepository : CartRepository {
 
                                 .padding(16.dp),
 
+                            
                             horizontalArrangement = Arrangement.SpaceBetween
                         ) {
                             Text("Total:")
