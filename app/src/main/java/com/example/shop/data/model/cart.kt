@@ -249,6 +249,7 @@ class InMemoryCartRepository : CartRepository {
                 TopAppBar(
                     title = { Text("Your Cart") },
                     actions = {
+
                         IconButton(onClick = { viewModel.clearCart() }) {
                             Icon(Icons.Default.Delete, contentDescription = "Clear Cart")
                         }
@@ -257,7 +258,7 @@ class InMemoryCartRepository : CartRepository {
             },
             content = { padding ->
                 Column(
-                    
+
                     modifier = Modifier
                         .padding(padding)
                         .fillMaxSize()
