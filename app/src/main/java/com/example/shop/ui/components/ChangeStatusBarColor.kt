@@ -13,6 +13,7 @@ import com.google.accompanist.systemuicontroller.rememberSystemUiController
 @Composable
 fun ChangeStatusBarColor(navController: NavHostController) {
 
+
     val navBackStackEntry by navController.currentBackStackEntryAsState()
 
     val systemUiController = rememberSystemUiController()
