@@ -30,6 +30,7 @@ fun ChangeStatusBarColor(navController: NavHostController) {
                 systemUiController.setStatusBarColor(
 
                     color = Purple80
+
                 )
             }
         }
