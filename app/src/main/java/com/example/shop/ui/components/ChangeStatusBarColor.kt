@@ -22,10 +22,6 @@ fun ChangeStatusBarColor(navController: NavHostController) {
         Screen.Splash.route -> {
 
 
-
-
-
-
             SideEffect {
 
                 systemUiController.setStatusBarColor(
@@ -35,7 +31,6 @@ fun ChangeStatusBarColor(navController: NavHostController) {
                 )
             }
         }
-
 
 
         else ->
