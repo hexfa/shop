@@ -34,6 +34,7 @@ fun ChangeStatusBarColor(navController: NavHostController) {
             }
         }
 
+
         else ->
             systemUiController.setStatusBarColor(
                 color = Color.White
