@@ -76,12 +76,13 @@ fun ProfileScreen(
 
             activity.apply {
 
-                
+
                 finish()
 
                 startActivity(Intent(activity, MainActivity::class.java))
             }
 
+            
         }) {
             Text("en")
         }
