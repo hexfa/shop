@@ -47,6 +47,7 @@ fun ProfileScreen(
             dataStore.saveUserLanguage(PERSIAN)
             activity.apply {
 
+                
                 finish()
                 startActivity(Intent(activity, MainActivity::class.java))
             }
