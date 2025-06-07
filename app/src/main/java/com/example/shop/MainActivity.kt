@@ -80,6 +80,7 @@ class MainActivity : ComponentActivity() {
             MainBottomBar(navController)
 
         }) {
+
             SetUpNavGraph(navController = navController)
         }
     }
@@ -88,7 +89,7 @@ class MainActivity : ComponentActivity() {
     @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        
+
         super.onCreate(savedInstanceState)
 
         enableEdgeToEdge()
