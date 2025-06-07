@@ -27,6 +27,7 @@ fun ProfileScreen(
     navController: NavHostController,
     dataStore: DataStoreViewModel = hiltViewModel()
 ) {
+    
     Column(
         modifier = Modifier
 
@@ -37,7 +38,7 @@ fun ProfileScreen(
     ) {
 
 
-        
+
 
         val activity = LocalContext.current as Activity
 
