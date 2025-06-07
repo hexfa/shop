@@ -34,6 +34,7 @@ fun ProfileScreen(
             .fillMaxSize()
             .background(Color.Blue),
         horizontalAlignment = Alignment.CenterHorizontally,
+        
         verticalArrangement = Arrangement.Center
     ) {
 
@@ -46,7 +47,7 @@ fun ProfileScreen(
         Text("prof" +
                 "ile")
 
-        
+
         Button(onClick = {
 
 
