@@ -54,6 +54,7 @@ fun ProfileScreen(
 
 
                 finish()
+                
                 startActivity(Intent(activity, MainActivity::class.java))
             }
 
@@ -61,7 +62,7 @@ fun ProfileScreen(
 
 
         }) {
-            
+
             Text("fa")
 
         }
