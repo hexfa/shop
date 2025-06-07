@@ -107,6 +107,7 @@ class MainActivity : ComponentActivity() {
 fun ConfigureApp(navController: NavHostController? = null) {
     navController?.let {
         ChangeStatusBarColor(it)
+
     }
     // Add more app-wide configurations here
 }
