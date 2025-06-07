@@ -37,6 +37,7 @@ class MainActivity : ComponentActivity() {
     private fun setupLocale() {
 
         LocalUtils.setLocale(LocalContext.current, USER_LANGUAGE)
+
     }
 
     private fun getLayoutDirection(): LayoutDirection {
@@ -45,7 +46,7 @@ class MainActivity : ComponentActivity() {
         } else {
 
             LayoutDirection.Rtl
-            
+
         }
     }
 
@@ -91,6 +92,7 @@ class MainActivity : ComponentActivity() {
 
         enableEdgeToEdge()
         logAppConfig()
+
 
         setContent {
 
