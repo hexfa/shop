@@ -25,7 +25,7 @@ import com.example.shop.viewmodels.DataStoreViewModel
 @Composable
 fun ProfileScreen(
     navController: NavHostController,
-    
+
     dataStore: DataStoreViewModel = hiltViewModel()
 ) {
 
@@ -37,6 +37,7 @@ fun ProfileScreen(
             .background(Color.Blue),
 
         horizontalAlignment = Alignment.CenterHorizontally,
+
 
         verticalArrangement = Arrangement.Center
     ) {
