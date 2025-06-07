@@ -40,14 +40,15 @@ fun ProfileScreen(
 
         val activity = LocalContext.current as Activity
 
-        Text("profile")
+        Text("prof" +
+                "ile")
 
         Button(onClick = {
 
             dataStore.saveUserLanguage(PERSIAN)
             activity.apply {
 
-                
+
                 finish()
                 startActivity(Intent(activity, MainActivity::class.java))
             }
