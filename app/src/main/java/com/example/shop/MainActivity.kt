@@ -79,6 +79,7 @@ class MainActivity : ComponentActivity() {
 
             MainBottomBar(navController)
 
+
         }) {
 
             SetUpNavGraph(navController = navController)
