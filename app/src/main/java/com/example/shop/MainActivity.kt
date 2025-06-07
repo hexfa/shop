@@ -49,12 +49,13 @@ class MainActivity : ComponentActivity() {
     }
 
     private fun logAppConfig() {
+        
         Log.d("MainActivity", "com.example.shop.data.model.User language: $USER_LANGUAGE, LayoutDirection: ${getLayoutDirection()}")
     }
 
     @Composable
 
-    
+
     fun MainBottomBar(navController: androidx.navigation.NavHostController) {
 
         BottomNavigationBar(navController = navController, onItemClick = {
