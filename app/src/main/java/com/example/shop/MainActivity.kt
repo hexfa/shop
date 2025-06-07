@@ -76,6 +76,7 @@ class MainActivity : ComponentActivity() {
             SetUpNavGraph(navController = navController)
         }
     }
+    
 
     @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 
@@ -84,7 +85,7 @@ class MainActivity : ComponentActivity() {
 
         enableEdgeToEdge()
         logAppConfig()
-        
+
         setContent {
 
             ShopTheme {
