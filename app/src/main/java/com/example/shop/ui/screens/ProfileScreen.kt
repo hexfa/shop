@@ -46,6 +46,7 @@ fun ProfileScreen(
         Text("prof" +
                 "ile")
 
+        
         Button(onClick = {
 
 
@@ -54,7 +55,7 @@ fun ProfileScreen(
 
 
                 finish()
-                
+
                 startActivity(Intent(activity, MainActivity::class.java))
             }
 
