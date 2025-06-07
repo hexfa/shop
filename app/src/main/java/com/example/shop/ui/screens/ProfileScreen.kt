@@ -48,7 +48,7 @@ fun ProfileScreen(
 
         Button(onClick = {
 
-            
+
             dataStore.saveUserLanguage(PERSIAN)
             activity.apply {
 
@@ -59,6 +59,7 @@ fun ProfileScreen(
 
 
 
+            
         }) {
             Text("fa")
 
