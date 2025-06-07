@@ -33,8 +33,9 @@ fun ProfileScreen(
 
             .fillMaxSize()
             .background(Color.Blue),
-        horizontalAlignment = Alignment.CenterHorizontally,
         
+        horizontalAlignment = Alignment.CenterHorizontally,
+
         verticalArrangement = Arrangement.Center
     ) {
 
