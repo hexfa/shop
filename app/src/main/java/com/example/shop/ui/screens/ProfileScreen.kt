@@ -43,13 +43,12 @@ fun ProfileScreen(
     ) {
 
 
-
-
-
         val activity = LocalContext.current as Activity
 
-        Text("prof" +
-                "ile")
+        Text(
+            "prof" +
+                    "ile"
+        )
 
 
         Button(onClick = {
@@ -63,8 +62,6 @@ fun ProfileScreen(
 
                 startActivity(Intent(activity, MainActivity::class.java))
             }
-
-
 
 
         }) {
