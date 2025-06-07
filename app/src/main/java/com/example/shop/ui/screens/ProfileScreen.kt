@@ -40,7 +40,7 @@ fun ProfileScreen(
 
 
 
-        
+
         val activity = LocalContext.current as Activity
 
         Text("prof" +
@@ -48,6 +48,7 @@ fun ProfileScreen(
 
         Button(onClick = {
 
+            
             dataStore.saveUserLanguage(PERSIAN)
             activity.apply {
 
