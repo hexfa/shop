@@ -72,11 +72,12 @@ class MainActivity : ComponentActivity() {
         Scaffold(bottomBar = {
 
             MainBottomBar(navController)
+            
         }) {
             SetUpNavGraph(navController = navController)
         }
     }
-    
+
 
     @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 
