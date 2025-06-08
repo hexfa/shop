@@ -112,6 +112,7 @@ class MainActivity : ComponentActivity() {
 
                 CompositionLocalProvider(LocalLayoutDirection provides getLayoutDirection()) {
 
+
                     MainContent()
                 }
 
