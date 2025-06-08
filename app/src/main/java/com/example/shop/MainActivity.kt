@@ -85,6 +85,7 @@ class MainActivity : ComponentActivity() {
 
         }) {
 
+
             SetUpNavGraph(navController = navController)
         }
     }
