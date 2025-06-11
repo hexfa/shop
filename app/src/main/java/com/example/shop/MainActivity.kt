@@ -118,7 +118,7 @@ class MainActivity : ComponentActivity() {
 
         enableEdgeToEdge()
 
-        
+
         logAppConfig()
 
 
@@ -126,6 +126,7 @@ class MainActivity : ComponentActivity() {
         setContent {
 
 
+            
             ShopTheme {
 
 
