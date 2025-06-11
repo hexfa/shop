@@ -88,7 +88,7 @@ class MainActivity : ComponentActivity() {
     fun MainContent() {
 
 
-        
+
         val navController = rememberNavController()
 
 
@@ -96,6 +96,7 @@ class MainActivity : ComponentActivity() {
 
 
 
+            
             MainBottomBar(navController)
 
 
