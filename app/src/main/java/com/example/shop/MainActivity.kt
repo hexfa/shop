@@ -72,7 +72,7 @@ class MainActivity : ComponentActivity() {
 
 
         BottomNavigationBar(navController = navController, onItemClick = {
-            
+
             navController.navigate(it.route)
         })
 
@@ -82,6 +82,7 @@ class MainActivity : ComponentActivity() {
 
     @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 
+    
     @Composable
 
     fun MainContent() {
