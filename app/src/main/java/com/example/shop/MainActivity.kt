@@ -96,7 +96,7 @@ class MainActivity : ComponentActivity() {
 
 
 
-            
+
             MainBottomBar(navController)
 
 
@@ -107,6 +107,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+    
 
     @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 
