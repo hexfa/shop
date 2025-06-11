@@ -107,7 +107,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    
+
 
     @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 
@@ -118,6 +118,7 @@ class MainActivity : ComponentActivity() {
 
         enableEdgeToEdge()
 
+        
         logAppConfig()
 
 
