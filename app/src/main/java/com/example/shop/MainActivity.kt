@@ -82,12 +82,13 @@ class MainActivity : ComponentActivity() {
 
     @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 
-    
+
     @Composable
 
     fun MainContent() {
 
 
+        
         val navController = rememberNavController()
 
 
