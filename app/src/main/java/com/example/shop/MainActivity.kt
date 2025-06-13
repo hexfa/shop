@@ -121,11 +121,6 @@ class MainActivity : ComponentActivity() {
 
 
         logAppConfig()
-
-
-
-
-
         setContent {
 
 
