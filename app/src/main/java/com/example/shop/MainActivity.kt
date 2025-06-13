@@ -119,6 +119,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
 
 
+
         logAppConfig()
 
 
