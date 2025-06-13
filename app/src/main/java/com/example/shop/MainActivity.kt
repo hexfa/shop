@@ -124,8 +124,6 @@ class MainActivity : ComponentActivity() {
 
                 ConfigureApp(navController = rememberNavController())
 
-
-
                 CompositionLocalProvider(LocalLayoutDirection provides getLayoutDirection()) {
 
 
