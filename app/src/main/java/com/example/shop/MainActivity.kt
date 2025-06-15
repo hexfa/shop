@@ -132,8 +132,6 @@ fun ConfigureApp(navController: NavHostController? = null) {
     }
     // Add more app-wide configurations here
 }
-
-
 @Composable
 fun ChangeStatusBarColor(navController: NavHostController) {
     val systemUiController = rememberSystemUiController()
