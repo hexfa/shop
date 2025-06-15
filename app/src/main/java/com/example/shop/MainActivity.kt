@@ -106,7 +106,6 @@ class MainActivity : ComponentActivity() {
             SetUpNavGraph(navController = navController)
         }
     }
-
     @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
