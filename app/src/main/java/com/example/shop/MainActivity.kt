@@ -119,7 +119,6 @@ class MainActivity : ComponentActivity() {
         setContent {
             ShopTheme {
                 ConfigureApp(navController = rememberNavController())
-
                 CompositionLocalProvider(LocalLayoutDirection provides getLayoutDirection()) {
                     MainContent()
                 }
