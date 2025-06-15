@@ -130,7 +130,6 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun ConfigureApp(navController: NavHostController? = null) {
     navController?.let {
-
         ChangeStatusBarColor(it)
 
     }
