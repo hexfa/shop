@@ -108,7 +108,6 @@ class MainActivity : ComponentActivity() {
     }
 
 
-
     @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -136,7 +135,6 @@ fun ConfigureApp(navController: NavHostController? = null) {
 fun ChangeStatusBarColor(navController: NavHostController) {
     val systemUiController = rememberSystemUiController()
     val useDarkIcons = MaterialTheme.colors.isLight
-
     SideEffect {
         systemUiController.setStatusBarColor(
             color = Color.White,
