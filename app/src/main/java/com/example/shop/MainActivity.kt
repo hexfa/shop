@@ -45,7 +45,6 @@ class MainActivity : ComponentActivity() {
 
         }
     }
-
     private fun logAppConfig() {
 
         Log.d("MainActivity", "com.example.shop.data.model.User language: $USER_LANGUAGE, LayoutDirection: ${getLayoutDirection()}")
