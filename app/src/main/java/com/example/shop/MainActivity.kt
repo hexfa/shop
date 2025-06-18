@@ -28,14 +28,13 @@ import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import dagger.hilt.android.AndroidEntryPoint
 
 
-
-
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     @Composable
     private fun setupLocale() {
         LocalUtils.setLocale(LocalContext.current, USER_LANGUAGE)
     }
+
     private fun getLayoutDirection(): LayoutDirection {
 
         return if (USER_LANGUAGE == ENGLISH) {
@@ -45,13 +44,17 @@ class MainActivity : ComponentActivity() {
 
         }
     }
+
     private fun logAppConfig() {
 
-        Log.d("MainActivity", "com.example.shop.data.model.User language: $USER_LANGUAGE, LayoutDirection: ${getLayoutDirection()}")
+        Log.d(
+            "MainActivity",
+            "com.example.shop.data.model.User language: $USER_LANGUAGE, LayoutDirection: ${getLayoutDirection()}"
+        )
     }
+
     @Composable
     fun MainBottomBar(navController: androidx.navigation.NavHostController) {
-
 
 
         BottomNavigationBar(navController = navController, onItemClick = {
@@ -62,14 +65,12 @@ class MainActivity : ComponentActivity() {
     }
 
 
-
     @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 
 
     @Composable
 
     fun MainContent() {
-
 
 
         val navController = rememberNavController()
@@ -82,6 +83,7 @@ class MainActivity : ComponentActivity() {
             SetUpNavGraph(navController = navController)
         }
     }
+
     @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -105,6 +107,7 @@ fun ConfigureApp(navController: NavHostController? = null) {
     }
     // Add more app-wide configurations here
 }
+
 @Composable
 fun ChangeStatusBarColor(navController: NavHostController) {
     val systemUiController = rememberSystemUiController()
