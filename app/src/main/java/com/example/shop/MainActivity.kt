@@ -41,8 +41,7 @@ class MainActivity : ComponentActivity() {
             LayoutDirection.Ltr
         } else {
             LayoutDirection.Rtl
-
-
+            
         }
     }
     private fun logAppConfig() {
