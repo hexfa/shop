@@ -35,7 +35,7 @@ class MainActivity : ComponentActivity() {
         LocalUtils.setLocale(LocalContext.current, USER_LANGUAGE)
     }
 
-    
+
 
     private fun getLayoutDirection(): LayoutDirection {
 
@@ -46,6 +46,7 @@ class MainActivity : ComponentActivity() {
 
         }
     }
+    
 
     private fun logAppConfig() {
 
