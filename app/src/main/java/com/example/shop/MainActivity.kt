@@ -58,7 +58,6 @@ class MainActivity : ComponentActivity() {
 
 
 
-
         BottomNavigationBar(navController = navController, onItemClick = {
 
             navController.navigate(it.route)
