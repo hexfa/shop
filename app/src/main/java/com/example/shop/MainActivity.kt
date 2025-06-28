@@ -42,9 +42,10 @@ class MainActivity : ComponentActivity() {
         } else {
             LayoutDirection.Rtl
 
+
         }
     }
-    
+
     private fun logAppConfig() {
         Log.d(
 
