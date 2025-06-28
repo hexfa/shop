@@ -55,8 +55,7 @@ class MainActivity : ComponentActivity() {
     }
 
 
-
-
+    
 
     @Composable
     fun MainBottomBar(navController: androidx.navigation.NavHostController) {
