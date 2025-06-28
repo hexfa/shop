@@ -34,12 +34,11 @@ class MainActivity : ComponentActivity() {
     private fun setupLocale() {
         LocalUtils.setLocale(LocalContext.current, USER_LANGUAGE)
     }
-    
+
 
 
     private fun getLayoutDirection(): LayoutDirection {
-
-
+        
         return if (USER_LANGUAGE == ENGLISH) {
             LayoutDirection.Ltr
         } else {
