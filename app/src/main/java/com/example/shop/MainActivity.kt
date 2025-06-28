@@ -47,6 +47,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+    
 
     private fun logAppConfig() {
 
