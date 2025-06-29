@@ -32,7 +32,7 @@ class DataStoreRepositoryImp @Inject constructor(
             preferences[preferencesKey] = value
         }
     }
-    
+
 
     override suspend fun getString(key: String): String? {
         return try {
@@ -40,6 +40,7 @@ class DataStoreRepositoryImp @Inject constructor(
             val preferences = context.datastore.data.first()
             preferences[preferencesKey]
 
+            
         } catch (e: Exception) {
             e.printStackTrace()
             return null
