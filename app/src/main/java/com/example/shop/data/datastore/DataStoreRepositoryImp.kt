@@ -55,11 +55,12 @@ class DataStoreRepositoryImp @Inject constructor(
         return try {
 
             val preferencesKey = intPreferencesKey(key)
-            
+
             val preferences = context.datastore.data.first()
             preferences[preferencesKey]
 
         } catch (e: Exception) {
+            
             e.printStackTrace()
             return null
         }
