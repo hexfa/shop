@@ -17,9 +17,10 @@ private val Context.datastore: DataStore<Preferences> by preferencesDataStore(na
 class DataStoreRepositoryImp @Inject constructor(
     private val context: Context
 ) : DataStoreRepository {
-    override suspend fun putString(key: String, value: String) {
+    override suspend fun putString(key: String, value: Str
+                                   ing) {
         val preferencesKey = stringPreferencesKey(key)
-        
+
         context.datastore.edit { preferences ->
 
 
