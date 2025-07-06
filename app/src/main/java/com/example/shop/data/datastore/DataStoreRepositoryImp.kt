@@ -11,7 +11,6 @@ import com.example.shop.utils.Constants.DATASTORE_NAME
 import kotlinx.coroutines.flow.first
 import javax.inject.Inject
 
-
 private val Context.datastore: DataStore<Preferences> by preferencesDataStore(name = DATASTORE_NAME)
 class DataStoreRepositoryImp @Inject constructor(
     private val context: Context
