@@ -22,7 +22,6 @@ class DataStoreRepositoryImp @Inject constructor(
 
     private val context: Context
 
-
 ) : DataStoreRepository {
     override suspend fun putString(key: String, value: String) {
         val preferencesKey = stringPreferencesKey(key)
