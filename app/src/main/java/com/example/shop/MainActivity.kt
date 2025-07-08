@@ -51,7 +51,6 @@ class MainActivity : ComponentActivity() {
     fun MainBottomBar(navController: androidx.navigation.NavHostController) {
 
 
-
         
         BottomNavigationBar(navController = navController, onItemClick = {
 
