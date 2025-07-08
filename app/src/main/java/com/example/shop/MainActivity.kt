@@ -59,7 +59,6 @@ class MainActivity : ComponentActivity() {
     fun MainContent() {
         val navController = rememberNavController()
         Scaffold(bottomBar = {
-
             MainBottomBar(navController)
         }) {
             SetUpNavGraph(navController = navController)
