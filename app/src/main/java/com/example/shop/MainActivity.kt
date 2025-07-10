@@ -33,6 +33,7 @@ class MainActivity : ComponentActivity() {
     private fun setupLocale() {
         LocalUtils.setLocale(LocalContext.current, USER_LANGUAGE)
     }
+
     private fun getLayoutDirection(): LayoutDirection {
         return if (USER_LANGUAGE == ENGLISH) {
             LayoutDirection.Ltr
@@ -40,12 +41,14 @@ class MainActivity : ComponentActivity() {
             LayoutDirection.Rtl
         }
     }
+
     private fun logAppConfig() {
         Log.d(
             "MainActivity",
             "com.example.shop.data.model.User language: $USER_LANGUAGE, LayoutDirection: ${getLayoutDirection()}"
         )
     }
+
     @Composable
     fun MainBottomBar(navController: androidx.navigation.NavHostController) {
         BottomNavigationBar(navController = navController, onItemClick = {
@@ -79,6 +82,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+
 @Composable
 fun ConfigureApp(navController: NavHostController? = null) {
     navController?.let {
