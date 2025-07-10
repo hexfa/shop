@@ -31,6 +31,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     @Composable
     private fun setupLocale() {
+
         LocalUtils.setLocale(LocalContext.current, USER_LANGUAGE)
     }
 
@@ -43,7 +44,7 @@ class MainActivity : ComponentActivity() {
     }
 
     private fun logAppConfig() {
-        
+
         Log.d(
             "MainActivity",
             "com.example.shop.data.model.User language: $USER_LANGUAGE, LayoutDirection: ${getLayoutDirection()}"
