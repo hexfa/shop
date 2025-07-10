@@ -92,6 +92,7 @@ fun ConfigureApp(navController: NavHostController? = null) {
 }
 @Composable
 fun ChangeStatusBarColor(navController: NavHostController) {
+
     val systemUiController = rememberSystemUiController()
     val useDarkIcons = MaterialTheme.colors.isLight
     SideEffect {
