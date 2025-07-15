@@ -69,7 +69,6 @@ dependencies {
     implementation(libs.androidx.media3.effect)
     implementation(libs.rendering)
     implementation(libs.androidx.recyclerview)
-
     testImplementation(libs.junit)
 
     androidTestImplementation(libs.androidx.junit)
