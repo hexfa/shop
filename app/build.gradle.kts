@@ -85,7 +85,6 @@ dependencies {
     kapt(libs.room.compiler)
     //datastore
     implementation(libs.datastore.preferences)
-
     //hilt di
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
