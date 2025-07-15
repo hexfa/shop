@@ -90,7 +90,6 @@ dependencies {
     kapt(libs.hilt.compiler)
     implementation(libs.hilt.navigation.compose)
 
-
     //navigation
     implementation(libs.navigation.compose)
 
