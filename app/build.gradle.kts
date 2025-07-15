@@ -95,7 +95,6 @@ dependencies {
     implementation(libs.lottie)
     //coil load image
     implementation(libs.coil.compose)
-
     //swipe refresh
     implementation(libs.swipe.refresh)
 
