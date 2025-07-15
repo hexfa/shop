@@ -91,7 +91,6 @@ dependencies {
     implementation(libs.hilt.navigation.compose)
     //navigation
     implementation(libs.navigation.compose)
-
     //animation
     implementation(libs.lottie)
 
