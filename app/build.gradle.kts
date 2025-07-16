@@ -8,7 +8,6 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     //alias(libs.plugins.hilt.plugin)
     id("org.jetbrains.kotlin.kapt")
-
 }
 val apikeyPropertiesFile=rootProject.file("key.properties")
 val apikeyProperties =  Properties()
