@@ -91,5 +91,4 @@ dependencies {
     implementation(libs.swipe.refresh)
     // system ui controller
     implementation(libs.accompanist.systemuicontroller)
-
 }
