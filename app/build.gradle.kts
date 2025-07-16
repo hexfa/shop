@@ -12,7 +12,6 @@ plugins {
 val apikeyPropertiesFile=rootProject.file("key.properties")
 val apikeyProperties =  Properties()
 apikeyProperties.load(FileInputStream(apikeyPropertiesFile))
-
 android {
     namespace = "com.example.shop"
     compileSdk = 35
