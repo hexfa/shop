@@ -13,6 +13,7 @@ import javax.inject.Singleton
 object HomeApiInterfaceModule {
     @Provides
     @Singleton
+    
     fun provideHomeApiService(retrofit: Retrofit): HomeApiInterface =
         retrofit.create(HomeApiInterface::class.java)
 }
