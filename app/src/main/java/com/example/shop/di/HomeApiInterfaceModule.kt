@@ -10,8 +10,9 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
+
 object HomeApiInterfaceModule {
-    
+
     @Provides
 
     @Singleton
