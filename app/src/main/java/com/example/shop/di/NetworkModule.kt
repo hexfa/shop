@@ -19,7 +19,6 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
-
     @Provides
     @Singleton
     internal fun interceptor(): HttpLoggingInterceptor {
@@ -29,8 +28,7 @@ object NetworkModule {
         return logging
     }
 
-
-
+    
 
     @Provides
     @Singleton
