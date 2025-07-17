@@ -28,7 +28,6 @@ object NetworkModule {
         return logging
     }
     
-
     @Provides
     @Singleton
     fun provideOkHttp(): OkHttpClient = OkHttpClient.Builder()
