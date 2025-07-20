@@ -25,6 +25,7 @@ object NetworkModule {
 
         val logging = HttpLoggingInterceptor()
         logging.setLevel(HttpLoggingInterceptor.Level.BODY)
+        
         return logging
     }
 
