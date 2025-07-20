@@ -29,6 +29,7 @@ object NetworkModule {
     }
     @Provides
     @Singleton
+    
     fun provideOkHttp(): OkHttpClient = OkHttpClient.Builder()
         .connectTimeout(TIMEOUT_IN_SECOND, TimeUnit.SECONDS)
         .readTimeout(TIMEOUT_IN_SECOND, TimeUnit.SECONDS)
@@ -39,7 +40,7 @@ object NetworkModule {
                 .addHeader("lang", USER_LANGUAGE)
             chain.proceed(request.build())
         }
-        
+
         .addInterceptor(interceptor())
         .build()
 
