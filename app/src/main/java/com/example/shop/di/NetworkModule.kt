@@ -47,7 +47,6 @@ object NetworkModule {
 
         .addInterceptor(interceptor())
         .build()
-
     @Provides
 
     @Singleton
