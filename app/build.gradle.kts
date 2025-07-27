@@ -13,7 +13,6 @@ apikeyProperties.load(FileInputStream(apikeyPropertiesFile))
 android {
 
     namespace = "com.example.shop"
-
     compileSdk = 35
 
     defaultConfig {
