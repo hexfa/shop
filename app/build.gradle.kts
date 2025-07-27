@@ -29,6 +29,7 @@ android {
         buildConfigField("String","X_API_KEY",apikeyProperties["X_API_KEY"].toString())
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        
     }
     buildTypes {
         release {
