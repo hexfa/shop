@@ -15,7 +15,6 @@ android {
     namespace = "com.example.shop"
     compileSdk = 35
     defaultConfig {
-
         applicationId = "com.example.shop"
         minSdk = 25
         targetSdk = 35
