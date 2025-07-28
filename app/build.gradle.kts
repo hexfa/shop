@@ -21,7 +21,6 @@ android {
         minSdk = 25
 
         targetSdk = 35
-
         versionCode = 1
         versionName = "1.0"
         buildConfigField("String","X_API_KEY",apikeyProperties["X_API_KEY"].toString())
