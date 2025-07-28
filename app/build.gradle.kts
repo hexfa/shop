@@ -17,7 +17,6 @@ android {
     defaultConfig {
 
         applicationId = "com.example.shop"
-
         minSdk = 25
         targetSdk = 35
         versionCode = 1
