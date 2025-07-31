@@ -8,7 +8,6 @@ import javax.inject.Inject
 
 
 class HomeRepository @Inject constructor(private val api: HomeApiInterface) : BaseApiResponse() {
-
     suspend fun getSlider(): NetworkResult<List<Slider>> =
         safeApiCall {
             api.getSlider()
