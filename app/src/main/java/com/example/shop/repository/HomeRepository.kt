@@ -6,7 +6,6 @@ import com.example.shop.data.remote.HomeApiInterface
 import com.example.shop.data.remote.NetworkResult
 import javax.inject.Inject
 
-
 class HomeRepository @Inject constructor(private val api: HomeApiInterface) : BaseApiResponse() {
     suspend fun getSlider(): NetworkResult<List<Slider>> =
         safeApiCall {
