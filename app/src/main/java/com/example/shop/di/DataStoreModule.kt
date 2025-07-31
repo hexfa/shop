@@ -11,6 +11,7 @@ import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
+
 object DataStoreModule {
 
     @Singleton
@@ -22,5 +23,5 @@ object DataStoreModule {
         @ApplicationContext context: Context
 
     ): DataStoreRepository = DataStoreRepositoryImp(context)
-    
+
 }
