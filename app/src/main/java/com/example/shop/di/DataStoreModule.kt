@@ -22,4 +22,5 @@ object DataStoreModule {
         @ApplicationContext context: Context
 
     ): DataStoreRepository = DataStoreRepositoryImp(context)
+    
 }
