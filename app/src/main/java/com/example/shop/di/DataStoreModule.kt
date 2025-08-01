@@ -18,7 +18,6 @@ import javax.inject.Singleton
 object DataStoreModule {
     @Singleton
     @Provides
-
     fun provideDataStoreRepository(
 
         @ApplicationContext context: Context
