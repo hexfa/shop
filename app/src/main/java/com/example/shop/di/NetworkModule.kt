@@ -46,8 +46,9 @@ object NetworkModule {
 
 
             val request = chain.request().newBuilder()
-                
+
                 .addHeader("x-api-key", API_KEY)
+                
                 .addHeader("lang", USER_LANGUAGE)
             chain.proceed(request.build())
         }
