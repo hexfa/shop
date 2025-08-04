@@ -43,6 +43,7 @@ object NetworkModule {
         .writeTimeout(TIMEOUT_IN_SECOND, TimeUnit.SECONDS)
 
         .addInterceptor { chain ->
+
             
             val request = chain.request().newBuilder()
                 .addHeader("x-api-key", API_KEY)
