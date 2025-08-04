@@ -29,11 +29,12 @@ object NetworkModule {
         logging.setLevel(HttpLoggingInterceptor.Level.BODY)
 
         return logging
-        
+
     }
     @Provides
     @Singleton
     fun provideOkHttp(): OkHttpClient = OkHttpClient.Builder()
+        
         .connectTimeout(TIMEOUT_IN_SECOND, TimeUnit.SECONDS)
         .readTimeout(TIMEOUT_IN_SECOND, TimeUnit.SECONDS)
         .writeTimeout(TIMEOUT_IN_SECOND, TimeUnit.SECONDS)
