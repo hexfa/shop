@@ -54,11 +54,12 @@ object NetworkModule {
             .baseUrl(BASE_URL)
 
             .addConverterFactory(GsonConverterFactory.create())
-            
+
             .client(okHttpClient)
             .build()
     @Provides
     @Singleton
     fun provideApiService(retrofit: Retrofit): HomeApiInterface =
+        
         retrofit.create(HomeApiInterface::class.java)
 }
