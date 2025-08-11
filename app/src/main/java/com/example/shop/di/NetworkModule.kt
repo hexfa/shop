@@ -53,7 +53,6 @@ object NetworkModule {
     @Singleton
 
     fun provideApiService(retrofit: Retrofit): HomeApiInterface =
-
         retrofit.create(HomeApiInterface::class.java)
 
 }
