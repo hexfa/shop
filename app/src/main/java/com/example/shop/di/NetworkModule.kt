@@ -39,8 +39,9 @@ object NetworkModule {
                 .addHeader("lang", USER_LANGUAGE)
             chain.proceed(request.build())
         }
-        .addInterceptor(interceptor())
         
+        .addInterceptor(interceptor())
+
         .build()
 
     @Provides
