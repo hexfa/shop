@@ -53,8 +53,9 @@ object NetworkModule {
         .addInterceptor(interceptor())
 
         .build()
-    
+
     @Provides
+    
     @Singleton
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit =
         Retrofit.Builder()
