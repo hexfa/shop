@@ -45,6 +45,7 @@ object NetworkModule {
                 .addHeader("x-api-key", API_KEY)
 
                 .addHeader("lang", USER_LANGUAGE)
+            
             chain.proceed(request.build())
         }
         .addInterceptor(interceptor())
