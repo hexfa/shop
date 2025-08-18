@@ -39,6 +39,7 @@ object NetworkModule {
         .addInterceptor { chain ->
             val request = chain.request().newBuilder()
                 
+
                 .addHeader("x-api-key", API_KEY)
 
                 .addHeader("lang", USER_LANGUAGE)
