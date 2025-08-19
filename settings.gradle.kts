@@ -1,6 +1,7 @@
 pluginManagement {
     repositories {
         google {
+
             content {
                 includeGroupByRegex("com\\.android.*")
 
@@ -8,7 +9,7 @@ pluginManagement {
                 includeGroupByRegex("com\\.google.*")
 
                 includeGroupByRegex("androidx.*")
-                
+
             }
 
         }
