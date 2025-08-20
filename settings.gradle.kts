@@ -19,9 +19,10 @@ pluginManagement {
 
 
             }
-            
+
 
         }
+        
 
         mavenCentral()
 
