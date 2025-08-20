@@ -14,6 +14,7 @@ pluginManagement {
 
                 includeGroupByRegex("com\\.google.*")
 
+                
                 includeGroupByRegex("androidx.*")
 
             }
