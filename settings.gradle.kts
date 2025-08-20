@@ -22,10 +22,11 @@ pluginManagement {
 
 
         }
-        
+
 
         mavenCentral()
 
+        
         gradlePluginPortal()
     }
 
