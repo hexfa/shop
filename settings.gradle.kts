@@ -11,7 +11,6 @@ pluginManagement {
 
 
 
-
                 includeGroupByRegex("com\\.google.*")
 
 
