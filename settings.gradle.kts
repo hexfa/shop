@@ -12,7 +12,7 @@ pluginManagement {
         gradlePluginPortal()
     }
 
-    
+
 }
 
 
