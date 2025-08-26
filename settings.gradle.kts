@@ -9,6 +9,7 @@ pluginManagement {
 
                 includeGroupByRegex("com\\.android.*")
 
+
                 includeGroupByRegex("com\\.google.*")
 
                 includeGroupByRegex("androidx.*")
@@ -28,7 +29,7 @@ dependencyResolutionManagement {
     repositories {
 
         google()
-        
+
         mavenCentral()
     }
 }
