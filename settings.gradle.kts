@@ -30,10 +30,11 @@ dependencyResolutionManagement {
         google()
 
         mavenCentral()
-        
+
     }
 }
 
 rootProject.name = "shop"
+
 include(":app")
  
