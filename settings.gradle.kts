@@ -10,7 +10,6 @@ pluginManagement {
                 includeGroupByRegex("androidx.*")
 
             }
-
         }
 
         mavenCentral()
