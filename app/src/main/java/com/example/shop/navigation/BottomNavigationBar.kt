@@ -32,6 +32,7 @@ fun BottomNavigationBar(
     navController: NavController,
     modifier: Modifier = Modifier,
     onItemClick: (BottomNavItem) -> Unit
+
 ) {
 
     val items = listOf(
