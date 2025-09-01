@@ -36,6 +36,7 @@ fun BottomNavigationBar(
 ) {
 
     val items = listOf(
+
         BottomNavItem(
             name = stringResource(id = R.string.basket),
             route = Screen.Basket.route,
