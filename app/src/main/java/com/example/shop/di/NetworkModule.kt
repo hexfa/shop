@@ -57,6 +57,7 @@ object NetworkModule {
             .addConverterFactory(GsonConverterFactory.create())
 
             .client(okHttpClient)
+            
             .build()
     @Provides
     @Singleton
