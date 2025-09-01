@@ -43,10 +43,11 @@ fun BottomNavigationBar(
             route = Screen.Basket.route,
 
             selectedIcon = painterResource(R.drawable.cart_fill),
-            
+
             deSelectedIcon = painterResource(R.drawable.cart_outline)
         ),
         BottomNavItem(
+            
             name = stringResource(id = R.string.home),
             route = Screen.Home.route,
             selectedIcon = painterResource(R.drawable.home_fill),
