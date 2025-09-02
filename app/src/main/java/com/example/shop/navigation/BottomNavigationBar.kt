@@ -96,6 +96,7 @@ fun BottomNavigationBar(
                     selectedContentColor = MaterialTheme.colors.selectedBottomBar,
 
                     unselectedContentColor = MaterialTheme.colors.unSelectedBottomBar,
+
                     icon = {
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
                             if (selected) {
