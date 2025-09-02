@@ -88,6 +88,7 @@ fun BottomNavigationBar(
                 val selected = item.route == backStackEntry.value?.destination?.route
 
                 BottomNavigationItem(
+
                     selected = selected,
                     onClick = { onItemClick(item) },
                     selectedContentColor = MaterialTheme.colors.selectedBottomBar,
