@@ -50,7 +50,6 @@ fun BottomNavigationBar(
             name = stringResource(id = R.string.home),
             route = Screen.Home.route,
             selectedIcon = painterResource(R.drawable.home_fill),
-
             deSelectedIcon = painterResource(R.drawable.home_outline)
 
         ),
