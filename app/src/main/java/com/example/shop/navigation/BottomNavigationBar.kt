@@ -98,6 +98,7 @@ fun BottomNavigationBar(
                     unselectedContentColor = MaterialTheme.colors.unSelectedBottomBar,
 
                     icon = {
+
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
                             if (selected) {
                                 Icon(
@@ -107,6 +108,7 @@ fun BottomNavigationBar(
                                 )
                             } else {
                                 Icon(
+                                    
                                     painter = item.deSelectedIcon,
                                     contentDescription = item.name,
                                     modifier = Modifier.height(24.dp)
