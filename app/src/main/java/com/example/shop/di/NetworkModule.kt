@@ -44,7 +44,6 @@ object NetworkModule {
             chain.proceed(request.build())
         }
         .addInterceptor(interceptor())
-
         .build()
     @Provides
     @Singleton
