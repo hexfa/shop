@@ -24,7 +24,6 @@ fun BasketScreen(navController: NavHostController) {
     if (isSystemInDarkTheme()) {
         BasketDark()
     } else {
-
         BasketLight()
 
 
