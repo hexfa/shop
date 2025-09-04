@@ -66,4 +66,5 @@ object NetworkModule {
     fun provideApiService(retrofit: Retrofit): HomeApiInterface =
 
         retrofit.create(HomeApiInterface::class.java)
+    
 }
