@@ -25,7 +25,6 @@ fun BasketScreen(navController: NavHostController) {
         BasketDark()
     } else {
         BasketLight()
-        
     }
 
 }
