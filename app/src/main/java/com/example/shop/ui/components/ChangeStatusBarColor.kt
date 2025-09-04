@@ -19,7 +19,6 @@ fun ChangeStatusBarColor(navController: NavHostController) {
             SideEffect {
                 systemUiController.setStatusBarColor(
                     color = Purple80
-
                 )
             }
 
