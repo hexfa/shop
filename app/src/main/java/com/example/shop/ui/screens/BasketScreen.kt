@@ -40,7 +40,6 @@ fun BasketLight() {
         verticalArrangement = Arrangement.Center
     ) {
         Text("BasketScreen", color = MaterialTheme.colors.selectedBottomBar)
-
     }
 
 
