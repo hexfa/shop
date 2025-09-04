@@ -15,7 +15,6 @@ fun ChangeStatusBarColor(navController: NavHostController) {
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val systemUiController = rememberSystemUiController()
     when (navBackStackEntry?.destination?.route) {
-
         Screen.Splash.route -> {
 
 
