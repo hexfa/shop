@@ -31,8 +31,9 @@ object NetworkModule {
     fun provideOkHttp(): OkHttpClient = OkHttpClient.Builder()
 
         .connectTimeout(TIMEOUT_IN_SECOND, TimeUnit.SECONDS)
-        
+
         .readTimeout(TIMEOUT_IN_SECOND, TimeUnit.SECONDS)
+        
         .writeTimeout(TIMEOUT_IN_SECOND, TimeUnit.SECONDS)
         .addInterceptor { chain ->
 
