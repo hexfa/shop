@@ -34,7 +34,6 @@ fun BasketScreen(navController: NavHostController) {
 fun BasketLight() {
     Column(
 
-
         modifier = Modifier
             .fillMaxSize()
             .background(Color.LightGray),
