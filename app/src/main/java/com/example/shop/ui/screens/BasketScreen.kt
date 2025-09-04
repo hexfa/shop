@@ -50,7 +50,6 @@ fun BasketDark() {
         modifier = Modifier
             .fillMaxSize()
             .background(Color.DarkGray),
-
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
 
