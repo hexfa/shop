@@ -21,7 +21,6 @@ fun ChangeStatusBarColor(navController: NavHostController) {
                     color = Purple80
                 )
             }
-
         }
 
 
