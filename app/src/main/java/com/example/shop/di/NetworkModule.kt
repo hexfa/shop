@@ -60,7 +60,7 @@ object NetworkModule {
 
     @Singleton
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit =
-        
+
 
         Retrofit.Builder()
 
@@ -75,7 +75,6 @@ object NetworkModule {
     @Provides
     @Singleton
     fun provideApiService(retrofit: Retrofit): HomeApiInterface =
-
         retrofit.create(HomeApiInterface::class.java)
 
 }
