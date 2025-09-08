@@ -54,7 +54,6 @@ fun BasketDark() {
         Text("BasketScreen", color = MaterialTheme.colors.selectedBottomBar)
     }
 }
-
 @Composable
 @Preview(uiMode = Configuration.UI_MODE_NIGHT_YES)
 
