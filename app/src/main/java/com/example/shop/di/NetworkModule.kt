@@ -57,9 +57,10 @@ object NetworkModule {
 
 
     @Provides
-    
+
     @Singleton
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit =
+        
 
         Retrofit.Builder()
 
