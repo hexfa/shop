@@ -16,7 +16,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
 import com.example.shop.ui.theme.selectedBottomBar
 
-
 @Composable
 fun BasketScreen(navController: NavHostController) {
     if (isSystemInDarkTheme()) {
