@@ -12,7 +12,6 @@ sealed class Screen(val route: String) {
 
 
     object Category : Screen("category_screen")
-
     fun withArgs(vararg args: Any): String {
         return buildString {
             append(route)
