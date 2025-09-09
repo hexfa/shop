@@ -33,6 +33,7 @@ object NetworkModule {
         .connectTimeout(TIMEOUT_IN_SECOND, TimeUnit.SECONDS)
         .readTimeout(TIMEOUT_IN_SECOND, TimeUnit.SECONDS)
         .writeTimeout(TIMEOUT_IN_SECOND, TimeUnit.SECONDS)
+
         .addInterceptor { chain ->
             val request = chain.request().newBuilder()
                 .addHeader("x-api-key", API_KEY)
@@ -41,7 +42,7 @@ object NetworkModule {
         }
         .addInterceptor(interceptor())
         .build()
-    
+
     @Provides
 
     @Singleton
