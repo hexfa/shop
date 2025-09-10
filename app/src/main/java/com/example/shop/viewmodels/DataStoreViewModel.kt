@@ -17,8 +17,7 @@ class DataStoreViewModel @Inject constructor(
         const val USER_LANGUAGE_KEY = "USER_LANGUAGE_KEY"
     }
 
-
-
+    
     fun saveUserLanguage(value: String) {
         viewModelScope.launch {
             repository.putString(USER_LANGUAGE_KEY, value)
