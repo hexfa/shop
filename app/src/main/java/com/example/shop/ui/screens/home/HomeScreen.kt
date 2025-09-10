@@ -35,8 +35,7 @@ fun Home(
             .background(color = Color.White)
             .fillMaxSize()
     ) {
-
-
+        
         val refreshScope = rememberCoroutineScope()
         val swipeRefreshState = rememberSwipeRefreshState(isRefreshing = false)
         SwipeRefresh(state = swipeRefreshState, onRefresh = {
