@@ -18,6 +18,7 @@ import com.example.shop.viewmodels.HomeViewModel
 import com.google.accompanist.swiperefresh.SwipeRefresh
 import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
 import kotlinx.coroutines.launch
+import java.lang.reflect.Modifier
 
 @Composable
 fun HomeScreen(navController: NavHostController) {
@@ -50,7 +51,6 @@ fun Home(
                     .verticalScroll(rememberScrollState())
                     .padding(bottom = 60.dp)
             ) {
-
                 LaunchedEffect(true) {
                     viewModel.getSlider();
                 }
