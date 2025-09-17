@@ -18,6 +18,7 @@ fun ChangeStatusBarColor(navController: NavHostController) {
         Screen.Splash.route -> {
             SideEffect {
                 systemUiController.setStatusBarColor(
+
                     color = Purple80
 
                 )
