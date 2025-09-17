@@ -6,6 +6,7 @@ import com.example.shop.utils.Constants
 import com.example.shop.viewmodels.DataStoreViewModel
 
 @Composable
+
 fun AppConfig(
 
     dataStore: DataStoreViewModel = hiltViewModel()
