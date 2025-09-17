@@ -20,8 +20,10 @@ fun ChangeStatusBarColor(navController: NavHostController) {
                 systemUiController.setStatusBarColor(
                     color = Purple80
                 )
+
             }
         }
+
         else ->
             systemUiController.setStatusBarColor(
                 color = Color.White
