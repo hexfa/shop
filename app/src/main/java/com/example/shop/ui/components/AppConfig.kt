@@ -8,7 +8,6 @@ import com.example.shop.viewmodels.DataStoreViewModel
 @Composable
 
 fun AppConfig(
-
     dataStore: DataStoreViewModel = hiltViewModel()
 ) {
 
