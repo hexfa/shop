@@ -20,6 +20,7 @@ sealed class Screen(val route: String) {
           \  append(route)
 
             args.forEach {
+
                 append("/$it")
             }
         }
