@@ -23,6 +23,7 @@ sealed class Screen(val route: String) {
 
                 append("/$it")
             }
+
         }
     }
 
