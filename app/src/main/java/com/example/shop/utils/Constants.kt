@@ -1,7 +1,6 @@
 package com.example.shop.utils
 
 import com.google.gson.internal.GsonBuildConfig
-
 object Constants {
     const val ENGLISH="en"
    const val PERSIAN="fa"
