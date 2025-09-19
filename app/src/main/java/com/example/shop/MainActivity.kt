@@ -48,6 +48,7 @@ class MainActivity : ComponentActivity() {
             LayoutDirection.Rtl
 
         }
+
     }
     private fun logAppConfig() {
 
