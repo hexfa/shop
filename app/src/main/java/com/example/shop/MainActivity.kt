@@ -38,6 +38,7 @@ class MainActivity : ComponentActivity() {
 
     }
     private fun getLayoutDirection(): LayoutDirection {
+
         return if (USER_LANGUAGE == ENGLISH) {
             LayoutDirection.Ltr
         } else {
