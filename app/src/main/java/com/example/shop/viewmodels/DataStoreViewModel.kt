@@ -12,6 +12,7 @@ import javax.inject.Inject
 @HiltViewModel
 class DataStoreViewModel @Inject constructor(
     private val repository: DataStoreRepository
+
 ) : ViewModel() {
     companion object {
         const val USER_LANGUAGE_KEY = "USER_LANGUAGE_KEY"
