@@ -26,7 +26,6 @@ class DataStoreViewModel @Inject constructor(
         viewModelScope.launch {
 
             repository.putString(USER_LANGUAGE_KEY, value)
-
         }
 
     }
@@ -34,6 +33,6 @@ class DataStoreViewModel @Inject constructor(
     fun getUserLanguage(): String = runBlocking {
 
         repository.getString(USER_LANGUAGE_KEY) ?: Constants.PERSIAN
-        
+
     }
 }
