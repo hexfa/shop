@@ -24,8 +24,9 @@ class DataStoreViewModel @Inject constructor(
             repository.putString(USER_LANGUAGE_KEY, value)
 
         }
-        
+
     }
+    
     fun getUserLanguage(): String = runBlocking {
         repository.getString(USER_LANGUAGE_KEY) ?: Constants.PERSIAN
 
