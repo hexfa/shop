@@ -44,7 +44,7 @@ fun Home(
         val refreshScope = rememberCoroutineScope()
 
         val swipeRefreshState = rememberSwipeRefreshState(isRefreshing = false)
-        
+
         SwipeRefresh(state = swipeRefreshState, onRefresh = {
             refreshScope.launch {
             }
@@ -64,7 +64,6 @@ fun Home(
 
                     .padding(bottom = 60.dp)
             ) {
-
 
                 LaunchedEffect(true) {
                     viewModel.getSlider();
