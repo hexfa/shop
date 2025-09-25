@@ -60,8 +60,9 @@ fun Home(
                 modifier =
 
                 Modifier
-                    
+
                     .background(color = Color.White)
+                    
                     .fillMaxSize()
                     .verticalScroll(rememberScrollState())
                     .padding(bottom = 60.dp)
