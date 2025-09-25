@@ -19,7 +19,6 @@ import com.google.accompanist.swiperefresh.SwipeRefresh
 import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
 import kotlinx.coroutines.launch
 import java.lang.reflect.Modifier
-
 @Composable
 fun HomeScreen(navController: NavHostController) {
     Home(navController)
