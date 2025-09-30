@@ -82,8 +82,9 @@ fun Home(
             ) {
 
                 LaunchedEffect(true) {
-                    
+
                     viewModel.getSlider();
+                    
                 }
                 TopSlider()
             }
