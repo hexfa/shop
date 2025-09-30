@@ -64,8 +64,9 @@ fun Home(
         })
 
         {
-            
+
             Column(
+                
                 modifier =
                 Modifier
                     .background(color = Color.White)
