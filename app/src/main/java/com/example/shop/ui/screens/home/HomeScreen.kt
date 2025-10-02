@@ -51,8 +51,9 @@ fun Home(
                     .verticalScroll(rememberScrollState())
                     .padding(bottom = 60.dp)
             ) {
-                
+
                 LaunchedEffect(true) {
+                    
                     viewModel.getSlider();
                 }
                 TopSlider()
