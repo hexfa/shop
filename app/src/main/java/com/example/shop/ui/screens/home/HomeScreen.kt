@@ -59,8 +59,9 @@ fun Home(
                 }
 
                 TopSlider()
-                
+
             }
+            
         }
     }
 }
