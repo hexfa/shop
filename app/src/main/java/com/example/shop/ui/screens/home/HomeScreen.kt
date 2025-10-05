@@ -30,9 +30,10 @@ fun Home(
     navController: NavHostController,
 
     viewModel: HomeViewModel = hiltViewModel()
-    
+
 ) {
     Column(
+        
         modifier =
         Modifier
             .background(color = Color.White)
