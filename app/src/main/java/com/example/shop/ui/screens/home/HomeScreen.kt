@@ -28,6 +28,7 @@ fun HomeScreen(navController: NavHostController) {
 fun Home(
 
     navController: NavHostController,
+    
     viewModel: HomeViewModel = hiltViewModel()
 ) {
     Column(
