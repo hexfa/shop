@@ -59,7 +59,6 @@ fun Home(
                 }
                 TopSlider()
             }
-
         }
 
     }
