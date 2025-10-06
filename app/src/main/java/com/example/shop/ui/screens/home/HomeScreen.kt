@@ -60,6 +60,5 @@ fun Home(
                 TopSlider()
             }
         }
-
     }
 }
