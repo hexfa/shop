@@ -35,7 +35,6 @@ fun Home(
             .fillMaxSize()
     )
     {
-
         val refreshScope = rememberCoroutineScope()
 
 
