@@ -24,7 +24,6 @@ fun HomeScreen(navController: NavHostController) {
     Home(navController)
 }
 @Composable
-
 fun Home(
 
     navController: NavHostController,
@@ -77,7 +76,7 @@ fun Home(
                 LaunchedEffect(true) {
 
                     viewModel.getSlider();
-                    
+
                 }
                 TopSlider()
             }
