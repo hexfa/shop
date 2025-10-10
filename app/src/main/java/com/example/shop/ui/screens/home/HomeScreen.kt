@@ -25,6 +25,7 @@ fun HomeScreen(navController: NavHostController) {
 }
 @Composable
 fun Home(
+    
     navController: NavHostController,
     viewModel: HomeViewModel = hiltViewModel()
 ) {
