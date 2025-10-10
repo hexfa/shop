@@ -52,7 +52,6 @@ fun Home(
                     .padding(bottom = 60.dp)
             ) {
                 LaunchedEffect(true) {
-
                     viewModel.getSlider();
 
                 }
