@@ -43,7 +43,6 @@ fun Home(
 
         })
         {
-
             Column(
 
                 modifier =
