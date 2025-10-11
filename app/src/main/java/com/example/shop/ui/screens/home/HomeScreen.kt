@@ -31,15 +31,7 @@ fun Home(
     viewModel: HomeViewModel = hiltViewModel()
 
 ) {
-    Column(
-
-        modifier =
-
-        Modifier
-
-            .background(color = Color.White)
-            .fillMaxSize()
-    )
+    Column()
     {
         val refreshScope = rememberCoroutineScope()
         val swipeRefreshState = rememberSwipeRefreshState(isRefreshing = false)
