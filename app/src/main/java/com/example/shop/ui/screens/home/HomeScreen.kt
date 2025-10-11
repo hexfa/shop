@@ -58,7 +58,6 @@ fun Home(
 
 
                     .background(color = Color.White)
-
                     .fillMaxSize()
 
                     .verticalScroll(rememberScrollState())
