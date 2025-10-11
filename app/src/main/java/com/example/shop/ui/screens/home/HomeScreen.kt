@@ -25,6 +25,7 @@ fun HomeScreen(navController: NavHostController) {
     Home(navController)
 }
 @Composable
+
 fun Home(
 
     navController: NavHostController,
