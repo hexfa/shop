@@ -28,8 +28,7 @@ fun HomeScreen(navController: NavHostController) {
 @Composable
 
 fun Home(
-
-
+    
     navController: NavHostController,
 
     viewModel: HomeViewModel = hiltViewModel()
@@ -42,7 +41,7 @@ fun Home(
         val refreshScope = rememberCoroutineScope()
 
         val swipeRefreshState = rememberSwipeRefreshState(isRefreshing = false)
-        
+
         SwipeRefresh(state = swipeRefreshState, onRefresh = {
 
             refreshScope.launch {
