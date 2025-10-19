@@ -22,7 +22,6 @@ import java.lang.reflect.Modifier
 @Composable
 
 fun HomeScreen(navController: NavHostController) {
-
     Home(navController)
 }
 @Composable
