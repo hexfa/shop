@@ -60,7 +60,6 @@ fun Home(
                     viewModel.getSlider();
                 }
                 TopSlider()
-
             }
         }
     }
