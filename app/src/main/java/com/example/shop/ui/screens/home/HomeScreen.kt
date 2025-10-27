@@ -70,7 +70,8 @@ fun Home(
                 TopSlider()
 
             }
-            
+
         }
+        
     }
 }
