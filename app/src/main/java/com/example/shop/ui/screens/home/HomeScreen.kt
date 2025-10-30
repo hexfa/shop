@@ -77,6 +77,7 @@ fun Home(
                 TopSlider()
 
             }
+            
 
         }
 
