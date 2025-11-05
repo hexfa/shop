@@ -31,7 +31,6 @@ fun Home(
     viewModel: HomeViewModel = hiltViewModel()
 )
 {
-
     Column()
     {
 
