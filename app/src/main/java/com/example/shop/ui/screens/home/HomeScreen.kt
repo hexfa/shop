@@ -30,7 +30,6 @@ fun Home(
     viewModel: HomeViewModel = hiltViewModel()
 )
 {
-
     Column()
     {
         val refreshScope = rememberCoroutineScope()
