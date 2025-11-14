@@ -39,6 +39,7 @@ fun Home(
             }
 
         })
+        
         {
             Column(
                 modifier =
