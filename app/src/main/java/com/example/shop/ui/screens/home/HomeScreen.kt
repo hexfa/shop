@@ -45,7 +45,6 @@ fun Home(
                 modifier =
 
                 Modifier
-
                     .background(color = Color.White)
 
                     .fillMaxSize()
