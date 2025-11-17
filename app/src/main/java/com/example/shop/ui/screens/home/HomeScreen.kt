@@ -30,12 +30,13 @@ fun HomeScreen(navController: NavHostController) {
 fun Home(
 
     navController: NavHostController,
-    
+
     viewModel: HomeViewModel = hiltViewModel()
 )
 {
     Column()
     {
+
         val refreshScope = rememberCoroutineScope()
         val swipeRefreshState = rememberSwipeRefreshState(isRefreshing = false)
         SwipeRefresh(state = swipeRefreshState, onRefresh = {
