@@ -56,6 +56,7 @@ fun Home(
 
 
                 }
+                
 
                 TopSlider()
             }
