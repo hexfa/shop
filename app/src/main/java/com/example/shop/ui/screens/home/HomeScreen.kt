@@ -53,7 +53,6 @@ fun Home(
 
 
                     .fillMaxSize()
-
                     .verticalScroll(rememberScrollState())
                     .padding(bottom = 60.dp)
             ) {
