@@ -63,6 +63,7 @@ fun Home(
 
 
                     viewModel.getSlider();
+                    
 
 
                 }
