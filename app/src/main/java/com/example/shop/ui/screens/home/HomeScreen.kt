@@ -67,10 +67,9 @@ fun Home(
 
 
                 }
-
-
-                TopSlider()
                 
+                TopSlider()
+
 
             }
         }
