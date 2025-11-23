@@ -41,6 +41,7 @@ fun Home(
             }
         })
         {
+
             Column(
                 modifier =
                 Modifier
@@ -59,7 +60,7 @@ fun Home(
 
 
                 TopSlider()
-                
+
             }
         }
     }
