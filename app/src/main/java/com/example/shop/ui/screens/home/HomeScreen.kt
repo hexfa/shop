@@ -33,8 +33,9 @@ fun Home(
 )
 
 {
-    
+
     Column()
+
     {
         val refreshScope = rememberCoroutineScope()
         val swipeRefreshState = rememberSwipeRefreshState(isRefreshing = false)
