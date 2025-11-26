@@ -42,7 +42,6 @@ fun Home(
         SwipeRefresh(state = swipeRefreshState, onRefresh = {
             refreshScope.launch {
             }
-
         })
 
         {
