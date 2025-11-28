@@ -36,10 +36,11 @@ fun Home(
     Column()
     {
         val refreshScope = rememberCoroutineScope()
-        val swipeRefreshState = rememberSwipeRefreshState(isRefreshing = false)
+        val swipeRefreshState = rememberSwipeRefreshState(isRefreshing = fal
+                se)
         SwipeRefresh(state = swipeRefreshState, onRefresh = {
             refreshScope.launch {
-                
+
             }
 
         })
