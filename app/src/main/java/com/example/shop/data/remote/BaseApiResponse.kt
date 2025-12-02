@@ -23,7 +23,6 @@ open class BaseApiResponse {
 
                         return@withContext NetworkResult.Success(body.message, body.data)
 
-
                     }
                 }
 
