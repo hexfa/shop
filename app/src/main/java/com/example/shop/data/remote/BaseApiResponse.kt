@@ -20,7 +20,6 @@ open class BaseApiResponse {
 
                     body?.let {
 
-
                         return@withContext NetworkResult.Success(body.message, body.data)
                     }
                 }
