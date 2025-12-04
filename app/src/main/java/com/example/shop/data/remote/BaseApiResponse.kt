@@ -22,6 +22,7 @@ open class BaseApiResponse {
                 return@withContext error(e.message ?: e.toString())
             }
         }
+
     private fun <T> error(errorMessage: String): NetworkResult<T> =
         NetworkResult.Error("Api call failed: $errorMessage")
 }
