@@ -6,7 +6,7 @@ import kotlinx.coroutines.withContext
 import retrofit2.Response
 
 open class BaseApiResponse {
-    
+
 
     suspend fun <T> safeApiCall(apiCall: suspend () -> Response<ResponseResult<T>>): NetworkResult<T> =
         withContext(Dispatchers.IO) {
@@ -27,6 +27,7 @@ open class BaseApiResponse {
                 return@withContext error("code :${response.code()}  message:${response.message()}")
             } catch (e: Exception) {
 
+                
                 return@withContext error(e.message ?: e.toString())
             }
         }
