@@ -19,6 +19,7 @@ open class BaseApiResponse {
 
                     val body = response.body()
 
+                    
                     body?.let {
 
                         return@withContext NetworkResult.Success(body.message, body.data)
@@ -38,6 +39,6 @@ open class BaseApiResponse {
 
 
         NetworkResult.Error("Api call failed: $errorMessage")
-    
+
 
 }
