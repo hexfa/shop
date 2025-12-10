@@ -30,6 +30,7 @@ open class BaseApiResponse {
 
 
                 return@withContext error(e.message ?: e.toString())
+
             }
         }
 
