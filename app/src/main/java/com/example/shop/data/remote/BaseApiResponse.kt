@@ -15,7 +15,6 @@ open class BaseApiResponse {
                 if (response.isSuccessful) {
                     val body = response.body()
                     body?.let {
-                        
                         return@withContext NetworkResult.Success(body.message, body.data)
 
                     }
