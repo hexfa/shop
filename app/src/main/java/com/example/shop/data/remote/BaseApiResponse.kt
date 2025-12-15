@@ -13,6 +13,7 @@ open class BaseApiResponse {
             try {
                 val response = apiCall()
 
+
                 if (response.isSuccessful) {
 
                     val body = response.body()
