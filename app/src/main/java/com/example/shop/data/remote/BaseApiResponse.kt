@@ -11,7 +11,6 @@ open class BaseApiResponse {
     suspend fun <T> safeApiCall(apiCall: suspend () -> Response<ResponseResult<T>>): NetworkResult<T> =
         withContext(Dispatchers.IO) {
             try {
-
                 val response = apiCall()
 
 
