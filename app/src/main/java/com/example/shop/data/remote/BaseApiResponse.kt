@@ -9,6 +9,7 @@ open class BaseApiResponse {
 
 
     suspend fun <T> safeApiCall(apiCall: suspend () -> Response<ResponseResult<T>>): NetworkResult<T> =
+        
         withContext(Dispatchers.IO) {
             try {
                 val response = apiCall()
@@ -30,7 +31,7 @@ open class BaseApiResponse {
             } catch (e: Exception) {
                 return@withContext error(e.message ?: e.toString())
             }
-            
+
         }
     private fun <T> error(errorMessage: String): NetworkResult<T> =
         NetworkResult.Error("Api call failed: $errorMessage")
