@@ -26,5 +26,4 @@ open class BaseApiResponse {
     private fun <T> error(errorMessage: String): NetworkResult<T> =
         NetworkResult.Error("Api call failed: $errorMessage")
 
-
 }
