@@ -25,8 +25,9 @@ open class BaseApiResponse {
                         return@withContext NetworkResult.Success(body.message, body.data)
 
                     }
-                    
+
                 }
+                
                 return@withContext error("code :${response.code()}  message:${response.message()}")
 
             } catch (e: Exception) {
