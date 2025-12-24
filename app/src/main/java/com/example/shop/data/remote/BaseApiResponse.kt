@@ -20,7 +20,6 @@ open class BaseApiResponse {
 
                 return@withContext error("code :${response.code()}  message:${response.message()}")
 
-
             } catch (e: Exception) {
 
                 return@withContext error(e.message ?: e.toString())
