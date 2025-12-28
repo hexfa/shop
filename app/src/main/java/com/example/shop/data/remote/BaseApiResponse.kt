@@ -13,7 +13,6 @@ open class BaseApiResponse {
             try {
                 val response = apiCall()
                 if (response.isSuccessful) {
-
                     val body = response.body()
                     body?.let {
                         return@withContext NetworkResult.Success(body.message, body.data)
