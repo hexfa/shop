@@ -6,5 +6,4 @@ data class Slider(
     val url:String,
     val category:String,
     val priority:Int
-
 )
