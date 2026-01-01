@@ -22,8 +22,9 @@ class DataStoreRepositoryImp @Inject constructor(
     }
     override suspend fun putInt(key: String, value: Int) {
         val preferencesKey = intPreferencesKey(key)
+        
         context.datastore.edit { preferences ->
-            
+
             preferences[preferencesKey] = value
 
         }
