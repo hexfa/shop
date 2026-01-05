@@ -42,7 +42,6 @@ class DataStoreRepositoryImp @Inject constructor(
 
         return try {
 
-
             val preferencesKey = intPreferencesKey(key)
 
             val preferences = context.datastore.data.first()
