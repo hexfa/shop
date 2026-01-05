@@ -34,8 +34,9 @@ class DataStoreRepositoryImp @Inject constructor(
         } catch (e: Exception) {
             e.printStackTrace()
             return null
+            
         }
-        
+
     }
     override suspend fun getInt(key: String): Int? {
         return try {
