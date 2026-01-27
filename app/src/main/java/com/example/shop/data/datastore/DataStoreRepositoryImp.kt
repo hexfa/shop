@@ -30,8 +30,9 @@ class DataStoreRepositoryImp @Inject constructor(
 
 
         val preferencesKey = intPreferencesKey(key)
-        
+
         context.datastore.edit { preferences ->
+            
             preferences[preferencesKey] = value
         }
     }
