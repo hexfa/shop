@@ -64,9 +64,8 @@ class DataStoreRepositoryImp @Inject constructor(
 
             e.printStackTrace()
             return null
-            
-            preferences[preferencesKey]
 
+            preferences[preferencesKey]
         } catch (e: Exception) {
 
 
