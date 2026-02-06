@@ -79,7 +79,6 @@ class DataStoreRepositoryImp @Inject constructor(
             preferences[preferencesKey]
 
 
-
         } catch (e: Exception) {
 
             e.printStackTrace()
@@ -93,7 +92,7 @@ class DataStoreRepositoryImp @Inject constructor(
             e.printStackTrace()
 
             return null
-            
+
         }
     }
 }
