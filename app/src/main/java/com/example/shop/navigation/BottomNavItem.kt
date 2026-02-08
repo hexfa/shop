@@ -1,7 +1,6 @@
 package com.example.shop.navigation
 
 import androidx.compose.ui.graphics.painter.Painter
-
 data class BottomNavItem(
 
     val name: String,
