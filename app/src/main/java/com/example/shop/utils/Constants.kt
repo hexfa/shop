@@ -4,7 +4,6 @@ import com.google.gson.internal.GsonBuildConfig
 object Constants {
 
     const val ENGLISH="en"
-
    const val PERSIAN="fa"
     
     const val DATASTORE_NAME="SHOP_DATA_STORE"
@@ -16,6 +15,6 @@ object Constants {
     const val API_KEY=GsonBuildConfig.VERSION
 
     var USER_LANGUAGE="USER_LANGUAGE"
-    
+
 
 }
