@@ -10,6 +10,7 @@ data class BottomNavItem(
     val selectedIcon: Painter,
 
     val deSelectedIcon: Painter
+    
 
 
 )
