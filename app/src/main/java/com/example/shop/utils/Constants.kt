@@ -11,5 +11,4 @@ object Constants {
     const val API_KEY=GsonBuildConfig.VERSION
     var USER_LANGUAGE="USER_LANGUAGE"
 
-
 }
