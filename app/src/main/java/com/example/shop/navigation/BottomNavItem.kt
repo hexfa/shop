@@ -8,4 +8,5 @@ data class BottomNavItem(
     val route: String,
     val selectedIcon: Painter,
     val deSelectedIcon: Painter
+    
 )
