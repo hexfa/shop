@@ -14,7 +14,8 @@ object Constants {
     const val BASE_URL="https://truelearn-digikala.iran.liara.run/api/"
 
     const val API_KEY=GsonBuildConfig.VERSION
-    
+
     var USER_LANGUAGE="USER_LANGUAGE"
+    
 
 }
