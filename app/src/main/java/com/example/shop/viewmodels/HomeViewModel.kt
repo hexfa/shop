@@ -17,8 +17,7 @@ class HomeViewModel @Inject constructor(private val homeRepo: HomeRepository):Vi
      ){
          viewModelScope.launch {
              slider.value = NetworkResult.Loading()
-
-
+             
              slider.emit(homeRepo.getSlider())
              slider.emit(homeRepo.getSlider())
              slider.emit(homeRepo.getSlider())
