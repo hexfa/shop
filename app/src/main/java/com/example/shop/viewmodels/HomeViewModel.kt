@@ -29,9 +29,8 @@ class HomeViewModel @Inject constructor(private val homeRepo: HomeRepository):Vi
              slider.emit(homeRepo.getSlider())
 
              slider.emit(homeRepo.getSlider())
-
              slider.emit(homeRepo.getSlider())
-             
+
 
 
          }
