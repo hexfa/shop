@@ -14,6 +14,7 @@ import javax.inject.Inject
 
 
 class HomeViewModel @Inject constructor(private val homeRepo: HomeRepository):ViewModel(){
+    
     val slider= MutableStateFlow<NetworkResult<List<Slider>>>(NetworkResult.Loading())
      fun getSlider(
 
