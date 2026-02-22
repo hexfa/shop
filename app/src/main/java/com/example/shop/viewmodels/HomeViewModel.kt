@@ -27,10 +27,11 @@ class HomeViewModel @Inject constructor(private val homeRepo: HomeRepository):Vi
 
 
              slider.value = NetworkResult.Loading()
-             
+
 
              slider.emit(homeRepo.getSlider())
 
+             
              slider.emit(homeRepo.getSlider())
              slider.emit(homeRepo.getSlider())
 
