@@ -16,12 +16,13 @@ import javax.inject.Inject
 class HomeViewModel @Inject constructor(private val homeRepo: HomeRepository):ViewModel(){
     val slider= MutableStateFlow<NetworkResult<List<Slider>>>(NetworkResult.Loading())
 
+
      fun getSlider(
 
      ){
 
          viewModelScope.launch {
-             
+
              slider.value = NetworkResult.Loading()
              slider.emit(homeRepo.getSlider())
              slider.emit(homeRepo.getSlider())
