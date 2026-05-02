@@ -22,7 +22,6 @@ class HomeViewModel @Inject constructor(private val homeRepo: HomeRepository):Vi
 
 
 
-
      fun getSlider(
 
 
